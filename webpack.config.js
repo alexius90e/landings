@@ -11,10 +11,10 @@ const config = {
   output: {
     path: path.resolve(__dirname, 'dist'),
   },
-  devtool: false,
   devServer: {
     compress: true,
     port: 3000,
+    watchFiles: ['src/**/*']
   },
   plugins: [
     new HtmlWebpackPlugin({
