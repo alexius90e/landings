@@ -1,0 +1,148 @@
+.header {
+  display: flex;
+  justify-content: center;
+  margin: 1.125rem 0 1.5rem;
+  padding: 0 1.5rem;
+
+  & ul {
+    margin: 0;
+    padding: 0;
+
+    & > li {
+      list-style-type: none;
+    }
+  }
+
+  &__container {
+    display: flex;
+    gap: 1.875rem;
+  }
+
+  &__main {
+    flex: 1 0 auto;
+
+    &-wrap {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.875rem;
+    color: $black;
+    border-bottom: 1px solid $gray;
+
+    & > ul {
+      display: flex;
+      gap: 1.5rem;
+
+      & li > a {
+        font-size: 0.75rem;
+        line-height: 0.875rem;
+        text-decoration: none;
+        color: $black;
+      }
+    }
+
+    ul + &-login {
+      gap: 0;
+
+      & > li {
+        padding: 0 0.875rem;
+
+        &:first-child {
+          border-right: 1px solid $black;
+        }
+      }
+    }
+  }
+
+  &__banner {
+    width: 15.875rem;
+    height: 4.375rem;
+    background-color: $gray;
+  }
+
+  &__basket {
+    display: flex;
+    gap: 2.1875rem;
+
+    &-info {
+      &-icon {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 1.125rem;
+      }
+
+      & > li {
+        display: flex;
+        gap: 0.75rem;
+        margin-bottom: 0.75rem;
+
+        & > a {
+          font-size: 0.75rem;
+          line-height: 0.875rem;
+          color: $black;
+        }
+
+        &:first-child > a {
+          font-size: 0.875rem;
+          line-height: 1rem;
+        }
+      }
+    }
+
+    &-items {
+      display: flex;
+      gap: 1rem;
+
+      & > li > img {
+        width: 4.375rem;
+        height: 4.375rem;
+        object-fit: contain;
+      }
+    }
+  }
+
+  &__worktime {
+    font-size: 0.75rem;
+    line-height: 0.875rem;
+
+    &-time {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &-phone {
+      margin-bottom: 0.25rem;
+      padding: 0.9375rem 0 0.875rem;
+      border-bottom: 1px solid $gray;
+
+      & > a {
+        font-weight: 700;
+        font-size: 1.5625rem;
+        line-height: 1.8125rem;
+        text-decoration: none;
+        color: $black;
+      }
+    }
+
+    &-location {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &-button {
+      padding: 0 0 0 0.75rem;
+      border: none;
+      border-bottom: 1px dashed $black;
+      background: url('../assets/itreangle.svg') no-repeat left center;
+      cursor: pointer;
+    }
+  }
+}

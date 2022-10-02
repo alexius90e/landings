@@ -8,7 +8,79 @@
   </head>
   <body>
     <header class="header">
-      <img src="./assets/logo.png" alt="" />
+      <div class="header__container container">
+        <div class="header__logo">
+          <img src="./assets/logo.svg" alt="logo" />
+        </div>
+
+        <div class="header__main">
+          <nav class="header__nav">
+            <ul class="header__nav-menu">
+              <li><a href="#">Каталог инструментов</a></li>
+              <li><a href="#">Все для сада</a></li>
+              <li><a href="#">Ручной интрумент</a></li>
+              <li><a href="#">Электрика</a></li>
+              <li><a href="#">Доставка</a></li>
+              <li><a href="#">Оплата</a></li>
+              <li><a href="#">О нас</a></li>
+            </ul>
+
+            <ul class="header__nav-login">
+              <li><a href="#">Вход</a></li>
+              <li><a href="#">Регистрация</a></li>
+            </ul>
+          </nav>
+
+          <div class="header__main-wrap">
+            <div class="header__banner"></div>
+
+            <div class="header__basket">
+              <ul class="header__basket-info">
+                <li>
+                  <div class="header__basket-info-icon">
+                    <img src="./assets/icart.svg" alt="icon" />
+                  </div>
+                  <a href="#">3 шт. / 17 250 р.</a>
+                </li>
+                <li>
+                  <div class="header__basket-info-icon">
+                    <img src="./assets/istar.svg" alt="icon" />
+                  </div>
+                  <a href="#">Избранное (7)</a>
+                </li>
+                <li>
+                  <div class="header__basket-info-icon">
+                    <img src="./assets/ibalance.svg" alt="icon" />
+                  </div>
+                  <a href="#">К сравнению (5)</a>
+                </li>
+              </ul>
+
+              <ul class="header__basket-items">
+                <li><img src="./assets/goods/1.png" alt="goods" /></li>
+                <li><img src="./assets/goods/2.png" alt="goods" /></li>
+                <li><img src="./assets/goods/2.png" alt="goods" /></li>
+              </ul>
+            </div>
+
+            <div class="header__worktime">
+              <div class="header__worktime-time">
+                <b>Время работы:</b>
+                <span>10:00 — 19:00</span>
+              </div>
+
+              <div class="header__worktime-phone">
+                <a href="tel:84957212525">8 495 721-25-25</a>
+              </div>
+
+              <div class="header__worktime-location">
+                <span>Москва</span>
+                <button class="header__worktime-button">сменить</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </header>
     <nav class="navigation"></nav>
   </body>
