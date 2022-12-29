@@ -30,7 +30,10 @@
             Рейтинг SEO компаний <span>Беларуси</span>
           </h1>
 
-          <form class="first-screen-form">
+          <form
+            class="first-screen-form"
+            onsubmit="(event) => console.log(event)"
+          >
             <h4 class="first-screen-form__title">
               Заполните форму и наш менеджер свяжется с вами
             </h4>
@@ -54,39 +57,216 @@
         </div>
       </section>
 
-      <section class="container">
-        <h2>Lorem ipsum dolor sit amet</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-      </section>
-
-      <section class="container">
-        <h2>Рынок услуг</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum
-          dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-          incididunt ut labore et dolore magna aliqua.
+      <section class="rating container">
+        <p class="rating__description">
+          Ниже представлен рейтинг агентств Беларуси, специализирующийся на
+          оказании SEO услуг. В компании из представленного нами списка, можно
+          обратиться за следующими услугами: SEO продвижение сайта в поисковых
+          системах Яндекс и Google, проведение аудита сайта, разовые технические
+          рекомендации по оптимизации сайтов, и другие профильные услуги,
+          связанные с повышением позиций и посещаемости сайта.
         </p>
 
+        <h2>Рейтинг компаний</h2>
+
+        <div class="rating-cards">
+          <div class="rating-card">
+            <div class="rating-card__position">1</div>
+            <div class="rating-card__icon"></div>
+            <div class="rating-card__logo">
+              <img src="./assets/companies/logo-cropas-by.png" alt="logo" />
+            </div>
+            <div class="rating-card__info">
+              <h3 class="rating-card__title">CROPAS</h3>
+              <a href="https://cropas.by/" target="_blank">cropas.by</a>
+            </div>
+          </div>
+
+          <div class="rating-card">
+            <div class="rating-card__position">2</div>
+            <div class="rating-card__icon"></div>
+            <div class="rating-card__logo">
+              <img src="./assets/companies/webmart_logo.svg" alt="logo" />
+            </div>
+            <div class="rating-card__info">
+              <h3 class="rating-card__title">Webmart Group</h3>
+              <a href="https://webmart.by/" target="_blank">webmart.by</a>
+            </div>
+          </div>
+
+          <div class="rating-card">
+            <div class="rating-card__position">3</div>
+            <div class="rating-card__icon"></div>
+            <div class="rating-card__logo">
+              <img src="./assets/companies/hh.svg" alt="logo" />
+            </div>
+            <div class="rating-card__info">
+              <h3 class="rating-card__title">HotHeads</h3>
+              <a href="https://hheads.by/" target="_blank">hheads.by</a>
+            </div>
+          </div>
+
+          <div class="rating-card">
+            <div class="rating-card__position">4</div>
+            <div class="rating-card__icon"></div>
+            <div class="rating-card__logo">
+              <img src="./assets/companies/gussarow.png" alt="logo" />
+            </div>
+            <div class="rating-card__info">
+              <h3 class="rating-card__title">GUSAROV</h3>
+              <a href="https://gusarov-group.by/" target="_blank"
+                >gusarov-group.by</a
+              >
+            </div>
+          </div>
+
+          <div class="rating-card">
+            <div class="rating-card__position">5</div>
+            <div class="rating-card__icon"></div>
+            <div class="rating-card__logo">
+              <img src="./assets/companies/qmedia.png" alt="logo" />
+            </div>
+            <div class="rating-card__info">
+              <h3 class="rating-card__title">Qmedia</h3>
+              <a href="http://www.qmedia.by/" target="_blank">qmedia.by</a>
+            </div>
+          </div>
+
+          <div class="rating-card">
+            <div class="rating-card__position">6</div>
+            <div class="rating-card__icon"></div>
+            <div class="rating-card__logo">
+              <img src="./assets/companies/slam.png" alt="slam" />
+            </div>
+            <div class="rating-card__info">
+              <h3 class="rating-card__title">S.L.A.M.</h3>
+              <a href="https://slam.by/" target="_blank">slam.by</a>
+            </div>
+          </div>
+
+          <div class="rating-card">
+            <div class="rating-card__position">7</div>
+            <div class="rating-card__icon"></div>
+            <div class="rating-card__logo">
+              <img src="./assets/companies/ariol-bird.svg" alt="logo" />
+            </div>
+            <div class="rating-card__info">
+              <h3 class="rating-card__title">Ariol</h3>
+              <a href="https://ariol.by/" target="_blank">ariol.by</a>
+            </div>
+          </div>
+
+          <div class="rating-card">
+            <div class="rating-card__position">8</div>
+            <div class="rating-card__icon"></div>
+            <div class="rating-card__logo">
+              <img src="./assets/companies/seodev_by.png" alt="logo" />
+            </div>
+            <div class="rating-card__info">
+              <h3 class="rating-card__title">Seodev</h3>
+              <a href="https://seodev.by/" target="_blank">seodev.by</a>
+            </div>
+          </div>
+
+          <div class="rating-card">
+            <div class="rating-card__position">9</div>
+            <div class="rating-card__icon"></div>
+            <div class="rating-card__logo">
+              <img src="./assets/companies/seologic.png" alt="logo" />
+            </div>
+            <div class="rating-card__info">
+              <h3 class="rating-card__title">Seologic</h3>
+              <a href="https://www.seologic.by/" target="_blank"
+                >www.seologic.by</a
+              >
+            </div>
+          </div>
+
+          <div class="rating-card">
+            <div class="rating-card__position">10</div>
+            <div class="rating-card__icon"></div>
+            <div class="rating-card__logo">
+              <img src="./assets/companies/allwrite.png" alt="logo" />
+            </div>
+            <div class="rating-card__info">
+              <h3 class="rating-card__title">AllWrite</h3>
+              <a href="https://allwrite.by/" target="_blank">allwrite.by</a>
+            </div>
+          </div>
+
+          <div class="rating-card">
+            <div class="rating-card__position">11</div>
+            <div class="rating-card__icon"></div>
+            <div class="rating-card__logo">
+              <img src="./assets/companies/wunder.png" alt="logo" />
+            </div>
+            <div class="rating-card__info">
+              <h3 class="rating-card__title">Wunder</h3>
+              <a href="https://wunder-digital.by/" target="_blank"
+                >wunder-digital.by</a
+              >
+            </div>
+          </div>
+
+          <div class="rating-card">
+            <div class="rating-card__position">12</div>
+            <div class="rating-card__icon"></div>
+            <div class="rating-card__logo">
+              <img src="./assets/companies/clickmedia.png" alt="logo" />
+            </div>
+            <div class="rating-card__info">
+              <h3 class="rating-card__title">Клик Медиа</h3>
+              <a href="https://clickmedia.by/" target="_blank">clickmedia.by</a>
+            </div>
+          </div>
+
+          <div class="rating-card">
+            <div class="rating-card__position">13</div>
+            <div class="rating-card__icon"></div>
+            <div class="rating-card__logo">
+              <img src="./assets/companies/webernetic.png" alt="logo" />
+            </div>
+            <div class="rating-card__info">
+              <h3 class="rating-card__title">Вебернетик</h3>
+              <a href="https://webernetic.by/" target="_blank">webernetic.by</a>
+            </div>
+          </div>
+
+          <div class="rating-card">
+            <div class="rating-card__position">14</div>
+            <div class="rating-card__icon"></div>
+            <div class="rating-card__logo">
+              <img src="./assets/companies/websfera.png" alt="logo" />
+            </div>
+            <div class="rating-card__info">
+              <h3 class="rating-card__title">ВебСфера</h3>
+              <a href="https://websfera.by/" target="_blank">websfera.by</a>
+            </div>
+          </div>
+
+          <div class="rating-card">
+            <div class="rating-card__position">15</div>
+            <div class="rating-card__icon"></div>
+            <div class="rating-card__logo">
+              <img src="./assets/companies/medialime.png" alt="logo" />
+            </div>
+            <div class="rating-card__info">
+              <h3 class="rating-card__title">МедиаЛайм</h3>
+              <a href="https://medialime.by/" target="_blank">medialime.by</a>
+            </div>
+          </div>
+        </div>
+
         <p>
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-          nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
+          В рейтинге представлены ведущие агентства Беларуси. Основной род
+          деятельности - SEO продвижение и разработка сайтов, решение
+          маркетинговых и коммуникационных задач клиентов. Что касается
+          методологии ранжирования в рейтинге, позиция зависит от совокупности
+          факторов: близость сайта компании к ТОП1 в поисковых системах,
+          удобство пользования сайтом, качество портфолио, количество и масштаб
+          клиентов в нем. Также принимается во внимание посещаемость ресурсов
+          компаний по данным внешних источников. Методология расчета постоянно
+          улучшается и совершенствуется. Следите за нашими новостями.
         </p>
       </section>
     </main>

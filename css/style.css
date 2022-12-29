@@ -15,6 +15,42 @@ h1 {
   color: #ffffff;
 }
 
+h2 {
+  margin-bottom: 1.875rem;
+  font-size: 2.5rem;
+  line-height: 3rem;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+@media (max-width: 992px) {
+  h2 {
+    margin-bottom: 1.25rem;
+    font-size: 2.25rem;
+    line-height: 2.6875rem;
+  }
+
+  p {
+    font-size: 15px;
+    line-height: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  h2 {
+    font-size: 1.75rem;
+    line-height: 2.125rem;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
+
 .container {
   max-width: 80.625rem;
   margin: 0 auto;
@@ -142,7 +178,7 @@ h1 {
 }
 
 .button-primary:active {
-  transform: scale(0.95);
+  transform: scale(0.98);
 }
 
 .main {
@@ -259,6 +295,7 @@ h1 {
   border: 1px solid #d3d3d3;
   background: none;
   border-radius: 0.375rem;
+  color: #fbfbfb;
 }
 
 .first-screen-form > .button {
@@ -304,5 +341,184 @@ h1 {
     display: block;
     width: 100%;
     margin-top: 1.25rem;
+  }
+}
+
+/* rating */
+
+.rating {
+  padding-top: 6.25rem;
+  padding-bottom: 1.25rem;
+}
+
+.rating__description {
+  margin-top: 0;
+}
+
+.rating-card {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  margin-bottom: 1.25rem;
+  padding: 30px 40px;
+  background: #fbfbfb;
+  border: 1px solid #d3d3d3;
+  box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.5),
+    5px 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.rating-card__position {
+  width: 3rem;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  color: #1b1b1b;
+}
+
+.rating-card:first-child .rating-card__position {
+  color: #fed500;
+}
+
+.rating-card:nth-child(2) > .rating-card__position {
+  color: #cbcbcb;
+}
+
+.rating-card:nth-child(3) > .rating-card__position {
+  color: #7a6e6e;
+}
+
+.rating-card__icon {
+  flex: 0 0 3.125rem;
+  height: 3.125rem;
+  width: 3.125rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.rating-card:first-child .rating-card__icon {
+  background-image: url(../assets/icons/trophy-one.svg);
+}
+
+.rating-card:nth-child(2) > .rating-card__icon {
+  background-image: url(../assets/icons/trophy-two.svg);
+}
+
+.rating-card:nth-child(3) > .rating-card__icon {
+  background-image: url(../assets/icons/trophy-three.svg);
+}
+
+.rating-card__logo {
+  flex: 0 0 10rem;
+  display: flex;
+  align-items: center;
+  height: 3.75rem;
+  width: 10rem;
+}
+
+.rating-card__logo > img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.rating-card__info {
+  display: flex;
+  width: 100%;
+}
+
+.rating-card__title {
+  flex: 1 0 50%;
+  margin: 0;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.rating-card__info > a {
+  flex: 0 0 50%;
+  display: flex;
+  font-size: 16px;
+  line-height: 19px;
+  text-decoration: none;
+  color: #4f4f4f;
+}
+
+@media (max-width: 992px) {
+  .rating {
+    padding-top: 5rem;
+  }
+
+  .rating-card {
+    gap: 1.25rem;
+    margin-bottom: 1.875rem;
+  }
+
+  .rating-card__position {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .rating-card__icon {
+    flex: 0 0 1.875rem;
+    height: 1.875rem;
+    width: 1.875rem;
+  }
+
+  .rating-card__logo {
+    flex: 0 0 5.625rem;
+    height: 2.25rem;
+    width: 5.625rem;
+  }
+
+  .rating-card__title,
+  .rating-card__info > a {
+    font-size: 15px;
+    line-height: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .rating {
+    padding-top: 3.75rem;
+  }
+
+  .rating-card {
+    padding: 20px;
+    margin-bottom: 1.25rem;
+  }
+
+  .rating-card__position {
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  .rating-card__icon {
+    flex: 0 0 1.5rem;
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+
+  .rating-card__logo {
+    flex: 0 0 3.75rem;
+    height: 1.5rem;
+    width: 3.75rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .rating-card {
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .rating-card__info {
+    flex-direction: column;
+  }
+
+  .rating-card__title,
+  .rating-card__info > a {
+    font-size: 13px;
+    line-height: 16px;
   }
 }
