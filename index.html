@@ -16,7 +16,7 @@
         </div>
 
         <nav class="main-nav">
-          <a href="#">О рейтинге</a>
+          <a href="#rating">О рейтинге</a>
           <a href="#">Обратная связь</a>
           <button class="button button-primary">Подать заявку</button>
         </nav>
@@ -57,7 +57,7 @@
         </div>
       </section>
 
-      <section class="rating container">
+      <section class="rating container" id="rating">
         <p class="rating__description">
           Ниже представлен рейтинг агентств Беларуси, специализирующийся на
           оказании SEO услуг. В компании из представленного нами списка, можно
@@ -268,6 +268,30 @@
           компаний по данным внешних источников. Методология расчета постоянно
           улучшается и совершенствуется. Следите за нашими новостями.
         </p>
+      </section>
+
+      <section class="container">
+        <div class="horizontal-form-wrapper">
+          <h3>Заполните форму и наш менеджер свяжется с вами</h3>
+
+          <form class="horizontal-form">
+            <label class="horizontal-form__label">
+              <span>Введите имя</span>
+              <input type="text" placeholder="Имя" />
+            </label>
+
+            <label class="horizontal-form__label">
+              <span>Введите номер телефона</span>
+              <input type="text" placeholder="+7 (990) 111-11-11" />
+            </label>
+
+            <input
+              class="button button-primary"
+              type="submit"
+              value="Отправить"
+            />
+          </form>
+        </div>
       </section>
     </main>
   </body>

@@ -26,6 +26,14 @@ p {
   line-height: 1.5rem;
 }
 
+input[type='text'] {
+  width: fit-content;
+  padding: 15px 25px;
+  background: none;
+  border: 1px solid #d3d3d3;
+  border-radius: 5px;
+}
+
 @media (max-width: 992px) {
   h2 {
     margin-bottom: 1.25rem;
@@ -36,6 +44,11 @@ p {
   p {
     font-size: 15px;
     line-height: 18px;
+  }
+
+  input[type='text'] {
+    padding: 15px 25px;
+    background: none;
   }
 }
 
@@ -48,6 +61,11 @@ p {
   p {
     font-size: 14px;
     line-height: 17px;
+  }
+
+  input[type='text'] {
+    padding: 15px 25px;
+    background: none;
   }
 }
 
@@ -349,6 +367,7 @@ p {
 .rating {
   padding-top: 6.25rem;
   padding-bottom: 1.25rem;
+  margin-bottom: 6.25rem;
 }
 
 .rating__description {
@@ -520,5 +539,108 @@ p {
   .rating-card__info > a {
     font-size: 13px;
     line-height: 16px;
+  }
+}
+
+/* horizontal-form */
+
+.horizontal-form-wrapper {
+  margin-bottom: 7.5rem;
+  padding: 50px;
+  border: 1px solid #d3d3d3;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background: linear-gradient(90deg, #0376c9 1.52%, #02b5cd 100%);
+}
+
+.horizontal-form-wrapper > h3 {
+  max-width: 35rem;
+  margin-top: 0;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  color: #ffffff;
+}
+
+.horizontal-form {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 3rem;
+  color: #ffffff;
+}
+
+.horizontal-form__label {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+  margin: 0;
+}
+
+.horizontal-form__label > input::placeholder {
+  color: #d3d3d3;
+}
+
+.horizontal-form__label > input {
+  width: 100%;
+  box-sizing: border-box;
+  color: #ffffff;
+}
+
+.horizontal-form .button {
+  flex: 1 0 auto;
+  margin-left: 5%;
+  color: #0376c9;
+  background: #ffffff;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.15);
+  border-radius: 30px;
+}
+
+@media (max-width: 992px) {
+  .horizontal-form {
+    gap: 2.25rem;
+  }
+
+  .horizontal-form__label {
+    flex: 1 1 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+  }
+
+  .horizontal-form-wrapper {
+    margin-bottom: 7.5rem;
+    padding: 40px;
+  }
+
+  .horizontal-form .button {
+    flex: 0 0 calc(50% - 1.125rem);
+    margin: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .horizontal-form {
+    gap: 1.25rem;
+  }
+
+  .horizontal-form-wrapper {
+    margin-bottom: 7.5rem;
+    padding: 30px 25px;
+  }
+}
+
+@media (max-width: 576px) {
+  .horizontal-form__label {
+    flex: 1 1 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+  }
+
+  .horizontal-form .button {
+    flex: 1 0 100%;
   }
 }
