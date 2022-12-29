@@ -17,8 +17,8 @@
 
         <nav class="main-nav">
           <a href="#rating">О рейтинге</a>
-          <a href="#">Обратная связь</a>
-          <button class="button button-primary">Подать заявку</button>
+          <a class="callback-button">Обратная связь</a>
+          <a href="/zayvka-seo" class="button button-primary">Подать заявку</a>
         </nav>
       </div>
     </header>
@@ -301,12 +301,39 @@
           <img src="./assets/logo-white.svg" alt="logo" />
           <span>SEO рейтинг<br />Беларуси</span>
         </div>
-        <div class="footer__copyright">Copyright © 2022 SEO рейтинг Беларуси</div>
+        <div class="footer__copyright">
+          Copyright © 2022 SEO рейтинг Беларуси
+        </div>
         <nav class="footer__nav">
           <a href="#rating">О рейтинге</a>
-          <a href="#">Обратная связь</a>
+          <a class="callback-button">Обратная связь</a>
         </nav>
       </div>
     </footer>
+
+    <div class="overlay hidden" id="callback-modal">
+      <form
+        class="first-screen-form modal"
+        onsubmit="(event) => console.log(event)"
+      >
+        <h4 class="first-screen-form__title">
+          Заполните форму и наш менеджер свяжется с вами
+        </h4>
+
+        <label class="first-screen-form__label">
+          <span>Введите имя</span>
+          <input type="text" placeholder="Имя" />
+        </label>
+
+        <label class="first-screen-form__label">
+          <span>Введите номер телефона</span>
+          <input type="text" placeholder="+7 (990) 111-11-11" />
+        </label>
+
+        <input class="button button-primary" type="submit" value="Отправить" />
+      </form>
+    </div>
+
+    <script src="./js/index.js"></script>
   </body>
 </html>
