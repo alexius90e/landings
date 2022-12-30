@@ -38,11 +38,9 @@ detailedNav.addEventListener('click', (event) => {
   currentTab.classList.add('active');
   detailedNavButtons.forEach((button) => button.classList.remove('active'));
   event.target.classList.add('active');
-  console.log(event.target.id);
 });
 
 const commentModal = document.getElementById('comment-modal');
-console.log(commentModal);
 
 const commentButton = document.querySelector('#comment-button');
 

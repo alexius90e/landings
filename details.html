@@ -34,6 +34,32 @@
           <a href="https://hheads.by/">hheads.by</a>
         </p>
         <h3 class="company-info__position">Номер в рейтинге: <span>3</span></h3>
+
+        <form
+          class="first-screen-form"
+          onsubmit="(event) => console.log(event)"
+        >
+          <h4 class="first-screen-form__title">
+            Заполните форму и наш менеджер свяжется с вами
+          </h4>
+
+          <label class="first-screen-form__label">
+            <span>Введите имя</span>
+            <input type="text" placeholder="Имя" />
+          </label>
+
+          <label class="first-screen-form__label">
+            <span>Введите номер телефона</span>
+            <input type="text" placeholder="+7 (990) 111-11-11" />
+          </label>
+
+          <input
+            class="button button-primary"
+            type="submit"
+            value="Отправить"
+          />
+        </form>
+
         <nav class="company-info__nav">
           <button class="button button-secondary active" id="about">
             О компании
@@ -113,7 +139,7 @@
           </div>
         </article>
 
-        <article id="contacts-tab" class="company-info__tab  contacts">
+        <article id="contacts-tab" class="company-info__tab contacts">
           <div class="container">
             <h3>Контакты компании</h3>
             <p class="contacts__location">
