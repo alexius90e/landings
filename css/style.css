@@ -5,7 +5,7 @@ html {
   --reversed-bg-gradient: linear-gradient(0deg, #0376c9 1.52%, #02b5cd 100%);
 
   font-family: 'Lato', sans-serif;
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 body {
@@ -34,10 +34,10 @@ a {
 
 input[type='text'] {
   width: fit-content;
-  padding: 15px 25px;
+  padding: 0.9375rem 1.5625rem;
   background: none;
-  border: 1px solid #d3d3d3;
-  border-radius: 5px;
+  border: 0.0625rem solid #d3d3d3;
+  border-radius: 0.3125rem;
   color: #1b1b1b;
 }
 
@@ -49,12 +49,12 @@ input[type='text'] {
   }
 
   p {
-    font-size: 15px;
-    line-height: 18px;
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
   }
 
   input[type='text'] {
-    padding: 15px 25px;
+    padding: 0.9375rem 1.5625rem;
     background: none;
   }
 }
@@ -66,12 +66,12 @@ input[type='text'] {
   }
 
   p {
-    font-size: 14px;
-    line-height: 17px;
+    font-size: 0.875rem;
+    line-height: 1.0625rem;
   }
 
   input[type='text'] {
-    padding: 15px 25px;
+    padding: 0.9375rem 1.5625rem;
     background: none;
   }
 }
@@ -109,17 +109,17 @@ input[type='text'] {
 }
 
 .button-secondary {
-  border: 1px solid #0376c9;
-  border-radius: 30px;
+  border: 0.0625rem solid #0376c9;
+  border-radius: 1.875rem;
   background-color: #ffffff;
   color: #1b1b1b;
 }
 
 .button-secondary.active {
   background-color: #0376c9;
-  border: 1px solid #0376c9;
-  border-radius: 30px;
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.15);
+  border: 0.0625rem solid #0376c9;
+  border-radius: 1.875rem;
+  box-shadow: 0.3125rem 0.3125rem 0.9375rem rgba(0, 0, 0, 0.15);
   color: #ffffff;
 }
 
@@ -161,7 +161,7 @@ a.button-primary:hover {
   right: 0;
   z-index: 5;
   color: #ffffff;
-  border-bottom: 1px solid #4f4f4f;
+  border-bottom: 0.0625rem solid #4f4f4f;
 }
 
 .header > .container {
@@ -361,7 +361,7 @@ a.button-primary:hover {
   box-sizing: border-box;
   width: 100%;
   padding: 1rem 1.25rem;
-  border: 1px solid #d3d3d3;
+  border: 0.0625rem solid #d3d3d3;
   background: none;
   border-radius: 0.375rem;
   color: #fbfbfb;
@@ -425,19 +425,19 @@ a.button-primary:hover {
   align-items: center;
   gap: 2.5rem;
   margin-bottom: 1.25rem;
-  padding: 30px 40px;
+  padding: 1.875rem 2.5rem;
   background: #fbfbfb;
-  border: 1px solid #d3d3d3;
-  box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.5),
-    5px 5px 15px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
+  border: 0.0625rem solid #d3d3d3;
+  box-shadow: -0.3125rem -0.3125rem 0.9375rem rgba(255, 255, 255, 0.5),
+    0.3125rem 0.3125rem 0.9375rem rgba(0, 0, 0, 0.1);
+  border-radius: 0.625rem;
 }
 
 .rating-card__position {
   width: 3rem;
   font-weight: 700;
-  font-size: 24px;
-  line-height: 29px;
+  font-size: 1.5rem;
+  line-height: 1.8125rem;
   color: #1b1b1b;
 }
 
@@ -496,8 +496,8 @@ a.button-primary:hover {
 .rating-card__title {
   flex: 1 0 50%;
   margin: 0;
-  font-size: 16px;
-  line-height: 19px;
+  font-size: 1rem;
+  line-height: 1.1875rem;
 }
 
 .rating-card__title,
@@ -515,8 +515,8 @@ a.button-primary:hover {
 .rating-card__info > a {
   flex: 0 0 50%;
   display: flex;
-  font-size: 16px;
-  line-height: 19px;
+  font-size: 1rem;
+  line-height: 1.1875rem;
   text-decoration: none;
   color: #4f4f4f;
 }
@@ -533,7 +533,7 @@ a.button-primary:hover {
 
   .rating-card__position {
     font-size: 1.25rem;
-    line-height: 24px;
+    line-height: 1.5rem;
   }
 
   .rating-card__icon {
@@ -550,8 +550,8 @@ a.button-primary:hover {
 
   .rating-card__title,
   .rating-card__info > a {
-    font-size: 15px;
-    line-height: 18px;
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
   }
 }
 
@@ -566,8 +566,8 @@ a.button-primary:hover {
   }
 
   .rating-card__position {
-    font-size: 16px;
-    line-height: 19px;
+    font-size: 1rem;
+    line-height: 1.1875rem;
   }
 
   .rating-card__icon {
@@ -595,8 +595,8 @@ a.button-primary:hover {
 
   .rating-card__title,
   .rating-card__info > a {
-    font-size: 13px;
-    line-height: 16px;
+    font-size: 0.8125rem;
+    line-height: 1rem;
   }
 }
 
@@ -604,10 +604,10 @@ a.button-primary:hover {
 
 .horizontal-form-wrapper {
   margin: 7.5rem 0;
-  padding: 50px;
-  border: 1px solid #d3d3d3;
-  box-shadow: 5px 5px 1.25rem rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
+  padding: 3.125rem;
+  border: 0.0625rem solid #d3d3d3;
+  box-shadow: 0.3125rem 0.3125rem 1.25rem rgba(0, 0, 0, 0.1);
+  border-radius: 0.625rem;
   background: var(--main-bg-gradient);
 }
 
@@ -615,8 +615,8 @@ a.button-primary:hover {
   max-width: 35rem;
   margin-top: 0;
   font-weight: 700;
-  font-size: 30px;
-  line-height: 36px;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
   color: #ffffff;
 }
 
@@ -652,8 +652,8 @@ a.button-primary:hover {
   margin-left: 5%;
   color: #0376c9;
   background: #ffffff;
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.15);
-  border-radius: 30px;
+  box-shadow: 0.3125rem 0.3125rem 0.9375rem rgba(0, 0, 0, 0.15);
+  border-radius: 1.875rem;
 }
 
 @media (max-width: 992px) {
@@ -670,7 +670,7 @@ a.button-primary:hover {
 
   .horizontal-form-wrapper {
     margin-bottom: 7.5rem;
-    padding: 40px;
+    padding: 2.5rem;
   }
 
   .horizontal-form .button {
@@ -686,7 +686,7 @@ a.button-primary:hover {
 
   .horizontal-form-wrapper {
     margin-bottom: 7.5rem;
-    padding: 30px 25px;
+    padding: 1.875rem 1.5625rem;
   }
 }
 
@@ -770,8 +770,8 @@ a.button-primary:hover {
   }
 
   .footer__nav > a {
-    font-size: 13px;
-    line-height: 16px;
+    font-size: 0.8125rem;
+    line-height: 1rem;
   }
 }
 
@@ -797,7 +797,7 @@ a.button-primary:hover {
 }
 
 .modal {
-  width: 500px;
+  width: 31.25rem;
   max-width: calc(100% - 2rem);
   margin: auto;
   background-color: #ffffff;
@@ -808,19 +808,19 @@ a.button-primary:hover {
 
 .company-info {
   position: relative;
-  margin-top: 80px;
-  margin-bottom: 60px;
+  margin-top: 5rem;
+  margin-bottom: 3.75rem;
 }
 
 .company-info > .first-screen-form {
   position: absolute;
   top: 0;
   right: 2.5rem;
-  width: 410px;
+  width: 25.625rem;
   box-sizing: border-box;
   background: #ffffff;
-  border: 1px solid #d3d3d3;
-  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+  border: 0.0625rem solid #d3d3d3;
+  box-shadow: 0.3125rem 0.3125rem 1.25rem rgba(0, 0, 0, 0.1);
 }
 
 .company-info .first-screen-form__label,
@@ -866,29 +866,29 @@ a.button-primary:hover {
 }
 
 .company-info__title {
-  margin-bottom: 30px;
+  margin-bottom: 1.875rem;
   font-weight: 600;
-  font-size: 40px;
-  line-height: 48px;
+  font-size: 2.5rem;
+  line-height: 3rem;
 }
 
 .company-info__site {
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
 }
 
 .company-info__site > a {
   font-weight: 400;
-  font-size: 16px;
-  line-height: 19px;
+  font-size: 1rem;
+  line-height: 1.1875rem;
   color: #1b1b1b;
   text-decoration: none;
 }
 
 .company-info__position {
-  margin-bottom: 50px;
+  margin-bottom: 3.125rem;
   font-weight: 700;
-  font-size: 18px;
-  line-height: 22px;
+  font-size: 1.125rem;
+  line-height: 1.375rem;
 }
 
 .company-info__position > span {
@@ -897,43 +897,43 @@ a.button-primary:hover {
 
 .company-info__nav {
   display: flex;
-  gap: 25px;
-  max-width: 740px;
-  margin-bottom: 60px;
+  gap: 1.5625rem;
+  max-width: 46.25rem;
+  margin-bottom: 3.75rem;
   padding-top: 1.25rem;
-  border-top: 1px solid #cbcbcb;
+  border-top: 0.0625rem solid #cbcbcb;
 }
 
 @media (max-width: 768px) {
   .company-info__nav {
-    gap: 20px;
+    gap: 1.25rem;
   }
 
   .company-info__nav > .button {
-    padding: 15px 30px;
-    font-size: 16px;
-    line-height: 19px;
+    padding: 0.9375rem 1.875rem;
+    font-size: 1rem;
+    line-height: 1.1875rem;
   }
 }
 
 @media (max-width: 576px) {
   .company-info__nav {
     justify-content: space-between;
-    gap: 5px;
+    gap: 0.3125rem;
   }
 
   .company-info__nav > .button {
     flex: 1 1 33%;
-    padding: 10px 0;
-    font-size: 12px;
-    line-height: 14px;
+    padding: 0.625rem 0;
+    font-size: 0.75rem;
+    line-height: 0.875rem;
   }
 }
 
 .company-info__tab {
   display: none;
-  font-size: 16px;
-  line-height: 20px;
+  font-size: 1rem;
+  line-height: 1.25rem;
 }
 
 .company-info__tab.active {
@@ -941,10 +941,10 @@ a.button-primary:hover {
 }
 
 .company-info__tab h3 {
-  margin: 0 0 30px;
+  margin: 0 0 1.875rem;
   font-weight: 600;
-  font-size: 28px;
-  line-height: 34px;
+  font-size: 1.75rem;
+  line-height: 2.125rem;
 }
 
 .company-info__tab ul {
@@ -958,8 +958,8 @@ a.button-primary:hover {
 /* about tab */
 
 .about__info {
-  margin-bottom: 80px;
-  max-width: calc(100% - 460px);
+  margin-bottom: 5rem;
+  max-width: calc(100% - 28.75rem);
 }
 
 @media (max-width: 992px) {
@@ -969,24 +969,24 @@ a.button-primary:hover {
 }
 
 .about__statistics {
-  padding: 30px 0;
+  padding: 1.875rem 0;
   background-color: #f7f7f7;
 }
 
 .about__statistics > .container {
   display: flex;
   flex-wrap: wrap;
-  gap: 80px;
+  gap: 5rem;
 }
 
 .about__chart {
-  flex: 0 0 900px;
-  max-width: 900px;
+  flex: 0 0 56.25rem;
+  max-width: 56.25rem;
 }
 
 .about__legends {
   display: flex;
-  gap: 30px;
+  gap: 1.875rem;
 }
 
 .about__legend_develop {
@@ -998,16 +998,16 @@ a.button-primary:hover {
 }
 
 .about__legend > h5 {
-  margin: 0 0 10px;
-  font-size: 16px;
-  line-height: 19px;
+  margin: 0 0 0.625rem;
+  font-size: 1rem;
+  line-height: 1.1875rem;
 }
 
 .about__legend > p {
   margin: 0;
   font-weight: 700;
-  font-size: 46px;
-  line-height: 55px;
+  font-size: 2.875rem;
+  line-height: 3.4375rem;
 }
 
 @media (max-width: 992px) {
@@ -1023,10 +1023,10 @@ a.button-primary:hover {
 .contacts__location,
 .contacts__phone,
 .contacts__site {
-  padding-left: 44px;
+  padding-left: 2.75rem;
   background-position: left center;
   background-repeat: no-repeat;
-  line-height: 25px;
+  line-height: 1.5625rem;
 }
 
 .contacts__location > a,
@@ -1037,8 +1037,8 @@ a.button-primary:hover {
 }
 
 .contacts__map {
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 1.875rem;
+  padding-bottom: 1.875rem;
   background-color: #f7f7f7;
 }
 
@@ -1051,7 +1051,7 @@ a.button-primary:hover {
 }
 
 .contacts__site {
-  margin-bottom: 56px;
+  margin-bottom: 3.5rem;
   background-image: url(../assets/icons/dashicons_admin-site-alt2.svg);
 }
 
@@ -1060,7 +1060,7 @@ a.button-primary:hover {
   box-sizing: border-box;
   width: 100%;
   padding: 1rem 1.25rem;
-  border: 1px solid #d3d3d3;
+  border: 0.0625rem solid #d3d3d3;
   background: none;
   border-radius: 0.375rem;
 }
