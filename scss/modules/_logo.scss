@@ -1,0 +1,12 @@
+.logo {
+  flex: 0 0 9.1875rem;
+  width: 9.1875rem;
+  height: 2.5rem;
+  background: url(../../assets/ax-pro-logo.png) center no-repeat;
+  cursor: pointer;
+
+  @include laptop {
+    width: 6.875rem;
+    height: 1.875rem;
+  }
+}

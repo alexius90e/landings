@@ -1,6 +1,8 @@
-@import '../vars';
+@import '../base/vars';
+@import '../base/mixins';
 
 .button {
+  min-width: max-content;
   padding: 0.625rem 2.5rem;
   font-weight: 700;
   font-size: 1rem;
@@ -10,6 +12,12 @@
   border-radius: 1.875rem;
   border: none;
   cursor: pointer;
+
+  @include laptop {
+    padding: 0.625rem 1.5rem;
+    font-size: 0.875rem;
+    line-height: 1.0625rem;
+  }
 
   &:hover {
     background: $purpleHover;

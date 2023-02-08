@@ -1,4 +1,152 @@
+@font-face {
+  font-family: "Century Gothic";
+  src: url("../../fonts/centurygothic.ttf");
+}
+html {
+  font-size: 16px;
+  font-family: "Century Gothic", "Segoe UI", Tahoma, Verdana, sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  color: #ffffff;
+  background-color: #070707;
+}
+.header > .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.875rem;
+  width: 100%;
+  max-width: 72rem;
+  padding: 0.9375rem 6.25rem;
+}
+@media (max-width: 1000px) {
+  .header > .container {
+    gap: 1.25rem;
+    padding-left: 3.125rem;
+    padding-right: 3.125rem;
+  }
+}
+@media (max-width: 768px) {
+  .header > .container {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+@media (max-width: 480px) {
+  .header > .container {
+    padding-left: 1.875rem;
+    padding-right: 1.875rem;
+  }
+}
+@media (max-width: 360px) {
+  .header > .container {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}
+.header__nav {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+@media (max-width: 768px) {
+  .header__nav {
+    display: none;
+  }
+}
+.header__nav > ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.875rem;
+  padding: 0;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+}
+@media (max-width: 1000px) {
+  .header__nav > ul {
+    gap: 1.25rem;
+  }
+}
+@media (max-width: 1000px) {
+  .header__nav > ul {
+    font-size: 0.875rem;
+    line-height: 1.0625rem;
+  }
+}
+.header__nav > ul > li {
+  list-style: none;
+}
+.header__nav > ul > li.active {
+  font-weight: 700;
+}
+.header__nav > ul > li.toggler {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.625rem;
+}
+.header__nav > ul > li.toggler::after {
+  content: "";
+  display: block;
+  width: 0.625rem;
+  height: 0.625rem;
+  background: url(../../assets/icons/icon_toggler.svg) center no-repeat;
+}
+.header__nav > ul a {
+  color: #ffffff;
+  text-decoration: none;
+}
+.header__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.875rem;
+}
+@media (max-width: 1000px) {
+  .header__buttons {
+    gap: 1.25rem;
+  }
+}
+@media (max-width: 768px) {
+  .header .button {
+    display: none;
+  }
+}
+
 .button {
+  min-width: -webkit-max-content;
+  min-width: -moz-max-content;
+  min-width: max-content;
   padding: 0.625rem 2.5rem;
   font-weight: 700;
   font-size: 1rem;
@@ -9,9 +157,61 @@
   border: none;
   cursor: pointer;
 }
+@media (max-width: 1000px) {
+  .button {
+    padding: 0.625rem 1.5rem;
+    font-size: 0.875rem;
+    line-height: 1.0625rem;
+  }
+}
 .button:hover {
   background: #804aa1;
 }
 .button:active {
   background: #764097;
+}
+
+.logo {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 9.1875rem;
+          flex: 0 0 9.1875rem;
+  width: 9.1875rem;
+  height: 2.5rem;
+  background: url(../../assets/ax-pro-logo.png) center no-repeat;
+  cursor: pointer;
+}
+@media (max-width: 1000px) {
+  .logo {
+    width: 6.875rem;
+    height: 1.875rem;
+  }
+}
+
+.icon-button {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  width: 1.25rem;
+  height: 1.25rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  cursor: pointer;
+}
+.icon-button_search {
+  background-image: url(../../assets/icons/icon_search.svg);
+}
+.icon-button_basket {
+  background-image: url(../../assets/icons/icon_basket.svg);
+}
+.icon-button_menu {
+  display: none;
+  background-image: url(../../assets/icons/icon_menu.svg);
+}
+@media (max-width: 768px) {
+  .icon-button_menu {
+    display: block;
+  }
 }
