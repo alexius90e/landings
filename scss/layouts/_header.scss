@@ -1,12 +1,14 @@
-@import '../base/vars';
-@import '../base/mixins';
-
 .header {
   display: flex;
   justify-content: center;
   width: 100%;
   color: $white;
   background-color: $black;
+
+  & a {
+    color: $white;
+    text-decoration: none;
+  }
 
   & > .container {
     display: flex;
@@ -84,11 +86,6 @@
               no-repeat;
           }
         }
-      }
-
-      & a {
-        color: $white;
-        text-decoration: none;
       }
     }
   }
