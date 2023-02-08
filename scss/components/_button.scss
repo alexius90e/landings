@@ -1,0 +1,21 @@
+@import '../vars';
+
+.button {
+  padding: 0.625rem 2.5rem;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  color: #ffffff;
+  background: $purple;
+  border-radius: 1.875rem;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background: $purpleHover;
+  }
+
+  &:active {
+    background: $purpleActive;
+  }
+}
