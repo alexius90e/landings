@@ -354,6 +354,17 @@ input {
 .button:active {
   background: #764097;
 }
+.button_large {
+  padding: 0.9375rem 3.125rem;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+@media (max-width: 1000px) {
+  .button_large {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
 
 .logo {
   -webkit-box-flex: 0;
