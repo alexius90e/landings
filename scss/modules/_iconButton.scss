@@ -25,4 +25,15 @@
       display: block;
     }
   }
+
+  &_phone {
+    display: block;
+    background-image: url(../../assets/icons/icon_phone.svg);
+    cursor: default;
+  }
+
+  &_mail {
+    background-image: url(../../assets/icons/icon_mail.svg);
+    cursor: default;
+  }
 }
