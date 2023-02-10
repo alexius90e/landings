@@ -18,6 +18,39 @@ input {
   font-family: "Century Gothic", "Segoe UI", Tahoma, Verdana, sans-serif;
 }
 
+input[type=text],
+input[type=tel],
+input[type=email],
+input[type=number],
+input[type=password],
+input[type=search] {
+  padding: 0.9375rem 1.5625rem;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1rem;
+  color: #070707;
+  background: #ffffff;
+  outline-color: rgba(161, 74, 156, 0.2);
+  border: 0.0625rem solid #a5a5a5;
+  border-radius: 1.875rem;
+}
+
+input[type=checkbox] {
+  display: block;
+}
+input[type=checkbox]::before {
+  content: "";
+  display: block;
+  width: 1.25rem;
+  height: 1.25rem;
+  background: #ffffff;
+  border: 0.0625rem solid #a5a5a5;
+  border-radius: 0.1875rem;
+}
+input[type=checkbox]:checked::before {
+  background-color: #a14a9c;
+}
+
 .top-contacts {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -945,6 +978,140 @@ input {
 .cases .swiper-pagination-bullet-active {
   background-color: #a14a9c;
   border-color: #a14a9c;
+}
+
+.consult-form {
+  color: #ffffff;
+}
+.consult-form__wrapper {
+  padding: 4.0625rem 4.375rem;
+  background: url(../../assets/formbackground.jpg) center no-repeat;
+  background-size: cover;
+  border: 0.0625rem solid #a5a5a5;
+  border-radius: 0.625rem;
+}
+@media (max-width: 1000px) {
+  .consult-form__wrapper {
+    padding: 3.75rem 3.125rem;
+  }
+}
+@media (max-width: 768px) {
+  .consult-form__wrapper {
+    padding: 3.75rem 2.1875rem;
+  }
+}
+@media (max-width: 360px) {
+  .consult-form__wrapper {
+    padding: 2.5rem 1.875rem;
+  }
+}
+.consult-form .main__heading {
+  margin-bottom: 0.625rem;
+  text-align: left;
+  color: #ffffff;
+}
+@media (max-width: 768px) {
+  .consult-form .main__heading {
+    text-align: center;
+  }
+}
+.consult-form .main__description {
+  margin-bottom: 3.75rem;
+  text-align: left;
+  color: #ffffff;
+}
+@media (max-width: 768px) {
+  .consult-form .main__description {
+    text-align: center;
+  }
+}
+@media (max-width: 480px) {
+  .consult-form .main__description {
+    margin-bottom: 3.125rem;
+  }
+}
+.consult-form__fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+.consult-form__fieldset_top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 1.25rem;
+  margin: 0 0 1.875rem;
+}
+@media (max-width: 768px) {
+  .consult-form__fieldset_top {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+@media (max-width: 768px) {
+  .consult-form__fieldset_top input, .consult-form__fieldset_top button {
+    width: 100%;
+    max-width: 21.875rem;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+}
+@media (max-width: 768px) {
+  .consult-form__fieldset_top button {
+    margin: 1.25rem 0 0;
+  }
+}
+.consult-form__label_input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+@media (max-width: 768px) {
+  .consult-form__label_input {
+    width: 100%;
+    max-width: 21.875rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+.consult-form__label_input > span {
+  margin-bottom: 0.6875rem;
+}
+.consult-form__label_checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.9375rem;
+}
+@media (max-width: 768px) {
+  .consult-form__label_checkbox {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+.consult-form__label_checkbox input[type=checkbox] {
+  height: 1.375rem;
+  width: 1.375rem;
+  cursor: pointer;
 }
 
 .button {

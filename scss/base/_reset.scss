@@ -18,3 +18,38 @@ button,
 input {
   font-family: 'Century Gothic', 'Segoe UI', Tahoma, Verdana, sans-serif;
 }
+
+input[type='text'],
+input[type='tel'],
+input[type='email'],
+input[type='number'],
+input[type='password'],
+input[type='search'] {
+  padding: 0.9375rem 1.5625rem;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1rem;
+  color: $black;
+  background: $white;
+  outline-color: rgba($color: $purple, $alpha: 0.2);
+  border: 0.0625rem solid $grey;
+  border-radius: 1.875rem;
+}
+
+input[type='checkbox'] {
+  display: block;
+
+  &::before {
+    content: '';
+    display: block;
+    width: 1.25rem;
+    height: 1.25rem;
+    background: $white;
+    border: 0.0625rem solid $grey;
+    border-radius: 0.1875rem;
+  }
+
+  &:checked::before {
+    background-color: $purple;
+  }
+}
