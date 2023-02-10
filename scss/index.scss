@@ -1,8 +1,8 @@
 // Base
 
+@import './base/vars';
 @import './base/reset';
 @import './base/mixins';
-@import './base/vars';
 
 // Layouts
 
@@ -12,6 +12,7 @@
 @import './layouts/main';
 @import './layouts/benefits';
 @import './layouts/categories';
+@import './layouts/info';
 
 // Modules
 
