@@ -5,12 +5,16 @@
     display: flex;
     flex-wrap: wrap;
     gap: 1.25rem 2.5rem;
-    margin: 0;
-    padding: 0 0 30px;
-    border-bottom: 1px solid $grey50;
+    margin: 0 0 3.125rem;
+    padding: 0 0 1.875rem;
+    border-bottom: 0.0625rem solid $grey50;
 
     @include laptop {
       gap: 1.25rem 1.875rem;
+    }
+
+    @include tablet {
+      margin: 0 0 1.875rem;
     }
 
     @include iphone {
@@ -25,6 +29,83 @@
         font-weight: 700;
         color: $purple;
       }
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    gap: 1.25rem;
+
+    @include laptop {
+      display: block;
+    }
+  }
+
+  &__filter {
+    flex: 0 1 19.375rem;
+    max-width: 19.375rem;
+    padding: 1.875rem;
+    background: $white;
+    border: 0.0625rem solid $grey;
+    border-radius: 0.625rem;
+    box-sizing: border-box;
+
+    @include laptop {
+      display: none;
+    }
+
+    &-toggler {
+      display: none;
+      margin-bottom: 1.25rem;
+      padding: 0;
+      font-weight: 700;
+      font-size: 1rem;
+      line-height: 1.25rem;
+      text-decoration: underline;
+      background: none;
+      border: none;
+      cursor: pointer;
+
+      @include laptop {
+        display: block;
+      }
+    }
+
+    &-selects {
+      display: flex;
+      flex-direction: column;
+      gap: 0.625rem;
+      margin: 1.25rem 0 1.875rem;
+    }
+
+    &-price {
+      display: flex;
+      align-items: center;
+      gap: 0.625rem;
+      margin-bottom: 2.5rem;
+
+      &-label {
+        flex: 1 0 auto;
+        font-weight: 400;
+        font-size: 0.875rem;
+        line-height: 1.0625rem;
+        padding: 0.9375rem 1.25rem;
+        border: 0.0625rem solid $grey;
+        border-radius: 1.875rem;
+      }
+    }
+  }
+
+  &__container {
+    flex: 1 0 auto;
+  }
+
+  &__sorting {
+    &-title {
+      font-weight: 400;
+      font-size: 0.875rem;
+      line-height: 1.0625rem;
+      margin: 0 0 1.25rem;
     }
   }
 }
