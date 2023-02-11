@@ -33,6 +33,8 @@ const casesSwiper = new Swiper('.cases .swiper', {
   },
 });
 
+// searchBar
+
 const searchBar = document.querySelector('.search-bar');
 const searchBarToggler = document.querySelector('.header .icon-button_search');
 const searchBarCloseButton = document.querySelector('.search-bar__close');
@@ -44,3 +46,27 @@ searchBarToggler.addEventListener('click', () => {
 searchBarCloseButton.addEventListener('click', () => {
   searchBar.classList.remove('active');
 });
+
+// catalogTypes
+
+const catalogTypesBlock = document.querySelector('.catalog__types');
+const allCatalogTypesButton = document.querySelector('.catalog__type_all');
+
+if (catalogTypesBlock)
+  catalogTypesBlock.addEventListener('click', (event) => {
+    const catalogTypesList = [...catalogTypesBlock.children];
+
+    if (event.target === allCatalogTypesButton) {
+      catalogTypesList.forEach((element) => element.classList.remove('active'));
+      event.target.classList.add('active');
+    } else {
+      event.target.classList.toggle('active');
+    }
+
+    const countOfActive = catalogTypesList.filter((item) =>
+      item.classList.contains('active')
+    ).length;
+
+    if (countOfActive > 1) allCatalogTypesButton.classList.remove('active');
+    if (countOfActive === 0) allCatalogTypesButton.classList.add('active');
+  });

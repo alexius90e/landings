@@ -1372,6 +1372,39 @@ input[type=checkbox]:checked::before {
           transform: rotate(90deg);
 }
 
+.catalog {
+  margin-top: 3.3125rem;
+}
+.catalog__types {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 1.25rem 2.5rem;
+  margin: 0;
+  padding: 0 0 30px;
+  border-bottom: 1px solid #e1e1e1;
+}
+@media (max-width: 1000px) {
+  .catalog__types {
+    gap: 1.25rem 1.875rem;
+  }
+}
+@media (max-width: 480px) {
+  .catalog__types {
+    gap: 1.25rem 1.5625rem;
+  }
+}
+.catalog__types > li {
+  list-style-type: none;
+  cursor: pointer;
+}
+.catalog__types > li.active {
+  font-weight: 700;
+  color: #a14a9c;
+}
+
 .button {
   min-width: -webkit-max-content;
   min-width: -moz-max-content;

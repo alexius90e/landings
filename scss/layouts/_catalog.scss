@@ -1,0 +1,30 @@
+.catalog {
+  margin-top: 3.3125rem;
+
+  &__types {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem 2.5rem;
+    margin: 0;
+    padding: 0 0 30px;
+    border-bottom: 1px solid $grey50;
+
+    @include laptop {
+      gap: 1.25rem 1.875rem;
+    }
+
+    @include iphone {
+      gap: 1.25rem 1.5625rem;
+    }
+
+    & > li {
+      list-style-type: none;
+      cursor: pointer;
+
+      &.active {
+        font-weight: 700;
+        color: $purple;
+      }
+    }
+  }
+}
