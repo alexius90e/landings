@@ -459,6 +459,64 @@ input[type=checkbox]:checked::before {
           transform: rotate(180deg);
 }
 
+.menu {
+  margin: 1.25rem 0;
+  padding: 0;
+}
+.menu.hidden {
+  display: none;
+}
+.menu ul {
+  margin: 0;
+  padding: 0;
+}
+.menu li {
+  margin-bottom: 0.625rem;
+  list-style-type: none;
+}
+.menu li:last-child {
+  margin: 0;
+}
+.menu .menu__sub-menu {
+  display: none;
+  padding-left: 1.5625rem;
+}
+.menu__sub-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 0.625rem;
+}
+.menu__sub-toggler {
+  display: block;
+  height: 1rem;
+  width: 1rem;
+  background-color: #ffffff;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 0.625rem;
+  background-image: url(../../assets/icons/icon_toggler-black.svg);
+  border: none;
+  -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-transition: all linear 0.2s;
+  -o-transition: all linear 0.2s;
+  transition: all linear 0.2s;
+  cursor: pointer;
+}
+.menu__sub-toggler.active {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
 .top-contacts {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1842,6 +1900,60 @@ input[type=checkbox]:checked::before {
   .catalog__filter {
     display: none;
   }
+}
+.catalog__filter-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 0 1.875rem;
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1.5625rem;
+}
+.catalog__filter-menu {
+  padding: 0.25rem 0;
+  border-top: 1px solid #e1e1e1;
+  border-bottom: 1px solid #e1e1e1;
+}
+.catalog__filter-menu-toggler {
+  display: block;
+  height: 1rem;
+  width: 1rem;
+  background-color: #ffffff;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 0.625rem;
+  background-image: url(../../assets/icons/icon_toggler-black.svg);
+  border: none;
+  -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-transition: all linear 0.2s;
+  -o-transition: all linear 0.2s;
+  transition: all linear 0.2s;
+  cursor: pointer;
+}
+.catalog__filter-menu-toggler.active {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.catalog__filter-button_reset {
+  padding: 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  text-decoration-line: underline;
+  background-color: #ffffff;
+  border: none;
+  cursor: pointer;
 }
 .catalog__filter-toggler {
   display: none;

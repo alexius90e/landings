@@ -91,170 +91,53 @@
 
           <div class="catalog__wrapper">
             <div class="catalog__filter">
-              <h4>Каталог</h4>
+              <h4 class="catalog__filter-title catalog__filter-title_catalog">
+                <span>Каталог</span>
+                <button class="catalog__filter-menu-toggler active"></button>
+              </h4>
 
-              <ul class="catalog__filter-nav">
-                <li>Контрольные панели</li>
-                <li>Интеграция</li>
-                <li>Кранштейны</li>
-                <li>
-                  <div>Оповещение</div>
-                  <ul>
-                    <li>Сирены</li>
-                    <li>Тревожные кнопки</li>
-                  </ul>
-                </li>
-                <li>
-                  <div>Датчики</div>
-                  <ul>
-                    <li>Сирены</li>
-                    <li>Тревожные кнопки</li>
-                  </ul>
-                </li>
-                <li>Управление</li>
-                <li>Автоматизация</li>
-                <li>Комплекты</li>
-              </ul>
-
-              <div class="catalog__filter-selects">
-                <div class="itc-select" id="moduleSelect">
-                  <button
-                    type="button"
-                    class="itc-select__toggle"
-                    name="car"
-                    value=""
-                    data-select="toggle"
-                    data-index="-1"
-                  >
-                    Модуль
-                  </button>
-
-                  <div class="itc-select__dropdown">
-                    <ul class="itc-select__options">
-                      <li
-                        class="itc-select__option"
-                        data-select="option"
-                        data-value="volkswagen"
-                        data-index="0"
-                      >
-                        Модуль 1
-                      </li>
-                      <li
-                        class="itc-select__option"
-                        data-select="option"
-                        data-value="toyota"
-                        data-index="2"
-                      >
-                        Модуль 2
-                      </li>
+              <div class="catalog__filter-menu">
+                <ul class="menu">
+                  <li>Контрольные панели</li>
+                  <li>Интеграция</li>
+                  <li>Кранштейны</li>
+                  <li>
+                    <div class="menu__sub-title">
+                      <span>Оповещение</span>
+                      <button class="menu__sub-toggler"></button>
+                    </div>
+                    <ul class="menu__sub-menu">
+                      <li>Сирены</li>
+                      <li>Тревожные кнопки</li>
                     </ul>
-                  </div>
-                </div>
-
-                <div class="itc-select" id="gsmSelect">
-                  <button
-                    type="button"
-                    class="itc-select__toggle"
-                    name="car"
-                    value=""
-                    data-select="toggle"
-                    data-index="-1"
-                  >
-                    GSM
-                  </button>
-
-                  <div class="itc-select__dropdown">
-                    <ul class="itc-select__options">
-                      <li
-                        class="itc-select__option"
-                        data-select="option"
-                        data-value="volkswagen"
-                        data-index="0"
-                      >
-                        GSM 750
-                      </li>
-                      <li
-                        class="itc-select__option"
-                        data-select="option"
-                        data-value="toyota"
-                        data-index="2"
-                      >
-                        GSM 1500
-                      </li>
+                  </li>
+                  <li>
+                    <div class="menu__sub-title">
+                      <span>Датчики</span>
+                      <button class="menu__sub-toggler"></button>
+                    </div>
+                    <ul class="menu__sub-menu">
+                      <li>Уличные</li>
+                      <li>Внутренние</li>
                     </ul>
-                  </div>
-                </div>
-
-                <div class="itc-select" id="frequencySelect">
-                  <button
-                    type="button"
-                    class="itc-select__toggle"
-                    name="car"
-                    value=""
-                    data-select="toggle"
-                    data-index="-1"
-                  >
-                    Рабочая частота
-                  </button>
-
-                  <div class="itc-select__dropdown">
-                    <ul class="itc-select__options">
-                      <li
-                        class="itc-select__option"
-                        data-select="option"
-                        data-value="volkswagen"
-                        data-index="0"
-                      >
-                        850 МГц
-                      </li>
-                      <li
-                        class="itc-select__option"
-                        data-select="option"
-                        data-value="toyota"
-                        data-index="2"
-                      >
-                        1800 МГц
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-
-                <div class="itc-select" id="supplySelect">
-                  <button
-                    type="button"
-                    class="itc-select__toggle"
-                    name="car"
-                    value=""
-                    data-select="toggle"
-                    data-index="-1"
-                  >
-                    Питание
-                  </button>
-
-                  <div class="itc-select__dropdown">
-                    <ul class="itc-select__options">
-                      <li
-                        class="itc-select__option"
-                        data-select="option"
-                        data-value="volkswagen"
-                        data-index="0"
-                      >
-                        220V AC
-                      </li>
-                      <li
-                        class="itc-select__option"
-                        data-select="option"
-                        data-value="toyota"
-                        data-index="2"
-                      >
-                        24V DC
-                      </li>
-                    </ul>
-                  </div>
-                </div>
+                  </li>
+                  <li>Управление</li>
+                  <li>Автоматизация</li>
+                  <li>Комплекты</li>
+                </ul>
               </div>
 
-              <h4>Цена</h4>
+              <div class="catalog__filter-selects">
+                <div class="itc-select" id="moduleSelect"></div>
+
+                <div class="itc-select" id="gsmSelect"></div>
+
+                <div class="itc-select" id="frequencySelect"></div>
+
+                <div class="itc-select" id="supplySelect"></div>
+              </div>
+
+              <h4 class="catalog__filter-title">Цена</h4>
 
               <div class="catalog__filter-price">
                 <div class="catalog__filter-price-label">от 2000</div>
@@ -262,7 +145,9 @@
                 <div class="catalog__filter-price-label">от 30000</div>
               </div>
 
-              <button>Сбросить фильтры</button>
+              <button class="catalog__filter-button_reset">
+                Сбросить фильтры
+              </button>
             </div>
 
             <div class="catalog__container">
@@ -273,109 +158,13 @@
 
                 <div class="catalog__sorting-container">
                   <div class="catalog__sorting-item">
-                    <div class="itc-select" id="priceSelect">
-                      <button
-                        type="button"
-                        class="itc-select__toggle"
-                        name="car"
-                        value=""
-                        data-select="toggle"
-                        data-index="-1"
-                      >
-                        По цене
-                      </button>
-
-                      <div class="itc-select__dropdown">
-                        <ul class="itc-select__options">
-                          <li
-                            class="itc-select__option"
-                            data-select="option"
-                            data-value="volkswagen"
-                            data-index="0"
-                          >
-                            Сначала дешевые
-                          </li>
-                          <li
-                            class="itc-select__option"
-                            data-select="option"
-                            data-value="toyota"
-                            data-index="2"
-                          >
-                            Сначала дорогие
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
+                    <div class="itc-select" id="priceSelect"></div>
                   </div>
                   <div class="catalog__sorting-item">
-                    <div class="itc-select" id="ratingSelect">
-                      <button
-                        type="button"
-                        class="itc-select__toggle"
-                        name="car"
-                        value=""
-                        data-select="toggle"
-                        data-index="-1"
-                      >
-                        По популярности
-                      </button>
-
-                      <div class="itc-select__dropdown">
-                        <ul class="itc-select__options">
-                          <li
-                            class="itc-select__option"
-                            data-select="option"
-                            data-value="volkswagen"
-                            data-index="0"
-                          >
-                            Более популярные
-                          </li>
-                          <li
-                            class="itc-select__option"
-                            data-select="option"
-                            data-value="toyota"
-                            data-index="2"
-                          >
-                            Менее популярные
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
+                    <div class="itc-select" id="ratingSelect"></div>
                   </div>
                   <div class="catalog__sorting-item">
-                    <div class="itc-select" id="nameSelect">
-                      <button
-                        type="button"
-                        class="itc-select__toggle"
-                        name="car"
-                        value=""
-                        data-select="toggle"
-                        data-index="-1"
-                      >
-                        По названию
-                      </button>
-
-                      <div class="itc-select__dropdown">
-                        <ul class="itc-select__options">
-                          <li
-                            class="itc-select__option"
-                            data-select="option"
-                            data-value="volkswagen"
-                            data-index="0"
-                          >
-                            от А до Я
-                          </li>
-                          <li
-                            class="itc-select__option"
-                            data-select="option"
-                            data-value="toyota"
-                            data-index="2"
-                          >
-                            от Я до А
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
+                    <div class="itc-select" id="nameSelect"></div>
                   </div>
                   <div
                     class="catalog__sorting-item catalog__sorting-item_buttons"

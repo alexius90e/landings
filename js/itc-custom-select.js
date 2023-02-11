@@ -7,11 +7,11 @@ export default class ItcCustomSelect {
   static DATA_TOGGLE = '[data-select="toggle"]';
 
   static template(params) {
-    const { name, options, targetValue } = params;
+    const { name, options, targetValue, content } = params;
     const items = [];
     let selectedIndex = -1;
     let selectedValue = '';
-    let selectedContent = 'Выберите из списка';
+    let selectedContent = content ?? 'Выберите из списка';
     options.forEach((option, index) => {
       let selectedClass = '';
       if (option[0] === targetValue) {
@@ -94,7 +94,7 @@ export default class ItcCustomSelect {
     if (selected) {
       selected.classList.remove(this.constructor.EL_OPTION_SELECTED);
     }
-    this._elToggle.textContent = 'Выберите из списка';
+    this._elToggle.textContent = this._params.content || 'Выберите из списка';
     this._elToggle.value = '';
     this._elToggle.dataset.index = '-1';
     this._el.dispatchEvent(new CustomEvent('itc.select.change'));

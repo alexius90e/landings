@@ -70,3 +70,16 @@ if (catalogTypesBlock)
     if (countOfActive > 1) allCatalogTypesButton.classList.remove('active');
     if (countOfActive === 0) allCatalogTypesButton.classList.add('active');
   });
+
+function handleSubMenuTogglerClick(e) {
+  const [, subMenu] = e.target.parentNode.parentNode.children;
+  const isSubMenuVisible = !e.target.classList.contains('active');
+  e.target.classList.toggle('active');
+  subMenu.style.display = isSubMenuVisible ? 'block' : 'none';
+}
+
+const subMenuTogglers = document.querySelectorAll('.menu__sub-toggler');
+
+subMenuTogglers.forEach((toggler) => {
+  toggler.addEventListener('click', handleSubMenuTogglerClick);
+});
