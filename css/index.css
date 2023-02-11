@@ -1761,9 +1761,92 @@ input[type=checkbox]:checked::before {
       -ms-flex: 1 0 auto;
           flex: 1 0 auto;
 }
+.catalog__sorting {
+  padding: 0 0 1.25rem;
+  margin: 0 0 2.5rem;
+  border-bottom: 1px solid #e1e1e1;
+}
 .catalog__sorting-title {
   font-weight: 400;
   font-size: 0.875rem;
   line-height: 1.0625rem;
   margin: 0 0 1.25rem;
+}
+.catalog__sorting-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.25rem;
+}
+@media (max-width: 768px) {
+  .catalog__sorting-container {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+.catalog__sorting-item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 calc((100% - 3.75rem) / 4);
+          flex: 1 0 calc((100% - 3.75rem) / 4);
+}
+@media (max-width: 768px) {
+  .catalog__sorting-item {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 calc((100% - 1.25rem) / 2);
+            flex: 1 0 calc((100% - 1.25rem) / 2);
+    max-width: calc((100% - 1.25rem) / 2);
+  }
+}
+@media (max-width: 480px) {
+  .catalog__sorting-item {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 100%;
+            flex: 1 0 100%;
+    max-width: 100%;
+  }
+}
+.catalog__sorting-item_buttons {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.625rem;
+}
+@media (max-width: 1000px) {
+  .catalog__sorting-item_buttons {
+    gap: 0.3125rem;
+  }
+}
+@media (max-width: 480px) {
+  .catalog__sorting-item_buttons {
+    display: none;
+  }
+}
+.catalog__sorting-button_table, .catalog__sorting-button_row {
+  display: block;
+  height: 3rem;
+  width: 3rem;
+  background-color: #ffffff;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: none;
+  cursor: pointer;
+}
+@media (max-width: 1000px) {
+  .catalog__sorting-button_table, .catalog__sorting-button_row {
+    height: 1.875rem;
+    width: 1.875rem;
+  }
+}
+.catalog__sorting-button_table {
+  background-image: url(../../assets/icons/icon_sort_table.svg);
+}
+.catalog__sorting-button_row {
+  background-image: url(../../assets/icons/icon_sort_rows.svg);
 }

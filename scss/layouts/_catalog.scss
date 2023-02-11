@@ -101,11 +101,82 @@
   }
 
   &__sorting {
+    padding: 0 0 1.25rem;
+    margin: 0 0 2.5rem;
+    border-bottom: 1px solid $grey50;
+
     &-title {
       font-weight: 400;
       font-size: 0.875rem;
       line-height: 1.0625rem;
       margin: 0 0 1.25rem;
+    }
+
+    &-container {
+      display: flex;
+      gap: 1.25rem;
+
+      @include tablet {
+        flex-wrap: wrap;
+      }
+
+      @include mobile {
+      }
+    }
+
+    &-item {
+      flex: 1 0 calc((100% - 1.25rem * 3) / 4);
+
+      @include tablet {
+        flex: 1 0 calc((100% - 1.25rem) / 2);
+        max-width: calc((100% - 1.25rem) / 2);
+      }
+
+      @include iphone {
+        flex: 1 0 100%;
+        max-width: 100%;
+      }
+
+      &_buttons {
+        flex: 0 0 auto;
+        display: flex;
+        align-items: center;
+        gap: 0.625rem;
+
+        @include laptop {
+          gap: 0.3125rem;
+        }
+
+        @include iphone {
+          display: none;
+        }
+      }
+    }
+
+    &-button_table,
+    &-button_row {
+      display: block;
+      height: 3rem;
+      width: 3rem;
+      background-color: $white;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      border: none;
+      cursor: pointer;
+
+      @include laptop {
+        height: 1.875rem;
+        width: 1.875rem;
+      }
+    }
+
+    &-button_table {
+      background-image: url(../../assets/icons/icon_sort_table.svg);
+    }
+
+    &-button_row {
+      background-image: url(../../assets/icons/icon_sort_rows.svg);
     }
   }
 }
