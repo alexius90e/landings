@@ -1,4 +1,14 @@
 .main {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  color: $black;
+
+  @include laptop {
+    font-size: 0.875rem;
+    line-height: 1.0625rem;
+  }
+
   &__section {
     margin: 8.75rem 0;
 

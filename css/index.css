@@ -370,6 +370,18 @@ input[type=checkbox]:checked::before {
   text-align: center;
 }
 
+.main {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  color: #070707;
+}
+@media (max-width: 1000px) {
+  .main {
+    font-size: 0.875rem;
+    line-height: 1.0625rem;
+  }
+}
 .main__section {
   margin: 8.75rem 0;
 }
@@ -1307,6 +1319,57 @@ input[type=checkbox]:checked::before {
 }
 .footer__policy {
   margin-bottom: 0.625rem;
+}
+
+.breadcrumbs {
+  margin: 1.25rem 0;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.0625rem;
+  color: #070707;
+}
+.breadcrumbs a {
+  color: #070707;
+  text-decoration: none;
+}
+.breadcrumbs a:hover {
+  text-decoration: underline;
+}
+.breadcrumbs ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.25rem;
+  margin: 0;
+  padding: 0;
+}
+.breadcrumbs li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.25rem;
+  list-style-type: none;
+}
+.breadcrumbs li:last-child::after {
+  display: none;
+}
+.breadcrumbs li::after {
+  content: "";
+  display: block;
+  height: 0.625rem;
+  width: 0.625rem;
+  background-image: url(../../assets/icons/icon_toggler-black.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
 }
 
 .button {
