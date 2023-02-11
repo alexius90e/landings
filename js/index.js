@@ -32,3 +32,15 @@ const casesSwiper = new Swiper('.cases .swiper', {
     prevEl: '.cases__button-prev',
   },
 });
+
+const searchBar = document.querySelector('.search-bar');
+const searchBarToggler = document.querySelector('.header .icon-button_search');
+const searchBarCloseButton = document.querySelector('.search-bar__close');
+
+searchBarToggler.addEventListener('click', () => {
+  searchBar.classList.toggle('active');
+});
+
+searchBarCloseButton.addEventListener('click', () => {
+  searchBar.classList.remove('active');
+});

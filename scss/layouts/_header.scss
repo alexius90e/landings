@@ -1,4 +1,6 @@
 .header {
+  position: relative;
+  z-index: 6;
   display: flex;
   justify-content: center;
   width: 100%;
@@ -11,6 +13,8 @@
   }
 
   & > .container {
+    position: relative;
+    z-index: 6;
     display: flex;
     align-items: center;
     gap: 1.875rem;

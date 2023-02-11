@@ -13,6 +13,10 @@
     background-image: url(../../assets/icons/icon_search.svg);
   }
 
+  &_search-black {
+    background-image: url(../../assets/icons/icon_search-black.svg);
+  }
+
   &_basket {
     background-image: url(../../assets/icons/icon_basket.svg);
   }
@@ -24,6 +28,10 @@
     @include tablet {
       display: block;
     }
+  }
+
+  &_close {
+    background-image: url(../../assets/icons/icon_close.svg);
   }
 
   &_phone {
