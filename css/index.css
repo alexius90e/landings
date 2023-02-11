@@ -326,6 +326,139 @@ input[type=checkbox]:checked::before {
   content: "";
 }
 
+.catalog-list-item {
+  position: relative;
+  height: 20.625rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #ffffff;
+  border: 0.1875rem solid rgba(161, 74, 156, 0);
+  border-radius: 0.625rem;
+  overflow: hidden;
+  cursor: pointer;
+}
+.catalog-list-item:hover {
+  border: 0.1875rem solid #a14a9c;
+}
+@media (max-width: 1000px) {
+  .catalog-list-item {
+    height: 18.75rem;
+  }
+}
+@media (max-width: 768px) {
+  .catalog-list-item {
+    height: 21.875rem;
+  }
+}
+@media (max-width: 480px) {
+  .catalog-list-item {
+    height: 15.625rem;
+  }
+}
+.catalog-list-item__image {
+  display: block;
+  height: 100%;
+  width: 100%;
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.catalog-list-item__info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1.25rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.catalog-list-item__title {
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+}
+@media (max-width: 360px) {
+  .catalog-list-item__title {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+.catalog-list-item__description {
+  font-size: 0.875rem;
+  line-height: 1.0625rem;
+}
+.catalog-list-item__price {
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.page-navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.25rem;
+  margin-top: 2.5rem;
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 1.5625rem;
+  color: #a5a5a5;
+}
+@media (max-width: 480px) {
+  .page-navigation {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+.page-navigation ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.9375rem;
+  padding: 0;
+  margin: 0;
+}
+.page-navigation ul li {
+  list-style-type: none;
+  cursor: pointer;
+}
+.page-navigation ul li.active {
+  font-weight: 700;
+  color: #070707;
+}
+.page-navigation__button {
+  width: 1.875rem;
+  height: 1.875rem;
+  background-color: #ffffff;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(../../assets/icons/icon_arrow.svg);
+  border: none;
+  opacity: 0.5;
+  cursor: pointer;
+}
+@media (max-width: 480px) {
+  .page-navigation__button {
+    width: 1.5625rem;
+    height: 1.5625rem;
+    background-size: 75%;
+  }
+}
+.page-navigation__button.disabled {
+  opacity: 0.2;
+}
+.page-navigation__button_next {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
 .top-contacts {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1683,6 +1816,9 @@ input[type=checkbox]:checked::before {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   gap: 1.25rem;
 }
 @media (max-width: 1000px) {
@@ -1758,8 +1894,8 @@ input[type=checkbox]:checked::before {
 }
 .catalog__container {
   -webkit-box-flex: 1;
-      -ms-flex: 1 0 auto;
-          flex: 1 0 auto;
+      -ms-flex: 1 0 calc(100% - 19.375rem - 1.25rem);
+          flex: 1 0 calc(100% - 19.375rem - 1.25rem);
 }
 .catalog__sorting {
   padding: 0 0 1.25rem;
@@ -1849,4 +1985,34 @@ input[type=checkbox]:checked::before {
 }
 .catalog__sorting-button_row {
   background-image: url(../../assets/icons/icon_sort_rows.svg);
+}
+.catalog__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 1.25rem;
+}
+.catalog__card {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 calc((100% - 2.5rem) / 3);
+          flex: 1 1 calc((100% - 2.5rem) / 3);
+  max-width: calc((100% - 2.5rem) / 3);
+}
+@media (max-width: 768px) {
+  .catalog__card {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 calc((100% - 1.25rem) / 2);
+            flex: 1 1 calc((100% - 1.25rem) / 2);
+    max-width: calc((100% - 1.25rem) / 2);
+  }
+}
+@media (max-width: 480px) {
+  .catalog__card {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+    max-width: 100%;
+  }
 }

@@ -34,6 +34,7 @@
 
   &__wrapper {
     display: flex;
+    align-items: flex-start;
     gap: 1.25rem;
 
     @include laptop {
@@ -97,7 +98,7 @@
   }
 
   &__container {
-    flex: 1 0 auto;
+    flex: 1 0 calc(100% - 19.375rem - 1.25rem);
   }
 
   &__sorting {
@@ -177,6 +178,27 @@
 
     &-button_row {
       background-image: url(../../assets/icons/icon_sort_rows.svg);
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+  }
+
+  &__card {
+    flex: 1 1 calc((100% - 1.25rem * 2) / 3);
+    max-width: calc((100% - 1.25rem * 2) / 3);
+
+    @include tablet {
+      flex: 1 1 calc((100% - 1.25rem) / 2);
+      max-width: calc((100% - 1.25rem) / 2);
+    }
+
+    @include iphone {
+      flex: 1 1 100%;
+      max-width: 100%;
     }
   }
 }
