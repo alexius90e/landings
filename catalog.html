@@ -141,10 +141,29 @@
 
               <h4 class="catalog__filter-title">Цена</h4>
 
+              <div class="double-range-slider">
+                <input
+                  type="range"
+                  min="0"
+                  max="50000"
+                  value="5000"
+                  step="100"
+                  id="lower"
+                />
+                <input
+                  type="range"
+                  min="0"
+                  max="50000"
+                  value="40000"
+                  step="100"
+                  id="upper"
+                />
+              </div>
+
               <div class="catalog__filter-price">
-                <div class="catalog__filter-price-label">от 2000</div>
+                <div class="catalog__filter-price-label" id="lowerLabel">от 2000</div>
                 <span>-</span>
-                <div class="catalog__filter-price-label">от 30000</div>
+                <div class="catalog__filter-price-label" id="upperLabel">до 30000</div>
               </div>
 
               <button class="catalog__filter-button_reset">

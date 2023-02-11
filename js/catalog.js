@@ -1,4 +1,5 @@
 import ItcCustomSelect from './itc-custom-select.js';
+import './dualRangeSlider.js';
 
 const moduleSelect = new ItcCustomSelect('#moduleSelect', {
   name: 'modules',

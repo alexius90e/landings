@@ -517,6 +517,65 @@ input[type=checkbox]:checked::before {
           transform: rotate(180deg);
 }
 
+.double-range-slider {
+  position: relative;
+  height: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+.double-range-slider input[type=range] {
+  position: absolute;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 100%;
+  margin: 0;
+  padding: 0 0.125rem;
+  overflow: hidden;
+  border: 0;
+  border-radius: 0.0625rem;
+  outline: none;
+  background: -webkit-gradient(linear, left top, left bottom, from(#070707), to(#070707)) no-repeat center;
+  background: -o-linear-gradient(#070707, #070707) no-repeat center;
+  background: linear-gradient(#070707, #070707) no-repeat center;
+  background-size: 100% 0.0625rem;
+  pointer-events: none;
+}
+.double-range-slider input[type=range]:active, .double-range-slider input[type=range]:focus {
+  outline: none;
+}
+.double-range-slider input[type=range]::-webkit-slider-thumb {
+  height: 0.875rem;
+  width: 0.875rem;
+  border-radius: 0.875rem;
+  background-color: #a14a9c;
+  position: relative;
+  margin: 0.3125rem 0;
+  cursor: pointer;
+  -webkit-appearance: none;
+          appearance: none;
+  pointer-events: all;
+}
+.double-range-slider input[type=range]::-webkit-slider-thumb::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0.8125rem;
+  left: 100%;
+  width: 125rem;
+  height: 0.125rem;
+}
+.double-range-slider input[type=range]:nth-child(1)::-webkit-slider-thumb::before {
+  background-color: red;
+}
+.double-range-slider input[type=range]:nth-child(2) {
+  background: none;
+}
+.double-range-slider input[type=range]:nth-child(2)::-webkit-slider-thumb::before {
+  background-color: #a5a5a5;
+}
+
 .top-contacts {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2034,8 +2093,8 @@ input[type=checkbox]:checked::before {
 }
 .catalog__filter-price-label {
   -webkit-box-flex: 1;
-      -ms-flex: 1 0 auto;
-          flex: 1 0 auto;
+      -ms-flex: 1 0 calc((50% - 0.625rem) / 2);
+          flex: 1 0 calc((50% - 0.625rem) / 2);
   font-weight: 400;
   font-size: 0.875rem;
   line-height: 1.0625rem;
