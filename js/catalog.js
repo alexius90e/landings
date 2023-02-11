@@ -70,6 +70,8 @@ const nameSelect = new ItcCustomSelect('#nameSelect', {
   ],
 });
 
+//reset filter selects
+
 const resetFilterButton = document.querySelector(
   '.catalog__filter-button_reset'
 );
@@ -85,6 +87,8 @@ resetFilterButton.addEventListener('click', () => {
   filterSelects.forEach((select) => console.log((select.value = '')));
 });
 
+// toggle filter menu
+
 const filterMenuToggler = document.querySelector(
   '.catalog__filter-menu-toggler'
 );
@@ -96,3 +100,19 @@ filterMenuToggler.addEventListener('click', (e) => {
   const isVisible = e.target.classList.contains('active');
   filterMenu.style.display = isVisible ? 'block' : 'none';
 });
+
+// toggle filter
+
+const filter = document.querySelector('.catalog__filter');
+const filterToggler = document.querySelector('.catalog__filter-toggler');
+const filterCloseButton = document.querySelector(
+  '.catalog__filter-button_close'
+);
+
+filterToggler.addEventListener('click', () =>
+  filter.classList.toggle('hidden')
+);
+
+filterCloseButton.addEventListener('click', () =>
+  filter.classList.add('hidden')
+);

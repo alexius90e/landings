@@ -33,6 +33,7 @@
   }
 
   &__wrapper {
+    position: relative;
     display: flex;
     align-items: flex-start;
     gap: 1.25rem;
@@ -52,17 +53,32 @@
     box-sizing: border-box;
 
     @include laptop {
-      display: none;
+      position: absolute;
+      top: 2.5rem;
+      z-index: 10;
+    }
+
+    &.hidden {
+      display: block;
+
+      @include laptop {
+        display: none;
+      }
     }
 
     &-title {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      gap: 0.625rem;
       margin: 0 0 1.875rem;
       font-weight: 700;
       font-size: 1.25rem;
       line-height: 1.5625rem;
+
+      @include laptop {
+        justify-content: flex-start;
+      }
     }
 
     &-menu {
@@ -90,16 +106,38 @@
       }
     }
 
-    &-button_reset {
-      padding: 0;
-      font-weight: 400;
-      font-size: 14px;
-      line-height: 17px;
-      text-align: center;
-      text-decoration-line: underline;
-      background-color: $white;
-      border: none;
-      cursor: pointer;
+    &-button {
+      &_reset {
+        padding: 0;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        text-align: center;
+        text-decoration-line: underline;
+        background-color: $white;
+        border: none;
+        cursor: pointer;
+      }
+
+      &_close {
+        position: absolute;
+        top: 1.875rem;
+        right: 1.875rem;
+        display: none;
+        height: 1.25rem;
+        width: 1.25rem;
+        background-color: $white;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 1rem;
+        background-image: url(../../assets/icons/icon_close_black.svg);
+        border: none;
+        cursor: pointer;
+
+        @include laptop {
+          display: block;
+        }
+      }
     }
 
     &-toggler {
