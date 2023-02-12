@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AX PRO Каталог</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./css/index.css" />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"
+    ></script>
+
+    <script defer src="./js/index.js"></script>
+    <script defer src="./js/catalog.js" type="module"></script>
+  </head>
+  <body>
+    <section class="top-contacts">
+      <div class="container">
+        <a href="mailto: help@site.ru">help@site.ru</a>
+        <a href="tel: +78001234567">+7 (800) 123 45 67</a>
+      </div>
+    </section>
+
+    <header class="header">
+      <div class="container">
+        <a class="logo" href="./index.html"></a>
+
+        <nav class="header__nav">
+          <ul class="header-menu">
+            <li class="header-menu-item">
+              <a href="./index.html">Главная</a>
+            </li>
+
+            <li class="header-menu-item active">
+              <div class="header-menu-item__title">
+                <a href="./catalog.html">Каталог</a>
+                <button class="header-menu-toggler"></button>
+              </div>
+            </li>
+
+            <li class="header-menu-item">
+              <a href="./cases.html">Кейсы</a>
+            </li>
+
+            <li class="header-menu-item">
+              <a href="./contacts.html">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="header__buttons">
+          <button class="icon-button icon-button_search"></button>
+          <button class="icon-button icon-button_basket">
+            <a href="./checkout.html"></a>
+          </button>
+          <button class="button">Получить КП</button>
+          <button
+            class="icon-button icon-button_menu"
+            id="burgerButton"
+          ></button>
+        </div>
+      </div>
+      <div class="search-bar">
+        <div class="search-bar__container">
+          <input
+            class="search-bar__input"
+            placeholder="Введите запрос"
+            type="search"
+          />
+          <button
+            class="icon-button icon-button_search-black search-bar__search-button"
+          ></button>
+          <button
+            class="icon-button icon-button_close search-bar__close"
+          ></button>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="main__section breadcrumbs">
+        <div class="main__container">
+          <ul>
+            <li><a href="./index.html">Главная</a></li>
+            <li>Каталог</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="main__section catalog">
+        <div class="main__container">
+          <h2 class="main__heading">Каталог</h2>
+
+          <ul class="catalog__types">
+            <li class="catalog__type catalog__type_all active">Все</li>
+            <li class="catalog__type">Контрольные панели</li>
+            <li class="catalog__type">Интеграция</li>
+            <li class="catalog__type">Кранштейны</li>
+            <li class="catalog__type">Сирены</li>
+            <li class="catalog__type">Уличные датчики</li>
+            <li class="catalog__type">Управление</li>
+            <li class="catalog__type">Автоматизация</li>
+            <li class="catalog__type">Внутренние датчики</li>
+            <li class="catalog__type">Комплекты</li>
+            <li class="catalog__type">Тревожные кнопки</li>
+          </ul>
+
+          <div class="catalog__wrapper">
+            <div class="catalog__filter hidden">
+              <h4 class="catalog__filter-title catalog__filter-title_catalog">
+                <span>Каталог</span>
+                <button class="catalog__filter-menu-toggler active"></button>
+              </h4>
+
+              <button class="catalog__filter-button_close"></button>
+
+              <div class="catalog__filter-menu">
+                <ul class="menu">
+                  <li>Контрольные панели</li>
+                  <li>Интеграция</li>
+                  <li>Кранштейны</li>
+                  <li>
+                    <div class="menu__sub-title">
+                      <span>Оповещение</span>
+                      <button class="menu__sub-toggler"></button>
+                    </div>
+                    <ul class="menu__sub-menu">
+                      <li>Сирены</li>
+                      <li>Тревожные кнопки</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <div class="menu__sub-title">
+                      <span>Датчики</span>
+                      <button class="menu__sub-toggler"></button>
+                    </div>
+                    <ul class="menu__sub-menu">
+                      <li>Уличные</li>
+                      <li>Внутренние</li>
+                    </ul>
+                  </li>
+                  <li>Управление</li>
+                  <li>Автоматизация</li>
+                  <li>Комплекты</li>
+                </ul>
+              </div>
+
+              <div class="catalog__filter-selects">
+                <div class="itc-select" id="moduleSelect"></div>
+
+                <div class="itc-select" id="gsmSelect"></div>
+
+                <div class="itc-select" id="frequencySelect"></div>
+
+                <div class="itc-select" id="supplySelect"></div>
+              </div>
+
+              <h4 class="catalog__filter-title">Цена</h4>
+
+              <div class="double-range-slider">
+                <input
+                  type="range"
+                  min="0"
+                  max="50000"
+                  value="5000"
+                  step="100"
+                  id="lower"
+                />
+                <input
+                  type="range"
+                  min="0"
+                  max="50000"
+                  value="40000"
+                  step="100"
+                  id="upper"
+                />
+              </div>
+
+              <div class="catalog__filter-price">
+                <div class="catalog__filter-price-label" id="lowerLabel">
+                  от 2000
+                </div>
+                <span>-</span>
+                <div class="catalog__filter-price-label" id="upperLabel">
+                  до 30000
+                </div>
+              </div>
+
+              <button class="catalog__filter-button_reset">
+                Сбросить фильтры
+              </button>
+            </div>
+
+            <div class="catalog__container">
+              <div class="catalog__sorting">
+                <button class="catalog__filter-toggler">Фильтр</button>
+
+                <h5 class="catalog__sorting-title">Сортировать:</h5>
+
+                <div class="catalog__sorting-container">
+                  <div class="catalog__sorting-item">
+                    <div class="itc-select" id="priceSelect"></div>
+                  </div>
+                  <div class="catalog__sorting-item">
+                    <div class="itc-select" id="ratingSelect"></div>
+                  </div>
+                  <div class="catalog__sorting-item">
+                    <div class="itc-select" id="nameSelect"></div>
+                  </div>
+                  <div
+                    class="catalog__sorting-item catalog__sorting-item_buttons"
+                  >
+                    <button class="catalog__sorting-button_table"></button>
+                    <button class="catalog__sorting-button_row"></button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="catalog__list">
+                <div class="catalog__card catalog-list-item">
+                  <img
+                    class="catalog-list-item__image"
+                    src="./assets/cases/case1.jpg"
+                    alt="catalog-list-item"
+                  />
+                  <div class="catalog-list-item__info">
+                    <h3 class="catalog-list-item__title">
+                      Охранная контрольная панель AX Lite
+                    </h3>
+                    <p class="catalog-list-item__description">
+                      Интеллектуальная централь системы безопасности
+                    </p>
+                    <div class="catalog-list-item__price">12 990 р./шт</div>
+                  </div>
+                </div>
+
+                <div class="catalog__card catalog-list-item">
+                  <img
+                    class="catalog-list-item__image"
+                    src="./assets/cases/case2.jpg"
+                    alt="catalog-list-item"
+                  />
+                  <div class="catalog-list-item__info">
+                    <h3 class="catalog-list-item__title">
+                      Охранная панель AX Lite
+                    </h3>
+                    <p class="catalog-list-item__description">
+                      Интеллектуальная централь системы безопасности
+                    </p>
+                    <div class="catalog-list-item__price">2 990 р./шт</div>
+                  </div>
+                </div>
+
+                <div class="catalog__card catalog-list-item">
+                  <img
+                    class="catalog-list-item__image"
+                    src="./assets/cases/case3.jpg"
+                    alt="catalog-list-item"
+                  />
+                  <div class="catalog-list-item__info">
+                    <h3 class="catalog-list-item__title">
+                      Охранная контрольная панель AX Lite
+                    </h3>
+                    <p class="catalog-list-item__description">
+                      Интеллектуальная централь
+                    </p>
+                    <div class="catalog-list-item__price">144 990 р./шт</div>
+                  </div>
+                </div>
+
+                <div class="catalog__card catalog-list-item">
+                  <img
+                    class="catalog-list-item__image"
+                    src="./assets/cases/case2.jpg"
+                    alt="catalog-list-item"
+                  />
+                  <div class="catalog-list-item__info">
+                    <h3 class="catalog-list-item__title">
+                      Охранная панель AX Lite
+                    </h3>
+                    <p class="catalog-list-item__description">
+                      Интеллектуальная централь системы безопасности
+                    </p>
+                    <div class="catalog-list-item__price">2 990 р./шт</div>
+                  </div>
+                </div>
+
+                <div class="catalog__card catalog-list-item">
+                  <img
+                    class="catalog-list-item__image"
+                    src="./assets/cases/case3.jpg"
+                    alt="catalog-list-item"
+                  />
+                  <div class="catalog-list-item__info">
+                    <h3 class="catalog-list-item__title">
+                      Охранная контрольная панель AX Lite
+                    </h3>
+                    <p class="catalog-list-item__description">
+                      Интеллектуальная централь
+                    </p>
+                    <div class="catalog-list-item__price">144 990 р./шт</div>
+                  </div>
+                </div>
+
+                <div class="catalog__card catalog-list-item">
+                  <img
+                    class="catalog-list-item__image"
+                    src="./assets/cases/case1.jpg"
+                    alt="catalog-list-item"
+                  />
+                  <div class="catalog-list-item__info">
+                    <h3 class="catalog-list-item__title">
+                      Охранная контрольная панель AX Lite
+                    </h3>
+                    <p class="catalog-list-item__description">
+                      Интеллектуальная централь системы безопасности
+                    </p>
+                    <div class="catalog-list-item__price">12 990 р./шт</div>
+                  </div>
+                </div>
+
+                <div class="catalog__card catalog-list-item">
+                  <img
+                    class="catalog-list-item__image"
+                    src="./assets/cases/case3.jpg"
+                    alt="catalog-list-item"
+                  />
+                  <div class="catalog-list-item__info">
+                    <h3 class="catalog-list-item__title">
+                      Охранная контрольная панель AX Lite
+                    </h3>
+                    <p class="catalog-list-item__description">
+                      Интеллектуальная централь
+                    </p>
+                    <div class="catalog-list-item__price">144 990 р./шт</div>
+                  </div>
+                </div>
+
+                <div class="catalog__card catalog-list-item">
+                  <img
+                    class="catalog-list-item__image"
+                    src="./assets/cases/case1.jpg"
+                    alt="catalog-list-item"
+                  />
+                  <div class="catalog-list-item__info">
+                    <h3 class="catalog-list-item__title">
+                      Охранная контрольная панель AX Lite
+                    </h3>
+                    <p class="catalog-list-item__description">
+                      Интеллектуальная централь системы безопасности
+                    </p>
+                    <div class="catalog-list-item__price">12 990 р./шт</div>
+                  </div>
+                </div>
+
+                <div class="catalog__card catalog-list-item">
+                  <img
+                    class="catalog-list-item__image"
+                    src="./assets/cases/case2.jpg"
+                    alt="catalog-list-item"
+                  />
+                  <div class="catalog-list-item__info">
+                    <h3 class="catalog-list-item__title">
+                      Охранная панель AX Lite
+                    </h3>
+                    <p class="catalog-list-item__description">
+                      Интеллектуальная централь системы безопасности
+                    </p>
+                    <div class="catalog-list-item__price">2 990 р./шт</div>
+                  </div>
+                </div>
+              </div>
+
+              <nav class="page-navigation">
+                <button
+                  class="page-navigation__button page-navigation__button_prev disabled"
+                ></button>
+                <ul>
+                  <li class="active">1</li>
+                  <li>2</li>
+                  <li>3</li>
+                </ul>
+                <button
+                  class="page-navigation__button page-navigation__button_next"
+                ></button>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="main__section">
+        <div class="main__container">
+          <p>
+            Повседневная практика показывает, что начало повседневной работы по
+            формированию позиции играет важную роль в формировании систем
+            массового участия. Таким образом реализация намеченных плановых
+            заданий позволяет выполнять важные задания по разработке систем
+            массового участия. Товарищи! постоянное
+            информационно-пропагандистское обеспечение нашей деятельности
+            способствует подготовки и реализации системы обучения кадров,
+            соответствует насущным потребностям. Повседневная практика
+            показывает, что начало повседневной работы по формированию позиции
+            играет важную роль в формировании систем массового участия.
+          </p>
+          <p>
+            Таким образом реализация намеченных плановых заданий позволяет
+            выполнять важные задания по разработке систем массового участия.
+            Товарищи! постоянное информационно-пропагандистское обеспечение
+            нашей деятельности способствует подготовки и реализации системы
+            обучения кадров, соответствует насущным потребностям.
+          </p>
+        </div>
+      </section>
+
+      <section class="main__section cases">
+        <div class="main__container">
+          <h2 class="main__heading">Кейсы</h2>
+
+          <p class="main__description">
+            Как мир становится безопаснее с AX PRO
+          </p>
+
+          <div class="cases__slider">
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="./assets/cases/case1.jpg" alt="case" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./assets/cases/case2.jpg" alt="case" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./assets/cases/case3.jpg" alt="case" />
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-pagination"></div>
+
+            <div class="cases__button-prev"></div>
+            <div class="cases__button-next"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="main__container">
+        <div class="footer__wrapper">
+          <div class="footer__logo footer__wrapper-block">
+            <div class="logo"></div>
+          </div>
+
+          <nav class="footer__menu footer__wrapper-block">
+            <ul>
+              <li><a href="#">Каталог</a></li>
+              <li><a href="#">Кейсы</a></li>
+              <li><a href="#">Контакты</a></li>
+            </ul>
+          </nav>
+
+          <div class="footer__contacts footer__wrapper-block">
+            <ul>
+              <li>
+                <div class="icon-button icon-button_phone"></div>
+                <a href="tel:+78001234567">+7 (800) 123 45 67</a>
+              </li>
+              <li>
+                <div class="icon-button icon-button_mail"></div>
+                <a href="mailto:help@site.ru">help@site.ru</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer__address footer__wrapper-block">
+            <ul>
+              <li>г. Москва, ул. Советская 1</li>
+              <li>Пн-Пт с 9:00 до 18:00</li>
+            </ul>
+          </div>
+
+          <div class="footer__social footer__wrapper-block">
+            <ul>
+              <li>Мы в социальных сетях</li>
+              <li>
+                <a
+                  class="footer__social-link footer__social-link_vk"
+                  href="https://vk.com/"
+                  target="_blank"
+                ></a>
+                <a
+                  class="footer__social-link footer__social-link_youtube"
+                  href="https://youtube.com/"
+                  target="_blank"
+                ></a>
+                <a
+                  class="footer__social-link footer__social-link_telegram"
+                  href="https://web.telegram.org/"
+                  target="_blank"
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="footer__policy">Политика конфиденциальности</p>
+
+        <p class="footer__copyright">Копирайт ⓒ 2023</p>
+      </div>
+    </footer>
+
+    <div class="modal" id="catalogModal">
+      <div class="modal-dialog">
+        <button
+          class="icon-button icon-button_close-black"
+          id="catModalCloseBtn"
+        ></button>
+        <div class="modal-content">
+          <article class="catalog-card">
+            <div class="catalog-card-header">
+              <div class="catalog-card-slider">
+                <div
+                  style="--swiper-navigation-color: #fff"
+                  class="swiper catalog-card-slider-top"
+                >
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img src="./assets/cases/case1.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./assets/cases/case2.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./assets/cases/case3.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./assets/cases/case1.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./assets/cases/case2.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./assets/cases/case3.jpg" />
+                    </div>
+                  </div>
+                  <div class="swiper-button-next"></div>
+                  <div class="swiper-button-prev"></div>
+                </div>
+
+                <div thumbsSlider="" class="swiper catalog-card-slider-thumbs">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img src="./assets/cases/case1.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./assets/cases/case2.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./assets/cases/case3.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./assets/cases/case1.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./assets/cases/case2.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./assets/cases/case3.jpg" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="catalog-card-info">
+                <h2 class="catalog-card-info__title">
+                  Охранная контрольная панель AX Lite
+                </h2>
+                <p class="catalog-card-info__article">
+                  Артикул: DS-WPA-96-M-WE
+                </p>
+                <p class="catalog-card-info__description">
+                  С помощью центрального устройства к охранной системе объекта
+                  можно подключить до 142 периферийных устройств, включая
+                  IP-камеры. Единый интерфейс для управления каждым элементом,
+                  настройка устройств и сигналов, просмотр видеозаписей и работа
+                  с архивом.
+                </p>
+                <div class="catalog-card-info__price">
+                  <span>12 990 р./шт</span>
+                  <button class="button button_large">
+                    Добавить в корзину
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="catalog-card-props">
+              <div class="catalog-card-props__tab">
+                <h3 class="catalog-card-props__title">
+                  Функциональные особенности
+                </h3>
+                <ul class="catalog-card-props__list">
+                  <li>Каналы связи: TCP/IP, Wi-Fi и GPRS</li>
+                  <li>Беспроводной протокол нового поколения: Tri-X</li>
+                  <li>Передача радиосигнала на дальние дистанции</li>
+                  <li>Передача радиосигнала на дальние дистанции</li>
+                  <li>Передача радиосигнала на дальние дистанции</li>
+                  <li>
+                    Поддержка до 32 пользователей сети, включая 1 установщика, 1
+                    администратора и 30 обычных пользователей
+                  </li>
+                </ul>
+              </div>
+
+              <div class="catalog-card-props__tab">
+                <h3 class="catalog-card-props__title">
+                  Технические характеристики
+                </h3>
+                <ul class="catalog-card-props__list">
+                  <li>Количество беспроводных зон: 64</li>
+                  <li>Подключение 32 брелоков, 2 повторителя, 4 сирены</li>
+                  <li>Количество пользователей: 32</li>
+                  <li>Количество пользователей: 32</li>
+                  <li>Рабочая частота: 868 МГц</li>
+                  <li>Каналы связи: LAN, Wi-Fi, GPRS</li>
+                  <li>
+                    LED-индикатор: постановка на охрану / снятие с охраны,
+                    тампер, сбой, облачный сервис, питание
+                  </li>
+                  <li>Питание: литиевая батарея 4520 мАч</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
