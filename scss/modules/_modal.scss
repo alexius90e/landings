@@ -18,50 +18,50 @@
   &-dialog {
     position: relative;
     width: 100%;
-    max-width: 1300px;
-    max-height: calc(100% - 100px);
-    margin: 100px;
-    padding: 40px 35px;
+    max-width: 81.25rem;
+    max-height: calc(100% - 6.25rem);
+    margin: 6.25rem;
+    padding: 2.5rem 2.1875rem;
     overflow: auto;
     box-sizing: border-box;
     background-color: $white;
-    border-radius: 10px;
+    border-radius: 0.625rem;
 
     @include laptop {
-      padding: 20px;
+      padding: 1.25rem;
     }
 
     @include tablet {
-      margin: 50px;
+      margin: 3.125rem;
     }
 
     @include iphone {
-      margin: 30px;
+      margin: 1.875rem;
     }
 
     @include mobile {
-      margin: 20px;
+      margin: 1.25rem;
     }
 
     &::-webkit-scrollbar {
-      width: 8px;
+      width: 0.5rem;
     }
 
     &::-webkit-scrollbar-thumb {
       background: $grey50;
-      border-radius: 20px;
-      border: 2px solid rgba($color: $white, $alpha: 0);
+      border-radius: 1.25rem;
+      border: 0.125rem solid rgba($color: $white, $alpha: 0);
     }
 
     & .icon-button_close-black {
       position: absolute;
       z-index: 1001;
-      top: 40px;
-      right: 35px;
+      top: 2.5rem;
+      right: 2.1875rem;
 
       @include laptop {
-        top: 30px;
-        right: 30px;
+        top: 1.875rem;
+        right: 1.875rem;
       }
     }
   }
