@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Century Gothic";
-  src: url("../../fonts/centurygothic.ttf");
+  src: url("../fonts/centurygothic.ttf");
 }
 html {
   font-size: 1rem;
@@ -111,7 +111,7 @@ input[type=checkbox]:checked::before {
           flex: 0 0 9.1875rem;
   width: 9.1875rem;
   height: 2.5rem;
-  background: url(../../assets/ax-pro-logo.png) center no-repeat;
+  background: url(../assets/ax-pro-logo.png) center no-repeat;
   cursor: pointer;
 }
 @media (max-width: 1000px) {
@@ -135,13 +135,13 @@ input[type=checkbox]:checked::before {
   cursor: pointer;
 }
 .icon-button_search {
-  background-image: url(../../assets/icons/icon_search.svg);
+  background-image: url(../assets/icons/icon_search.svg);
 }
 .icon-button_search-black {
-  background-image: url(../../assets/icons/icon_search-black.svg);
+  background-image: url(../assets/icons/icon_search-black.svg);
 }
 .icon-button_basket {
-  background-image: url(../../assets/icons/icon_basket.svg);
+  background-image: url(../assets/icons/icon_basket.svg);
 }
 .icon-button_basket > a {
   display: block;
@@ -151,17 +151,17 @@ input[type=checkbox]:checked::before {
 .icon-button_delete {
   height: 1.875rem;
   width: 1.875rem;
-  background-image: url(../../assets/icons/icon_delete.svg);
+  background-image: url(../assets/icons/icon_delete.svg);
 }
 .icon-button_menu {
   display: none;
-  background-image: url(../../assets/icons/icon_menu.svg);
+  background-image: url(../assets/icons/icon_menu.svg);
   -webkit-transition: all ease-in-out 0.1s;
   -o-transition: all ease-in-out 0.1s;
   transition: all ease-in-out 0.1s;
 }
 .icon-button_menu.active {
-  background-image: url(../../assets/icons/icon_close.svg);
+  background-image: url(../assets/icons/icon_close.svg);
 }
 @media (max-width: 768px) {
   .icon-button_menu {
@@ -169,18 +169,18 @@ input[type=checkbox]:checked::before {
   }
 }
 .icon-button_close {
-  background-image: url(../../assets/icons/icon_close.svg);
+  background-image: url(../assets/icons/icon_close.svg);
 }
 .icon-button_close-black {
-  background-image: url(../../assets/icons/icon_close_black.svg);
+  background-image: url(../assets/icons/icon_close_black.svg);
 }
 .icon-button_phone {
   display: block;
-  background-image: url(../../assets/icons/icon_phone.svg);
+  background-image: url(../assets/icons/icon_phone.svg);
   cursor: default;
 }
 .icon-button_mail {
-  background-image: url(../../assets/icons/icon_mail.svg);
+  background-image: url(../assets/icons/icon_mail.svg);
   cursor: default;
 }
 
@@ -284,7 +284,7 @@ input[type=checkbox]:checked::before {
   width: 0.75rem;
   height: 0.75rem;
   margin-left: 1rem;
-  background-image: url(../../assets/icons/icon_toggler-black.svg);
+  background-image: url(../assets/icons/icon_toggler-black.svg);
   background-repeat: no-repeat;
   background-position: center;
   -webkit-transform: rotate(180deg);
@@ -467,7 +467,7 @@ input[type=checkbox]:checked::before {
   background-color: #ffffff;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url(../../assets/icons/icon_arrow.svg);
+  background-image: url(../assets/icons/icon_arrow.svg);
   border: none;
   opacity: 0.5;
   cursor: pointer;
@@ -530,7 +530,7 @@ input[type=checkbox]:checked::before {
   background-position: center;
   background-repeat: no-repeat;
   background-size: 0.625rem;
-  background-image: url(../../assets/icons/icon_toggler-black.svg);
+  background-image: url(../assets/icons/icon_toggler-black.svg);
   border: none;
   -webkit-transform: rotate(0deg);
       -ms-transform: rotate(0deg);
@@ -1083,7 +1083,7 @@ input[type=checkbox]:checked::before {
   display: block;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url(../../assets/icons/icon_toggler-black.svg);
+  background-image: url(../assets/icons/icon_toggler-black.svg);
   -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
           transform: rotate(180deg);
@@ -1334,7 +1334,7 @@ input[type=checkbox]:checked::before {
   display: block;
   width: 0.625rem;
   height: 0.625rem;
-  background: url(../../assets/icons/icon_toggler.svg) center no-repeat;
+  background: url(../assets/icons/icon_toggler.svg) center no-repeat;
   border: none;
 }
 .header__buttons {
@@ -1395,7 +1395,7 @@ input[type=checkbox]:checked::before {
           align-items: center;
 }
 .first-screen .swiper-button-prev, .first-screen .swiper-button-next {
-  background-image: url(../../assets/icons/icon_arrow.svg);
+  background-image: url(../assets/icons/icon_arrow.svg);
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -1833,7 +1833,7 @@ input[type=checkbox]:checked::before {
   -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
           transform: rotate(180deg);
-  background-image: url(../../assets/icons/icon_arrow.svg);
+  background-image: url(../assets/icons/icon_arrow.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 0.9375rem;
@@ -1886,7 +1886,7 @@ input[type=checkbox]:checked::before {
   -webkit-transform: rotate(0deg);
       -ms-transform: rotate(0deg);
           transform: rotate(0deg);
-  background-image: url(../../assets/icons/icon_arrow_white.svg);
+  background-image: url(../assets/icons/icon_arrow_white.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 0.9375rem;
@@ -2058,7 +2058,7 @@ input[type=checkbox]:checked::before {
   top: calc(50% - 1.5625rem);
   width: 1.875rem;
   height: 1.875rem;
-  background-image: url(../../assets/icons/icon_arrow.svg);
+  background-image: url(../assets/icons/icon_arrow.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: auto;
@@ -2124,7 +2124,7 @@ input[type=checkbox]:checked::before {
 }
 .consult-form__wrapper {
   padding: 4.0625rem 4.375rem;
-  background: url(../../assets/formbackground.jpg) center no-repeat;
+  background: url(../assets/formbackground.jpg) center no-repeat;
   background-size: cover;
   border: 0.0625rem solid #a5a5a5;
   border-radius: 0.625rem;
@@ -2415,13 +2415,13 @@ input[type=checkbox]:checked::before {
   background-repeat: no-repeat;
 }
 .footer__social-link_vk {
-  background-image: url(../../assets/icons/ion_logo-vk.svg);
+  background-image: url(../assets/icons/ion_logo-vk.svg);
 }
 .footer__social-link_youtube {
-  background-image: url(../../assets/icons/akar-icons_youtube-fill.svg);
+  background-image: url(../assets/icons/akar-icons_youtube-fill.svg);
 }
 .footer__social-link_telegram {
-  background-image: url(../../assets/icons/mingcute_telegram-fill.svg);
+  background-image: url(../assets/icons/mingcute_telegram-fill.svg);
 }
 .footer__policy, .footer__copyright {
   margin: 0;
@@ -2482,7 +2482,7 @@ input[type=checkbox]:checked::before {
   display: block;
   height: 0.625rem;
   width: 0.625rem;
-  background-image: url(../../assets/icons/icon_toggler-black.svg);
+  background-image: url(../assets/icons/icon_toggler-black.svg);
   background-position: center;
   background-repeat: no-repeat;
   -webkit-transform: rotate(90deg);
@@ -2605,7 +2605,7 @@ input[type=checkbox]:checked::before {
   background-position: center;
   background-repeat: no-repeat;
   background-size: 0.625rem;
-  background-image: url(../../assets/icons/icon_toggler-black.svg);
+  background-image: url(../assets/icons/icon_toggler-black.svg);
   border: none;
   -webkit-transform: rotate(0deg);
       -ms-transform: rotate(0deg);
@@ -2642,7 +2642,7 @@ input[type=checkbox]:checked::before {
   background-position: center;
   background-repeat: no-repeat;
   background-size: 1rem;
-  background-image: url(../../assets/icons/icon_close_black.svg);
+  background-image: url(../assets/icons/icon_close_black.svg);
   border: none;
   cursor: pointer;
 }
@@ -2789,10 +2789,10 @@ input[type=checkbox]:checked::before {
   }
 }
 .catalog__sorting-button_table {
-  background-image: url(../../assets/icons/icon_sort_table.svg);
+  background-image: url(../assets/icons/icon_sort_table.svg);
 }
 .catalog__sorting-button_row {
-  background-image: url(../../assets/icons/icon_sort_rows.svg);
+  background-image: url(../assets/icons/icon_sort_rows.svg);
 }
 .catalog__list {
   display: -webkit-box;
@@ -3296,7 +3296,7 @@ input[type=checkbox]:checked::before {
 }
 .checkout-form {
   padding: 2.5rem;
-  background: url(../../assets/formbackground.jpg) center no-repeat;
+  background: url(../assets/formbackground.jpg) center no-repeat;
   background-size: cover;
   border-radius: 0.625rem;
   color: #ffffff;
