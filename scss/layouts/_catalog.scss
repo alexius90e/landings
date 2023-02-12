@@ -83,8 +83,8 @@
 
     &-menu {
       padding: 0.25rem 0;
-      border-top: 1px solid $grey50;
-      border-bottom: 1px solid $grey50;
+      border-top: 0.0625rem solid $grey50;
+      border-bottom: 0.0625rem solid $grey50;
 
       &-toggler {
         display: block;
@@ -110,8 +110,8 @@
       &_reset {
         padding: 0;
         font-weight: 400;
-        font-size: 14px;
-        line-height: 17px;
+        font-size: 0.875rem;
+        line-height: 1.0625rem;
         text-align: center;
         text-decoration-line: underline;
         background-color: $white;
@@ -189,7 +189,7 @@
   &__sorting {
     padding: 0 0 1.25rem;
     margin: 0 0 2.5rem;
-    border-bottom: 1px solid $grey50;
+    border-bottom: 0.0625rem solid $grey50;
 
     &-title {
       font-weight: 400;
