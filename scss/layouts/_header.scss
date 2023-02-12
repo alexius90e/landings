@@ -7,6 +7,16 @@
   color: $white;
   background-color: $black;
 
+  &.fixed {
+    @include tablet {
+      position: fixed;
+      top: 2.3125rem;
+      left: 0;
+      right: 0;
+      z-index: 5;
+    }
+  }
+
   & a {
     color: $white;
     text-decoration: none;
@@ -48,49 +58,68 @@
     display: flex;
     justify-content: center;
 
-    @include tablet {
-      display: none;
+    &.visible {
+      display: flex;
     }
 
-    & > ul {
-      display: flex;
-      gap: 1.875rem;
-      padding: 0;
-      font-weight: 400;
-      font-size: 0.9375rem;
-      line-height: 1.125rem;
+    @include tablet {
+      position: absolute;
+      z-index: 2;
+      top: 100%;
+      right: 0;
+      left: 0;
+      display: none;
+      width: 100%;
+      height: calc(100vh - 6.0625rem);
+      background-color: rgb(33, 33, 33);
+    }
+  }
 
-      @include laptop {
-        gap: 1.25rem;
+  &-menu {
+    display: flex;
+    gap: 1.875rem;
+    padding: 0;
+    font-weight: 400;
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+
+    @include laptop {
+      gap: 1.25rem;
+      font-size: 0.875rem;
+      line-height: 1.0625rem;
+    }
+
+    @include tablet {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 2.5rem;
+    }
+
+    &-item {
+      list-style: none;
+
+      &.active {
+        font-weight: 700;
       }
 
-      @include laptop {
-        font-size: 0.875rem;
-        line-height: 1.0625rem;
-      }
+      &__title {
+        display: flex;
+        align-items: center;
+        gap: 0.625rem;
 
-      & > li {
-        list-style: none;
-
-        &.active {
-          font-weight: 700;
+        @include tablet {
+          margin-right: -1.25rem;
         }
-
-        &.toggler {
-          display: flex;
-          align-items: center;
-          gap: 0.625rem;
-
-          &::after {
-            content: '';
-            display: block;
-            width: 0.625rem;
-            height: 0.625rem;
-            background: url(../../assets/icons/icon_toggler.svg) center
-              no-repeat;
-          }
-        }
       }
+    }
+
+    &-toggler {
+      display: block;
+      width: 0.625rem;
+      height: 0.625rem;
+      background: url(../../assets/icons/icon_toggler.svg) center no-repeat;
+      border: none;
     }
   }
 

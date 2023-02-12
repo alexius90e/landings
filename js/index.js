@@ -83,3 +83,27 @@ const subMenuTogglers = document.querySelectorAll('.menu__sub-toggler');
 subMenuTogglers.forEach((toggler) => {
   toggler.addEventListener('click', handleSubMenuTogglerClick);
 });
+
+// burger
+
+const topContacts = document.querySelector('.top-contacts');
+
+const header = document.querySelector('.header');
+
+const headerNav = document.querySelector('.header__nav');
+
+const burgerButton = document.querySelector('#burgerButton');
+
+burgerButton.addEventListener('click', () => {
+  burgerButton.classList.toggle('active');
+  const isVisible = burgerButton.classList.contains('active');
+  if (isVisible) {
+    headerNav.classList.add('visible');
+    header.classList.add('fixed');
+    topContacts.classList.add('fixed');
+  } else {
+    headerNav.classList.remove('visible');
+    header.classList.remove('fixed');
+    topContacts.classList.remove('fixed');
+  }
+});

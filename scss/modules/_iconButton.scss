@@ -24,6 +24,11 @@
   &_menu {
     display: none;
     background-image: url(../../assets/icons/icon_menu.svg);
+    transition: all ease-in-out 0.1s;
+
+    &.active {
+      background-image: url(../../assets/icons/icon_close.svg);
+    }
 
     @include tablet {
       display: block;

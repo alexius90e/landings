@@ -5,6 +5,16 @@
   background-color: $black;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 
+  &.fixed {
+    @include tablet {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 5;
+    }
+  }
+
   & a {
     font-size: 0.8125rem;
     line-height: 1rem;

@@ -29,19 +29,38 @@
     <header class="header">
       <div class="container">
         <a class="logo" href="./index.html"></a>
+
         <nav class="header__nav">
-          <ul>
-            <li><a href="./index.html">Главная</a></li>
-            <li class="active toggler"><a href="./catalog.html">Каталог</a></li>
-            <li><a href="./cases.html">Кейсы</a></li>
-            <li>Контакты</li>
+          <ul class="header-menu">
+            <li class="header-menu-item">
+              <a href="./index.html">Главная</a>
+            </li>
+
+            <li class="header-menu-item active">
+              <div class="header-menu-item__title">
+                <a href="./catalog.html">Каталог</a>
+                <button class="header-menu-toggler"></button>
+              </div>
+            </li>
+
+            <li class="header-menu-item">
+              <a href="./cases.html">Кейсы</a>
+            </li>
+
+            <li class="header-menu-item">
+              <a href="./contacts.html">Контакты</a>
+            </li>
           </ul>
         </nav>
+
         <div class="header__buttons">
           <button class="icon-button icon-button_search"></button>
           <button class="icon-button icon-button_basket"></button>
           <button class="button">Получить КП</button>
-          <button class="icon-button icon-button_menu"></button>
+          <button
+            class="icon-button icon-button_menu"
+            id="burgerButton"
+          ></button>
         </div>
       </div>
       <div class="search-bar">
@@ -496,7 +515,10 @@
 
     <div class="modal" id="catalogModal">
       <div class="modal-dialog">
-        <button class="icon-button icon-button_close-black" id="catModalCloseBtn"></button>
+        <button
+          class="icon-button icon-button_close-black"
+          id="catModalCloseBtn"
+        ></button>
         <div class="modal-content">
           <article class="catalog-card">
             <div class="catalog-card-header">
