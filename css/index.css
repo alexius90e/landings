@@ -608,7 +608,7 @@ input[type=checkbox]:checked::before {
   max-height: calc(100% - 6.25rem);
   margin: 6.25rem;
   padding: 2.5rem 2.1875rem;
-  overflow: auto;
+  overflow: hidden;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   background-color: #ffffff;
@@ -634,14 +634,6 @@ input[type=checkbox]:checked::before {
     margin: 1.25rem;
   }
 }
-.modal-dialog::-webkit-scrollbar {
-  width: 0.5rem;
-}
-.modal-dialog::-webkit-scrollbar-thumb {
-  background: #e1e1e1;
-  border-radius: 1.25rem;
-  border: 0.125rem solid rgba(255, 255, 255, 0);
-}
 .modal-dialog .icon-button_close-black {
   position: absolute;
   z-index: 1001;
@@ -650,9 +642,27 @@ input[type=checkbox]:checked::before {
 }
 @media (max-width: 1000px) {
   .modal-dialog .icon-button_close-black {
-    top: 1.875rem;
+    top: 1.25rem;
     right: 1.875rem;
   }
+}
+@media (max-width: 40rem) {
+  .modal-dialog .icon-button_close-black {
+    top: 1.875rem;
+    right: 2.25rem;
+  }
+}
+.modal-content {
+  max-height: 70vh;
+  overflow: auto;
+}
+.modal-content::-webkit-scrollbar {
+  width: 0.3125rem;
+}
+.modal-content::-webkit-scrollbar-thumb {
+  background: #e1e1e1;
+  border-top: 40px solid white;
+  border-bottom: 40px solid white;
 }
 
 .catalog-card-header {
@@ -876,6 +886,219 @@ input[type=checkbox]:checked::before {
 }
 .catalog-card-props__list > li:last-child {
   margin-bottom: 0;
+}
+
+.cases-card {
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.0625rem;
+}
+@media (max-width: 768px) {
+  .cases-card {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+  }
+}
+.cases-card-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.875rem;
+  padding-bottom: 2.5rem;
+  margin-bottom: 1.25rem;
+  border-bottom: 0.0625rem solid #e1e1e1;
+}
+@media (max-width: 1000px) {
+  .cases-card-header {
+    gap: 1.25rem;
+    padding-bottom: 1.5625rem;
+  }
+}
+@media (max-width: 40rem) {
+  .cases-card-header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-bottom: 1.25rem;
+  }
+}
+.cases-card-image {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 35%;
+          flex: 1 0 35%;
+  min-width: 35%;
+  height: 18.75rem;
+}
+@media (max-width: 1000px) {
+  .cases-card-image {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 50%;
+            flex: 1 0 50%;
+    min-width: 50%;
+  }
+}
+@media (max-width: 40rem) {
+  .cases-card-image {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 100%;
+            flex: 1 0 100%;
+    min-width: 100%;
+  }
+}
+.cases-card-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 0.625rem;
+}
+@media (max-width: 1000px) {
+  .cases-card-image img {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 50%;
+            flex: 1 0 50%;
+    min-width: 50%;
+    max-height: 15.625rem;
+  }
+}
+@media (max-width: 360px) {
+  .cases-card-image img {
+    max-height: 11.25rem;
+  }
+}
+.cases-card-info__title {
+  margin: 0 0 1.25rem;
+  padding-right: 2.5rem;
+  font-weight: 700;
+  font-size: 2.25rem;
+  line-height: 2.75rem;
+}
+@media (max-width: 1000px) {
+  .cases-card-info__title {
+    font-size: 1.75rem;
+  }
+}
+@media (max-width: 768px) {
+  .cases-card-info__title {
+    font-size: 1.5rem;
+    line-height: 1.8125rem;
+  }
+}
+@media (max-width: 480px) {
+  .cases-card-info__title {
+    margin: 0 0 0.625rem;
+    padding: 0;
+    font-size: 1.25rem;
+    line-height: 1.5625rem;
+  }
+}
+@media (max-width: 360px) {
+  .cases-card-info__title {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+.cases-card-info p {
+  margin-bottom: 0;
+}
+.cases-card-client, .cases-card-title_secondary {
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1.5625rem;
+}
+@media (max-width: 1000px) {
+  .cases-card-client, .cases-card-title_secondary {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+@media (max-width: 480px) {
+  .cases-card-client, .cases-card-title_secondary {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+.cases-card-title_secondary {
+  margin: 0.8125rem 0;
+}
+.cases-card-description {
+  margin-bottom: 1.875rem;
+}
+@media (max-width: 1000px) {
+  .cases-card-description__text.hidden {
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+       text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+  }
+}
+.cases-card-description__toggler {
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.625rem;
+  padding: 0;
+  font-size: 0.75rem;
+  line-height: 0.9375rem;
+  text-decoration-line: underline;
+  background-color: #ffffff;
+  border: none;
+  cursor: pointer;
+}
+.cases-card-description__toggler::after {
+  content: "";
+  width: 0.625rem;
+  height: 0.625rem;
+  display: block;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(../../assets/icons/icon_toggler-black.svg);
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.cases-card-description__toggler.hidden::after {
+  -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+@media (max-width: 1000px) {
+  .cases-card-description__toggler {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+.cases-card .consult-form {
+  padding: 1.5625rem 1.875rem;
+}
+.cases-card .consult-form .main__heading {
+  margin-bottom: 1.875rem;
+  font-size: 1.875rem;
+  line-height: 2.3125rem;
+}
+@media (max-width: 1000px) {
+  .cases-card .consult-form .main__heading {
+    font-size: 1.625rem;
+    line-height: 2rem;
+  }
+}
+@media (max-width: 480px) {
+  .cases-card .consult-form .main__heading {
+    font-size: 1.25rem;
+    line-height: 1.5625rem;
+  }
+}
+@media (max-width: 360px) {
+  .cases-card .consult-form .main__heading {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
 }
 
 .top-contacts {

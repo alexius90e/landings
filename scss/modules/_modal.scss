@@ -22,7 +22,7 @@
     max-height: calc(100% - 6.25rem);
     margin: 6.25rem;
     padding: 2.5rem 2.1875rem;
-    overflow: auto;
+    overflow: hidden;
     box-sizing: border-box;
     background-color: $white;
     border-radius: 0.625rem;
@@ -43,16 +43,6 @@
       margin: 1.25rem;
     }
 
-    &::-webkit-scrollbar {
-      width: 0.5rem;
-    }
-
-    &::-webkit-scrollbar-thumb {
-      background: $grey50;
-      border-radius: 1.25rem;
-      border: 0.125rem solid rgba($color: $white, $alpha: 0);
-    }
-
     & .icon-button_close-black {
       position: absolute;
       z-index: 1001;
@@ -60,9 +50,29 @@
       right: 2.1875rem;
 
       @include laptop {
-        top: 1.875rem;
+        top: 1.25rem;
         right: 1.875rem;
       }
+
+      @media (max-width: 40rem) {
+        top: 1.875rem;
+        right: 2.25rem;
+      }
+    }
+  }
+
+  &-content {
+    max-height: 70vh;
+    overflow: auto;
+
+    &::-webkit-scrollbar {
+      width: 0.3125rem;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: $grey50;
+      border-top: 40px solid white;
+      border-bottom: 40px solid white;
     }
   }
 }
