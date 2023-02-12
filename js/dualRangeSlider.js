@@ -1,6 +1,6 @@
-const lowerSlider = document.querySelector('#lower');
+export const lowerSlider = document.querySelector('#lower');
 
-const upperSlider = document.querySelector('#upper');
+export const upperSlider = document.querySelector('#upper');
 
 const lowerLabel = document.querySelector('#lowerLabel');
 
@@ -27,7 +27,7 @@ lowerSlider.addEventListener('input', () => {
   }
 });
 
-function updateValue() {
+export function updateValue() {
   lowerVal = parseInt(lowerSlider.value);
   upperVal = parseInt(upperSlider.value);
   lowerLabel.innerHTML = `от ${lowerVal}`;

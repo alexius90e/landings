@@ -1,0 +1,68 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  max-height: 100vh;
+  background-color: rgba($color: $black, $alpha: 0.9);
+
+  &.visible {
+    display: flex;
+  }
+
+  &-dialog {
+    position: relative;
+    width: 100%;
+    max-width: 1300px;
+    max-height: calc(100% - 100px);
+    margin: 100px;
+    padding: 40px 35px;
+    overflow: auto;
+    box-sizing: border-box;
+    background-color: $white;
+    border-radius: 10px;
+
+    @include laptop {
+      padding: 20px;
+    }
+
+    @include tablet {
+      margin: 50px;
+    }
+
+    @include iphone {
+      margin: 30px;
+    }
+
+    @include mobile {
+      margin: 20px;
+    }
+
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: $grey50;
+      border-radius: 20px;
+      border: 2px solid rgba($color: $white, $alpha: 0);
+    }
+
+    & .icon-button_close-black {
+      position: absolute;
+      z-index: 1001;
+      top: 40px;
+      right: 35px;
+
+      @include laptop {
+        top: 30px;
+        right: 30px;
+      }
+    }
+  }
+}

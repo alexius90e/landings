@@ -1,5 +1,5 @@
 import ItcCustomSelect from './itc-custom-select.js';
-import './dualRangeSlider.js';
+import { lowerSlider, upperSlider, updateValue } from './dualRangeSlider.js';
 
 const moduleSelect = new ItcCustomSelect('#moduleSelect', {
   name: 'modules',
@@ -71,21 +71,19 @@ const nameSelect = new ItcCustomSelect('#nameSelect', {
   ],
 });
 
-//reset filter selects
+//reset filter
 
 const resetFilterButton = document.querySelector(
   '.catalog__filter-button_reset'
 );
 
 resetFilterButton.addEventListener('click', () => {
-  const filterSelects = [
-    moduleSelect,
-    gsmSelect,
-    frequencySelect,
-    supplySelect,
-  ];
-
-  filterSelects.forEach((select) => console.log((select.value = '')));
+  [moduleSelect, gsmSelect, frequencySelect, supplySelect].forEach(
+    (select) => (select.value = '')
+  );
+  lowerSlider.value = 0;
+  upperSlider.value = 50000;
+  updateValue();
 });
 
 // toggle filter menu
@@ -117,3 +115,60 @@ filterToggler.addEventListener('click', () =>
 filterCloseButton.addEventListener('click', () =>
   filter.classList.add('hidden')
 );
+
+// modal
+
+const catalogItems = document.querySelectorAll(
+  '.catalog__card.catalog-list-item'
+);
+
+const catalogModal = document.querySelector('#catalogModal');
+const catalogModalCloseButton = document.querySelector('#catModalCloseBtn');
+
+catalogModalCloseButton.addEventListener('click', () =>
+  catalogModal.classList.remove('visible')
+);
+
+catalogItems.forEach((item) => {
+  item.addEventListener('click', () => catalogModal.classList.add('visible'));
+});
+
+catalogModal.addEventListener('click', (e) => {
+  if (e.target.classList.contains('modal')) {
+    catalogModal.classList.remove('visible');
+  }
+});
+
+// catalog card sliders
+
+const catalogSliderThumbs = new Swiper('.catalog-card-slider-thumbs', {
+  breakpoints: {
+    360: {
+      slidesPerView: 5,
+      spaceBetween: 10,
+    },
+    640: {
+      slidesPerView: 4,
+      spaceBetween: 10,
+    },
+    1200: {
+      slidesPerView: 5,
+      spaceBetween: 10,
+    },
+  },
+  spaceBetween: 10,
+  slidesPerView: 3,
+  freeMode: true,
+  watchSlidesProgress: true,
+});
+
+const catalogSliderTop = new Swiper('.catalog-card-slider-top', {
+  spaceBetween: 10,
+  navigation: {
+    nextEl: '.catalog-card-slider-top .swiper-button-next',
+    prevEl: '.catalog-card-slider-top .swiper-button-prev',
+  },
+  thumbs: {
+    swiper: catalogSliderThumbs,
+  },
+});

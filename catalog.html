@@ -161,9 +161,13 @@
               </div>
 
               <div class="catalog__filter-price">
-                <div class="catalog__filter-price-label" id="lowerLabel">от 2000</div>
+                <div class="catalog__filter-price-label" id="lowerLabel">
+                  от 2000
+                </div>
                 <span>-</span>
-                <div class="catalog__filter-price-label" id="upperLabel">до 30000</div>
+                <div class="catalog__filter-price-label" id="upperLabel">
+                  до 30000
+                </div>
               </div>
 
               <button class="catalog__filter-button_reset">
@@ -489,5 +493,129 @@
         <p class="footer__copyright">Копирайт ⓒ 2023</p>
       </div>
     </footer>
+
+    <div class="modal visible" id="catalogModal">
+      <div class="modal-dialog">
+        <button class="icon-button icon-button_close-black" id="catModalCloseBtn"></button>
+        <div class="modal-content">
+          <article class="catalog-card">
+            <div class="catalog-card-header">
+              <div class="catalog-card-slider">
+                <div
+                  style="--swiper-navigation-color: #fff"
+                  class="swiper catalog-card-slider-top"
+                >
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img src="./assets/cases/case1.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./assets/cases/case2.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./assets/cases/case3.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./assets/cases/case1.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./assets/cases/case2.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./assets/cases/case3.jpg" />
+                    </div>
+                  </div>
+                  <div class="swiper-button-next"></div>
+                  <div class="swiper-button-prev"></div>
+                </div>
+
+                <div thumbsSlider="" class="swiper catalog-card-slider-thumbs">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img src="./assets/cases/case1.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./assets/cases/case2.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./assets/cases/case3.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./assets/cases/case1.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./assets/cases/case2.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./assets/cases/case3.jpg" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="catalog-card-info">
+                <h2 class="catalog-card-info__title">
+                  Охранная контрольная панель AX Lite
+                </h2>
+                <p class="catalog-card-info__article">
+                  Артикул: DS-WPA-96-M-WE
+                </p>
+                <p class="catalog-card-info__description">
+                  С помощью центрального устройства к охранной системе объекта
+                  можно подключить до 142 периферийных устройств, включая
+                  IP-камеры. Единый интерфейс для управления каждым элементом,
+                  настройка устройств и сигналов, просмотр видеозаписей и работа
+                  с архивом.
+                </p>
+                <div class="catalog-card-info__price">
+                  <span>12 990 р./шт</span>
+                  <button class="button button_large">
+                    Добавить в корзину
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="catalog-card-props">
+              <div class="catalog-card-props__tab">
+                <h3 class="catalog-card-props__title">
+                  Функциональные особенности
+                </h3>
+                <ul class="catalog-card-props__list">
+                  <li>Каналы связи: TCP/IP, Wi-Fi и GPRS</li>
+                  <li>Беспроводной протокол нового поколения: Tri-X</li>
+                  <li>Передача радиосигнала на дальние дистанции</li>
+                  <li>Передача радиосигнала на дальние дистанции</li>
+                  <li>Передача радиосигнала на дальние дистанции</li>
+                  <li>
+                    Поддержка до 32 пользователей сети, включая 1 установщика, 1
+                    администратора и 30 обычных пользователей
+                  </li>
+                </ul>
+              </div>
+
+              <div class="catalog-card-props__tab">
+                <h3 class="catalog-card-props__title">
+                  Технические характеристики
+                </h3>
+                <ul class="catalog-card-props__list">
+                  <li>Количество беспроводных зон: 64</li>
+                  <li>Подключение 32 брелоков, 2 повторителя, 4 сирены</li>
+                  <li>Количество пользователей: 32</li>
+                  <li>Количество пользователей: 32</li>
+                  <li>Рабочая частота: 868 МГц</li>
+                  <li>Каналы связи: LAN, Wi-Fi, GPRS</li>
+                  <li>
+                    LED-индикатор: постановка на охрану / снятие с охраны,
+                    тампер, сбой, облачный сервис, питание
+                  </li>
+                  <li>Питание: литиевая батарея 4520 мАч</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
