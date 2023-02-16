@@ -1031,7 +1031,6 @@ input[type=checkbox]:checked::before {
   margin-bottom: 0;
 }
 .cases-card-client, .cases-card-title_secondary {
-  font-weight: 700;
   font-size: 1.25rem;
   line-height: 1.5625rem;
 }
@@ -1046,6 +1045,9 @@ input[type=checkbox]:checked::before {
     font-size: 1rem;
     line-height: 1.25rem;
   }
+}
+.cases-card-client > b, .cases-card-title_secondary {
+  font-weight: 700;
 }
 .cases-card-title_secondary {
   margin: 0.8125rem 0;
