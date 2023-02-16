@@ -200,6 +200,7 @@
 
     &-container {
       display: flex;
+      flex-wrap: wrap;
       gap: 1.25rem;
 
       @include tablet {
@@ -212,13 +213,14 @@
 
     &-item {
       flex: 1 0 calc((100% - 1.25rem * 3) / 4);
+      min-width: max-content;
 
       @include tablet {
         flex: 1 0 calc((100% - 1.25rem) / 2);
         max-width: calc((100% - 1.25rem) / 2);
       }
 
-      @include iphone {
+      @media (max-width: 36.25rem) {
         flex: 1 0 100%;
         max-width: 100%;
       }
