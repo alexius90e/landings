@@ -1325,11 +1325,6 @@ input[type=checkbox]:checked::before {
           align-items: center;
   gap: 0.625rem;
 }
-@media (max-width: 768px) {
-  .header-menu-item__title {
-    margin-right: -1.25rem;
-  }
-}
 .header-menu-toggler {
   display: block;
   width: 0.625rem;
