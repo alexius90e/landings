@@ -2305,6 +2305,7 @@ input[type=checkbox]:checked::before {
           align-items: center;
   gap: 1.625rem;
   list-style-type: none;
+  text-align: center;
 }
 .footer__wrapper-block a {
   color: #ffffff;
@@ -2347,7 +2348,7 @@ input[type=checkbox]:checked::before {
     gap: 3.125rem;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 40rem) {
   .footer__contacts {
     -webkit-box-flex: 1;
         -ms-flex: 1 0 100%;
@@ -2369,7 +2370,7 @@ input[type=checkbox]:checked::before {
             align-items: center;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 40rem) {
   .footer__address {
     -webkit-box-flex: 1;
         -ms-flex: 1 0 100%;
@@ -2384,7 +2385,7 @@ input[type=checkbox]:checked::before {
             align-items: center;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 40rem) {
   .footer__social {
     -webkit-box-flex: 1;
         -ms-flex: 1 0 100%;
