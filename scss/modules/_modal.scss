@@ -19,7 +19,7 @@
     position: relative;
     width: 100%;
     max-width: 81.25rem;
-    max-height: calc(100% - 6.25rem);
+    max-height: calc(100vh - 6.25rem);
     margin: 6.25rem;
     padding: 2.5rem 2.1875rem;
     overflow: hidden;
@@ -62,7 +62,7 @@
   }
 
   &-content {
-    max-height: 70vh;
+    max-height: calc(100vh - 10.25rem);
     overflow: auto;
 
     &::-webkit-scrollbar {

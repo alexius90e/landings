@@ -632,7 +632,7 @@ input[type=checkbox]:checked::before {
   position: relative;
   width: 100%;
   max-width: 81.25rem;
-  max-height: calc(100% - 6.25rem);
+  max-height: calc(100vh - 6.25rem);
   margin: 6.25rem;
   padding: 2.5rem 2.1875rem;
   overflow: hidden;
@@ -680,7 +680,7 @@ input[type=checkbox]:checked::before {
   }
 }
 .modal-content {
-  max-height: 70vh;
+  max-height: calc(100vh - 10.25rem);
   overflow: auto;
 }
 .modal-content::-webkit-scrollbar {
@@ -2977,6 +2977,10 @@ input[type=checkbox]:checked::before {
     text-align: center;
   }
 }
+.contacts__text * {
+  color: #070707;
+  text-decoration: none;
+}
 .contacts-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3010,10 +3014,12 @@ input[type=checkbox]:checked::before {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     gap: 1.25rem;
   }
 }
-@media (max-width: 40rem) {
+@media (max-width: 480px) {
   .contacts-info {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -3022,6 +3028,13 @@ input[type=checkbox]:checked::before {
   }
 }
 @media (max-width: 768px) {
+  .contacts-info__block {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 calc((100% - 1.25rem) / 2);
+            flex: 1 0 calc((100% - 1.25rem) / 2);
+  }
+}
+@media (max-width: 480px) {
   .contacts-info__block {
     -webkit-box-flex: 1;
         -ms-flex: 1 0 calc((100% - 3.75rem) / 4);
@@ -3219,7 +3232,7 @@ input[type=checkbox]:checked::before {
   font-size: 1rem;
   line-height: 1.25rem;
   text-align: center;
-  border: 0.125rem solid #070707;
+  border: 0.0625rem solid #070707;
   border-radius: 0.625rem;
   background-color: #ffffff;
 }
@@ -3231,6 +3244,10 @@ input[type=checkbox]:checked::before {
 .checkout-card__button {
   width: 2.5rem;
   cursor: pointer;
+}
+.checkout-card__button_plus {
+  font-weight: 700;
+  border-width: 0.125rem;
 }
 .checkout-card__input {
   width: 5rem;
