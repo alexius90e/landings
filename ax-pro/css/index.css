@@ -1130,6 +1130,68 @@ input[type=checkbox]:checked::before {
   }
 }
 
+#requestOfferModal .modal-dialog {
+  padding: 0;
+  width: auto;
+  border: none;
+  border-radius: 0;
+  background: none;
+}
+#requestOfferModal .modal-dialog .icon-button_close-black {
+  top: 1.25rem;
+  right: 1.25rem;
+}
+#requestOfferModal .consult-form {
+  padding: 2.25rem;
+}
+@media (max-width: 360px) {
+  #requestOfferModal .consult-form {
+    padding: 2.25rem 1rem;
+  }
+}
+#requestOfferModal .consult-form__wrapper {
+  background-size: auto 500px;
+  border: 1px solid #a14a9c;
+}
+#requestOfferModal .consult-form__fieldset_top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+#requestOfferModal .consult-form__label_input {
+  width: 100%;
+}
+#requestOfferModal .consult-form__label_input > input {
+  display: block;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+#requestOfferModal .consult-form__label_input > span {
+  margin-bottom: 0.6875rem;
+}
+#requestOfferModal .consult-form__label_checkbox {
+  max-width: 23rem;
+}
+#requestOfferModal .consult-form .button.button_large {
+  display: block;
+  width: 100%;
+}
+#requestOfferModal .main__heading {
+  margin-bottom: 30px;
+  font-size: 20px;
+  line-height: 25px;
+  text-align: center;
+}
+
 .top-contacts {
   display: -webkit-box;
   display: -ms-flexbox;
