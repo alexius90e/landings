@@ -107,3 +107,30 @@ burgerButton.addEventListener('click', () => {
     topContacts.classList.remove('fixed');
   }
 });
+
+// request-offer-button
+
+const requestOfferButtons = document.querySelectorAll('.request-offer-button');
+
+const requestOfferModal = document.querySelector('#requestOfferModal');
+
+if (requestOfferModal) {
+  requestOfferButtons.forEach((button) =>
+    button.addEventListener('click', () => {
+      requestOfferModal.classList.add('visible');
+    })
+  );
+
+  requestOfferModal.addEventListener('click', (e) => {
+    const targetClassList = e.target.classList;
+
+    const isOverlayTarget = targetClassList.contains('modal');
+
+    const isCloseBtnTarget = targetClassList.contains(
+      'icon-button_close-black'
+    );
+
+    if (isOverlayTarget || isCloseBtnTarget)
+      requestOfferModal.classList.remove('visible');
+  });
+}

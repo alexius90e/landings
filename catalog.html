@@ -57,7 +57,7 @@
           <button class="icon-button icon-button_basket">
             <a href="./checkout.html"></a>
           </button>
-          <button class="button">Получить КП</button>
+          <button class="button request-offer-button">Получить КП</button>
           <button
             class="icon-button icon-button_menu"
             id="burgerButton"
@@ -516,6 +516,41 @@
         <p class="footer__copyright">Копирайт ⓒ 2023</p>
       </div>
     </footer>
+
+    <div class="modal" id="requestOfferModal">
+      <div class="modal-dialog">
+        <button
+          class="icon-button icon-button_close-black"
+          id="casesCloseBtn"
+        ></button>
+        <div class="modal-content">
+          <div class="consult-form__wrapper consult-form">
+            <h2 class="main__heading">Запросить предложение</h2>
+            <form>
+              <fieldset
+                class="consult-form__fieldset consult-form__fieldset_top"
+              >
+                <label class="consult-form__label_input">
+                  <span>Ваше имя</span><input type="text" placeholder="Имя" />
+                </label>
+                <label class="consult-form__label_input">
+                  <span>Номер телефона</span>
+                  <input type="tel" placeholder="+7 (900) 800-00-00" />
+                </label>
+                <button class="button button_large">Задать вопрос</button>
+              </fieldset>
+
+              <fieldset class="consult-form__fieldset">
+                <label class="consult-form__label_checkbox">
+                  <input type="checkbox" />
+                  <span>Согласие на обработку персональных данных</span>
+                </label>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <div class="modal" id="catalogModal">
       <div class="modal-dialog">
