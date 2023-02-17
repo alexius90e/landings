@@ -1144,13 +1144,13 @@ input[type=checkbox]:checked::before {
 #requestOfferModal .consult-form {
   padding: 2.25rem;
 }
-@media (max-width: 360px) {
+@media (max-width: 22.5rem) {
   #requestOfferModal .consult-form {
     padding: 2.25rem 1rem;
   }
 }
 #requestOfferModal .consult-form__wrapper {
-  background-size: auto 500px;
+  background-size: auto 31.25rem;
   border: 1px solid #a14a9c;
 }
 #requestOfferModal .consult-form__fieldset_top {
@@ -1184,11 +1184,12 @@ input[type=checkbox]:checked::before {
 #requestOfferModal .consult-form .button.button_large {
   display: block;
   width: 100%;
+  margin-top: 1.875rem;
 }
 #requestOfferModal .main__heading {
-  margin-bottom: 30px;
-  font-size: 20px;
-  line-height: 25px;
+  margin-bottom: 1.875rem;
+  font-size: 1.25rem;
+  line-height: 1.5625rem;
   text-align: center;
 }
 
