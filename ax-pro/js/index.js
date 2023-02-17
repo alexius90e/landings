@@ -19,7 +19,7 @@ const casesSwiper = new Swiper('.cases .swiper', {
       slidesPerView: 2,
       spaceBetween: 20,
     },
-    1000: {
+    1001: {
       slidesPerView: 3,
       spaceBetween: 20,
     },
