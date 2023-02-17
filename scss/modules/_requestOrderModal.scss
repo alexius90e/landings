@@ -20,8 +20,8 @@
     }
 
     &__wrapper {
-      background-size: auto 500px ;
-      border: 1px solid $purple;
+      background-size: auto 31.25rem ;
+      border: 0.0625rem solid $purple;
     }
 
     &__fieldset_top {
@@ -54,6 +54,7 @@
     & .button.button_large {
       display: block;
       width: 100%;
+      margin-bottom: 1.875rem;
     }
   }
 
