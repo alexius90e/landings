@@ -8,20 +8,24 @@
     }
   }
 
-  &__slide-title {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0.3125rem;
-    padding: 0 1.5625rem 1.5625rem;
-    color: $white;
-    font-weight: 700;
-    font-size: 1.25rem;
-    line-height: 1.5625rem;
+  &__slide {
+    cursor: pointer;
 
-    @include iphone {
-      font-size: 1.125rem;
-      line-height: 1.375rem;
+    &-title {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0.3125rem;
+      padding: 0 1.5625rem 1.5625rem;
+      color: $white;
+      font-weight: 700;
+      font-size: 1.25rem;
+      line-height: 1.5625rem;
+
+      @include iphone {
+        font-size: 1.125rem;
+        line-height: 1.375rem;
+      }
     }
   }
 

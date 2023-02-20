@@ -2151,6 +2151,9 @@ input[type=checkbox]:checked::before {
 .cases__slider .swiper-slide img {
   border-radius: 0.625rem;
 }
+.cases__slide {
+  cursor: pointer;
+}
 .cases__slide-title {
   position: absolute;
   left: 0;
