@@ -1,6 +1,18 @@
 .catalog {
   margin-top: 3.3125rem;
 
+  &__text {
+    margin: 70px 0;
+
+    @include laptop {
+      margin: 60px 0;
+    }
+
+    @include iphone {
+      margin: 40px 0;
+    }
+  }
+
   &__types {
     display: flex;
     flex-wrap: wrap;
@@ -288,4 +300,6 @@
       max-width: 100%;
     }
   }
+
+
 }

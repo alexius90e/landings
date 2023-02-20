@@ -2609,6 +2609,19 @@ input[type=checkbox]:checked::before {
 .catalog {
   margin-top: 3.3125rem;
 }
+.catalog__text {
+  margin: 70px 0;
+}
+@media (max-width: 1000px) {
+  .catalog__text {
+    margin: 60px 0;
+  }
+}
+@media (max-width: 480px) {
+  .catalog__text {
+    margin: 40px 0;
+  }
+}
 .catalog__types {
   display: -webkit-box;
   display: -ms-flexbox;
