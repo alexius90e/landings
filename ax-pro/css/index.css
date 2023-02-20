@@ -1144,14 +1144,14 @@ input[type=checkbox]:checked::before {
 #requestOfferModal .consult-form {
   padding: 2.25rem;
 }
-@media (max-width: 22.5rem) {
+@media (max-width: 360px) {
   #requestOfferModal .consult-form {
     padding: 2.25rem 1rem;
   }
 }
 #requestOfferModal .consult-form__wrapper {
   background-size: auto 31.25rem;
-  border: 1px solid #a14a9c;
+  border: 0.0625rem solid #a14a9c;
 }
 #requestOfferModal .consult-form__fieldset_top {
   display: -webkit-box;
@@ -1184,12 +1184,12 @@ input[type=checkbox]:checked::before {
 #requestOfferModal .consult-form .button.button_large {
   display: block;
   width: 100%;
-  margin-top: 1.875rem;
+  margin-bottom: 1.875rem;
 }
 #requestOfferModal .main__heading {
-  margin-bottom: 1.875rem;
-  font-size: 1.25rem;
-  line-height: 1.5625rem;
+  margin-bottom: 30px;
+  font-size: 20px;
+  line-height: 25px;
   text-align: center;
 }
 
@@ -2151,6 +2151,9 @@ input[type=checkbox]:checked::before {
 .cases__slider .swiper-slide img {
   border-radius: 0.625rem;
 }
+.cases__slide {
+  cursor: pointer;
+}
 .cases__slide-title {
   position: absolute;
   left: 0;
@@ -2609,6 +2612,19 @@ input[type=checkbox]:checked::before {
 .catalog {
   margin-top: 3.3125rem;
 }
+.catalog__text {
+  margin: 70px 0;
+}
+@media (max-width: 1000px) {
+  .catalog__text {
+    margin: 60px 0;
+  }
+}
+@media (max-width: 480px) {
+  .catalog__text {
+    margin: 40px 0;
+  }
+}
 .catalog__types {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2806,15 +2822,19 @@ input[type=checkbox]:checked::before {
   margin-bottom: 2.5rem;
 }
 .catalog__filter-price-label {
+  display: block;
   -webkit-box-flex: 1;
-      -ms-flex: 1 0 calc((50% - 0.625rem) / 2);
-          flex: 1 0 calc((50% - 0.625rem) / 2);
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  max-width: calc(50% - 0.625rem);
   font-weight: 400;
   font-size: 0.875rem;
   line-height: 1.0625rem;
   padding: 0.9375rem 1.25rem;
   border: 0.0625rem solid #a5a5a5;
   border-radius: 1.875rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 .catalog__container {
   -webkit-box-flex: 1;

@@ -206,27 +206,27 @@
           <ul class="categories__list">
             <li class="categories__list-item">
               <img src="./assets/categories/category-bg1.jpg" alt="" />
-              <a href="#"> Комплекты </a>
+              <a href="./catalog.html"> Комплекты </a>
             </li>
             <li class="categories__list-item">
               <img src="./assets/categories/category-bg2.jpg" alt="" />
-              <a href="#"> Датчики </a>
+              <a href="./catalog.html"> Датчики </a>
             </li>
             <li class="categories__list-item">
               <img src="./assets/categories/category-bg3.jpg" alt="" />
-              <a href="#"> Оповещение </a>
+              <a href="./catalog.html"> Оповещение </a>
             </li>
             <li class="categories__list-item">
               <img src="./assets/categories/category-bg4.jpg" alt="" />
-              <a href="#"> Управление </a>
+              <a href="./catalog.html"> Управление </a>
             </li>
             <li class="categories__list-item">
               <img src="./assets/categories/category-bg5.jpg" alt="" />
-              <a href="#"> Автоматизация </a>
+              <a href="./catalog.html"> Автоматизация </a>
             </li>
 
             <li class="categories__list-item categories__list-item_basic">
-              <a href="#">Перейти в каталог</a>
+              <a href="./catalog.html">Перейти в каталог</a>
             </li>
           </ul>
         </div>
@@ -300,19 +300,19 @@
           <div class="cases__slider">
             <div class="swiper">
               <div class="swiper-wrapper">
-                <div class="swiper-slide">
+                <div class="swiper-slide cases__slide">
                   <img src="./assets/cases/case1.jpg" alt="case" />
                   <div class="cases__slide-title">
                     Внедрение AX PRO в компании “Рога и копыта”
                   </div>
                 </div>
-                <div class="swiper-slide">
+                <div class="swiper-slide cases__slide">
                   <img src="./assets/cases/case2.jpg" alt="case" />
                   <div class="cases__slide-title">
                     Система сигнализации в компании “Лидер”
                   </div>
                 </div>
-                <div class="swiper-slide">
+                <div class="swiper-slide cases__slide">
                   <img src="./assets/cases/case3.jpg" alt="case" />
                   <div class="cases__slide-title">
                     Разработка охранной системы для «Вектор»
@@ -371,9 +371,9 @@
 
           <nav class="footer__menu footer__wrapper-block">
             <ul>
-              <li><a href="#">Каталог</a></li>
-              <li><a href="#">Кейсы</a></li>
-              <li><a href="#">Контакты</a></li>
+              <li><a href="./catalog.html">Каталог</a></li>
+              <li><a href="./cases.html">Кейсы</a></li>
+              <li><a href="./contacts.html">Контакты</a></li>
             </ul>
           </nav>
 
@@ -458,6 +458,88 @@
               </fieldset>
             </form>
           </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="casesModal">
+      <div class="modal-dialog">
+        <button
+          class="icon-button icon-button_close-black"
+          id="casesCloseBtn"
+        ></button>
+        <div class="modal-content">
+          <article class="cases-card">
+            <div class="cases-card-header">
+              <div class="cases-card-image">
+                <img src="./assets/cases/case3.jpg" alt="case3" />
+              </div>
+              <div class="cases-card-info">
+                <h2 class="cases-card-info__title">
+                  Внедрение AX PRO в компании “Рога и копыта”
+                </h2>
+                <p class="cases-card-client"><b>Клиент:</b> “Рога и копыта”</p>
+                <h3 class="cases-card-title_secondary">Задача:</h3>
+                <p>
+                  С помощью центрального устройства к охранной системе объекта
+                  можно подключить до 142 периферийных устройств, включая
+                  IP-камеры. Единый интерфейс для управления каждым элементом,
+                  настройка устройств и сигналов, просмотр видеозаписей и работа
+                  с архивом.
+                </p>
+              </div>
+            </div>
+
+            <div class="cases-card-description">
+              <h3 class="cases-card-title_secondary">Задача:</h3>
+              <p class="cases-card-description__text hidden">
+                Задача организации, в особенности же дальнейшее развитие
+                различных форм деятельности позволяет оценить значение
+                направлений прогрессивного развития. Разнообразный и богатый
+                опыт сложившаяся структура организации представляет собой
+                интересный эксперимент проверки системы обучения кадров,
+                соответствует насущным потребностям. Значимость этих проблем
+                настолько очевидна, что сложившаяся структура организации
+                позволяет выполнять важные задания по разработке позиций,
+                занимаемых участниками в отношении поставленных задач. Таким
+                образом сложившаяся структура организации позволяет оценить
+                значение новых предложений. Значимость этих проблем настолько
+                очевидна, что постоянное информационно-пропагандистское
+                обеспечение нашей деятельности позволяет оценить значение форм
+                развития. Не следует, однако забывать, что рамки и место
+                обучения.
+              </p>
+
+              <button class="cases-card-description__toggler">
+                Читать полностью
+              </button>
+            </div>
+
+            <div class="consult-form__wrapper consult-form">
+              <h2 class="main__heading">Запросить предложение</h2>
+              <form>
+                <fieldset
+                  class="consult-form__fieldset consult-form__fieldset_top"
+                >
+                  <label class="consult-form__label_input">
+                    <span>Ваше имя</span><input type="text" placeholder="Имя" />
+                  </label>
+                  <label class="consult-form__label_input">
+                    <span>Номер телефона</span>
+                    <input type="tel" placeholder="+7 (900) 800-00-00" />
+                  </label>
+                  <button class="button button_large">Задать вопрос</button>
+                </fieldset>
+
+                <fieldset class="consult-form__fieldset">
+                  <label class="consult-form__label_checkbox">
+                    <input type="checkbox" />
+                    <span>Согласие на обработку персональных данных</span>
+                  </label>
+                </fieldset>
+              </form>
+            </div>
+          </article>
         </div>
       </div>
     </div>

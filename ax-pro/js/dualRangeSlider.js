@@ -27,11 +27,33 @@ lowerSlider.addEventListener('input', () => {
   }
 });
 
+lowerLabel.addEventListener('change', (e) => {
+  const newValue = parseInt(e.target.value);
+  if (newValue <= upperSlider.value) {
+    lowerSlider.value = newValue;
+  } else {
+    lowerLabel.value = lowerSlider.value;
+  }
+});
+
+upperLabel.addEventListener('change', (e) => {
+  const newValue = parseInt(e.target.value);
+
+  const maxValue = 50000;
+
+  if (newValue >= lowerSlider.value) {
+    upperSlider.value = newValue <= maxValue ? newValue : maxValue;
+    upperLabel.value = maxValue;
+  } else {
+    upperLabel.value = upperSlider.value;
+  }
+});
+
 export function updateValue() {
   lowerVal = parseInt(lowerSlider.value);
   upperVal = parseInt(upperSlider.value);
-  lowerLabel.innerHTML = `от ${lowerVal}`;
-  upperLabel.innerHTML = `до ${upperVal}`;
+  lowerLabel.value = lowerVal;
+  upperLabel.value = upperVal;
 }
 
 updateValue();

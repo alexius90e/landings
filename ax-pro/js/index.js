@@ -134,3 +134,23 @@ if (requestOfferModal) {
       requestOfferModal.classList.remove('visible');
   });
 }
+
+// cases modal
+
+const casesBlockModal = document.querySelector('#casesModal');
+
+const casesSlides = document.querySelectorAll('.cases__slide');
+
+casesSlides.forEach((slide) => {
+  slide.addEventListener('click', (e) => {
+    if (casesBlockModal) casesBlockModal.classList.add('visible');
+  });
+});
+
+if (casesBlockModal) {
+  casesBlockModal.addEventListener('click', (e) => {
+    const isCloseBtn = e.target.classList.contains('icon-button_close-black');
+    const isOverlay = e.target.classList.contains('modal');
+    if (isCloseBtn || isOverlay) casesBlockModal.classList.remove('visible');
+  });
+}
