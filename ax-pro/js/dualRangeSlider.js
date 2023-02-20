@@ -42,8 +42,8 @@ upperLabel.addEventListener('change', (e) => {
   const maxValue = 50000;
 
   if (newValue >= lowerSlider.value) {
+    upperLabel.value = newValue <= maxValue ? newValue : maxValue;
     upperSlider.value = newValue <= maxValue ? newValue : maxValue;
-    upperLabel.value = maxValue;
   } else {
     upperLabel.value = upperSlider.value;
   }
