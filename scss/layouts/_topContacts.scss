@@ -1,0 +1,47 @@
+.top-contacts {
+  display: flex;
+  justify-content: center;
+  padding: 0.625rem 0;
+  background-color: $black;
+  border-bottom: 0.0625rem solid rgba(255, 255, 255, 0.08);
+
+  &.fixed {
+    @include tablet {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 5;
+    }
+  }
+
+  & a {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+    color: $white;
+    text-decoration: none;
+  }
+
+  & > .container {
+    display: flex;
+    justify-content: flex-end;
+    gap: 2.5rem;
+    max-width: 72rem;
+    width: 100%;
+    padding: 0 6.25rem;
+
+    @include laptop {
+      gap: 1.25rem;
+      padding: 0 3.125rem;
+    }
+
+    @include iphone {
+      gap: 1.25rem;
+      padding: 0 1.875rem;
+    }
+
+    @include mobile {
+      padding: 0 1.25rem;
+    }
+  }
+}

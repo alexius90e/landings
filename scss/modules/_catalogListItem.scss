@@ -1,0 +1,66 @@
+.catalog-list-item {
+  position: relative;
+  height: 20.625rem;
+  box-sizing: border-box;
+  color: $white;
+  border: 0.1875rem solid rgba($color: $purple, $alpha: 0);
+  border-radius: 0.625rem;
+  overflow: hidden;
+  cursor: pointer;
+
+  &:hover {
+    border: 0.1875rem solid $purple;
+  }
+
+  @include laptop {
+    height: 18.75rem;
+  }
+
+  @include tablet {
+    height: 21.875rem;
+  }
+
+  @include iphone {
+    height: 15.625rem;
+  }
+
+  &__image {
+    display: block;
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    // border-radius: 0.625rem;
+  }
+
+  &__info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1.25rem;
+    box-sizing: border-box;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+
+    @include mobile {
+      font-size: 1rem;
+      line-height: 1.25rem;
+    }
+  }
+
+  &__description {
+    font-size: 0.875rem;
+    line-height: 1.0625rem;
+  }
+
+  &__price {
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}

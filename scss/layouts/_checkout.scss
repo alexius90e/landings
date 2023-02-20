@@ -1,0 +1,272 @@
+.checkout {
+  margin-top: 3.3125rem;
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+
+  @include laptop {
+    margin-top: 1.4375rem;
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+
+  &-card {
+    display: flex;
+    gap: 3.125rem;
+    margin-bottom: 1.25rem;
+    padding: 1.25rem;
+    border: 0.0625rem solid $grey;
+    border-radius: 0.625rem;
+
+    @include laptop {
+      gap: 1.875rem;
+    }
+
+    @include iphone {
+      padding: 0.625rem;
+      gap: 1.25rem;
+    }
+
+    @include mobile {
+      gap: 0.625rem;
+    }
+
+    &__image {
+      flex: 0 0 auto;
+      height: 12.5rem;
+      width: 12.5rem;
+
+      @include tablet {
+        height: 9.375rem;
+        width: 9.375rem;
+      }
+
+      @include iphone {
+        height: 6.25rem;
+        width: 6.25rem;
+      }
+
+      @include mobile {
+        height: 5.625rem;
+        width: 5.625rem;
+      }
+
+      & > img {
+        display: block;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 0.625rem;
+      }
+    }
+
+    &__data {
+      flex: 1 1 auto;
+    }
+
+    &__title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1.25rem;
+      margin: 0 0 0.9375rem;
+      font-weight: 700;
+      font-size: 1.5rem;
+      line-height: 1.8125rem;
+
+      @include laptop {
+        font-size: 1.25rem;
+        line-height: 1.5625rem;
+      }
+
+      @include tablet {
+        align-items: flex-start;
+      }
+
+      @include iphone {
+        font-size: 1.125rem;
+        line-height: 1.375rem;
+      }
+
+      @include mobile {
+        font-size: 0.9375rem;
+        line-height: 1.125rem;
+      }
+    }
+
+    &__description {
+      margin: 0 0 1.875rem;
+      font-size: 1rem;
+      line-height: 1.25rem;
+
+      @include laptop {
+        font-size: 0.875rem;
+        line-height: 1.0625rem;
+      }
+
+      @include mobile {
+        font-size: 0.75rem;
+        line-height: 0.9375rem;
+      }
+    }
+
+    &__buttons {
+      display: flex;
+      gap: 0.625rem;
+      margin: 0 0 1.25rem;
+    }
+
+    &__button,
+    &__input {
+      display: block;
+      height: 2.5rem;
+      box-sizing: border-box;
+      font-size: 1rem;
+      line-height: 1.25rem;
+      text-align: center;
+      border: 0.0625rem solid $black;
+      border-radius: 0.625rem;
+      background-color: $white;
+
+      @include laptop {
+        height: 2.1875rem;
+      }
+    }
+
+    &__button {
+      width: 2.5rem;
+      cursor: pointer;
+
+      &_plus {
+        font-weight: 700;
+        border-width: 0.125rem;
+      }
+    }
+
+    &__input {
+      width: 5rem;
+
+      @include tablet {
+        width: 3.75rem;
+      }
+    }
+
+    &__price {
+      font-weight: 700;
+      font-size: 1.25rem;
+      line-height: 1.5625rem;
+
+      @include laptop {
+        font-size: 1.125rem;
+        line-height: 1.375rem;
+      }
+
+      @include iphone {
+        font-size: 1rem;
+        line-height: 1.25rem;
+      }
+
+      @include mobile {
+        font-size: 0.9375rem;
+        line-height: 1.125rem;
+      }
+    }
+  }
+
+  &__price {
+    margin: 1.875rem 0 5.625rem;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 1.8125rem;
+    text-align: right;
+
+    @include laptop {
+      margin: 1.25rem 0 5.625rem;
+      font-size: 1.25rem;
+      line-height: 1.5625rem;
+    }
+
+    @include tablet {
+      align-items: flex-start;
+    }
+
+    @include iphone {
+      margin: 1.25rem 0 4.375rem;
+      font-size: 1.125rem;
+      line-height: 1.375rem;
+    }
+
+    @include mobile {
+      font-size: 0.9375rem;
+      line-height: 1.125rem;
+    }
+  }
+
+  &-form {
+    padding: 2.5rem;
+    background: url(../../assets/formbackground.jpg) center no-repeat;
+    background-size: cover;
+    border-radius: 0.625rem;
+    color: $white;
+
+    @include iphone {
+      padding: 1.875rem;
+    }
+
+    @include mobile {
+      padding: 1.25rem;
+    }
+
+    &__fieldset {
+      margin: 0;
+      padding: 0;
+      border: none;
+
+      &_top {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.25rem;
+        margin: 0 0 1.875rem;
+      }
+
+      &_bottom {
+        display: flex;
+        justify-content: space-between;
+        gap: 1.875rem;
+
+        @include tablet {
+          flex-direction: column-reverse;
+        }
+      }
+    }
+
+    &__label {
+      &-input {
+        flex: 1 0 calc((100% - 1.25rem) / 2);
+        display: flex;
+        flex-direction: column;
+        gap: 0.625rem;
+
+        @include iphone {
+          flex: 1 0 100%;
+        }
+      }
+
+      &-textarea {
+        flex: 1 0 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 0.625rem;
+
+        & textarea {
+          box-sizing: border-box;
+        }
+      }
+
+      &-checkbox {
+        display: flex;
+        align-items: center;
+        gap: 0.9375rem;
+      }
+    }
+  }
+}

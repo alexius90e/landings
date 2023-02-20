@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AX PRO Оформление заказа</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./css/index.css" />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"
+    ></script>
+
+    <script defer src="./js/index.js"></script>
+    <!-- <script defer src="./js/cases.js" type="module"></script> -->
+  </head>
+  <body>
+    <section class="top-contacts">
+      <div class="container">
+        <a href="mailto: help@site.ru">help@site.ru</a>
+        <a href="tel: +78001234567">+7 (800) 123 45 67</a>
+      </div>
+    </section>
+
+    <header class="header">
+      <div class="container">
+        <a class="logo" href="./index.html"></a>
+
+        <nav class="header__nav">
+          <ul class="header-menu">
+            <li class="header-menu-item">
+              <a href="./index.html">Главная</a>
+            </li>
+
+            <li class="header-menu-item">
+              <div class="header-menu-item__title">
+                <a href="./catalog.html">Каталог</a>
+              </div>
+            </li>
+
+            <li class="header-menu-item">
+              <a href="./cases.html">Кейсы</a>
+            </li>
+
+            <li class="header-menu-item">
+              <a href="./contacts.html">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="header__buttons">
+          <button class="icon-button icon-button_search"></button>
+          <button class="icon-button icon-button_basket">
+            <a href="./checkout.html"></a>
+          </button>
+          <button class="button request-offer-button">Получить КП</button>
+          <button
+            class="icon-button icon-button_menu"
+            id="burgerButton"
+          ></button>
+        </div>
+      </div>
+      <div class="search-bar">
+        <div class="search-bar__container">
+          <input
+            class="search-bar__input"
+            placeholder="Введите запрос"
+            type="search"
+          />
+          <button
+            class="icon-button icon-button_search-black search-bar__search-button"
+          ></button>
+          <button
+            class="icon-button icon-button_close search-bar__close"
+          ></button>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="main__section breadcrumbs">
+        <div class="main__container">
+          <ul>
+            <li><a href="./index.html">Главная</a></li>
+            <li>Оформление заказа</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="main__section checkout">
+        <div class="main__container">
+          <h2 class="main__heading">Оформление заказа</h2>
+
+          <div class="checkout-card">
+            <div class="checkout-card__image">
+              <img src="./assets/cases/case3.jpg" alt="case3" />
+            </div>
+            <div class="checkout-card__data">
+              <h2 class="checkout-card__title">
+                <span>Охранная контрольная панель AX Lite</span>
+                <button class="icon-button icon-button_delete"></button>
+              </h2>
+              <p class="checkout-card__description">
+                Интеллектуальная централь системы безопасности
+              </p>
+              <div class="checkout-card__buttons">
+                <button class="checkout-card__button">-</button>
+                <input class="checkout-card__input" type="number" value="1" />
+                <button
+                  class="checkout-card__button checkout-card__button_plus"
+                >
+                  +
+                </button>
+              </div>
+              <div class="checkout-card__price">36 990 руб.</div>
+            </div>
+          </div>
+
+          <div class="checkout-card">
+            <div class="checkout-card__image">
+              <img src="./assets/cases/case3.jpg" alt="case3" />
+            </div>
+            <div class="checkout-card__data">
+              <h2 class="checkout-card__title">
+                <span>Охранная контрольная панель AX Lite</span>
+                <button class="icon-button icon-button_delete"></button>
+              </h2>
+              <p class="checkout-card__description">
+                Интеллектуальная централь системы безопасности
+              </p>
+              <div class="checkout-card__buttons">
+                <button class="checkout-card__button">-</button>
+                <input class="checkout-card__input" type="number" value="1" />
+                <button
+                  class="checkout-card__button checkout-card__button_plus"
+                >
+                  +
+                </button>
+              </div>
+              <div class="checkout-card__price">36 990 руб.</div>
+            </div>
+          </div>
+
+          <div class="checkout__price">Итого: 52 990 руб.</div>
+
+          <form class="checkout-form">
+            <fieldset
+              class="checkout-form__fieldset checkout-form__fieldset_top"
+            >
+              <label class="checkout-form__label-input">
+                <span>Ваше имя</span><input type="text" placeholder="Имя" />
+              </label>
+
+              <label class="checkout-form__label-input">
+                <span>Номер телефона</span>
+                <input type="tel" placeholder="+7 (900) 800-00-00" />
+              </label>
+
+              <label class="checkout-form__label-textarea">
+                <span>Номер телефона</span>
+                <textarea placeholder="Введите комментарий" rows="4"></textarea>
+              </label>
+            </fieldset>
+
+            <fieldset
+              class="checkout-form__fieldset checkout-form__fieldset_bottom"
+            >
+              <label class="checkout-form__label-checkbox">
+                <input type="checkbox" />
+                <span>Согласие на обработку персональных данных</span>
+              </label>
+              <button class="button button_large">Оформить заказ</button>
+            </fieldset>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="main__container">
+        <div class="footer__wrapper">
+          <div class="footer__logo footer__wrapper-block">
+            <div class="logo"></div>
+          </div>
+
+          <nav class="footer__menu footer__wrapper-block">
+            <ul>
+              <li><a href="./catalog.html">Каталог</a></li>
+              <li><a href="./cases.html">Кейсы</a></li>
+              <li><a href="./contacts.html">Контакты</a></li>
+            </ul>
+          </nav>
+
+          <div class="footer__contacts footer__wrapper-block">
+            <ul>
+              <li>
+                <div class="icon-button icon-button_phone"></div>
+                <a href="tel:+78001234567">+7 (800) 123 45 67</a>
+              </li>
+              <li>
+                <div class="icon-button icon-button_mail"></div>
+                <a href="mailto:help@site.ru">help@site.ru</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer__address footer__wrapper-block">
+            <ul>
+              <li>г. Москва, ул. Советская 1</li>
+              <li>Пн-Пт с 9:00 до 18:00</li>
+            </ul>
+          </div>
+
+          <div class="footer__social footer__wrapper-block">
+            <ul>
+              <li>Мы в социальных сетях</li>
+              <li>
+                <a
+                  class="footer__social-link footer__social-link_vk"
+                  href="https://vk.com/"
+                  target="_blank"
+                ></a>
+                <a
+                  class="footer__social-link footer__social-link_youtube"
+                  href="https://youtube.com/"
+                  target="_blank"
+                ></a>
+                <a
+                  class="footer__social-link footer__social-link_telegram"
+                  href="https://web.telegram.org/"
+                  target="_blank"
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="footer__policy">Политика конфиденциальности</p>
+
+        <p class="footer__copyright">Копирайт ⓒ 2023</p>
+      </div>
+    </footer>
+
+    <div class="modal" id="requestOfferModal">
+      <div class="modal-dialog">
+        <button
+          class="icon-button icon-button_close-black"
+          id="casesCloseBtn"
+        ></button>
+        <div class="modal-content">
+          <div class="consult-form__wrapper consult-form">
+            <h2 class="main__heading">Запросить предложение</h2>
+            <form>
+              <fieldset
+                class="consult-form__fieldset consult-form__fieldset_top"
+              >
+                <label class="consult-form__label_input">
+                  <span>Ваше имя</span><input type="text" placeholder="Имя" />
+                </label>
+                <label class="consult-form__label_input">
+                  <span>Номер телефона</span>
+                  <input type="tel" placeholder="+7 (900) 800-00-00" />
+                </label>
+                <button class="button button_large">Задать вопрос</button>
+              </fieldset>
+
+              <fieldset class="consult-form__fieldset">
+                <label class="consult-form__label_checkbox">
+                  <input type="checkbox" />
+                  <span>Согласие на обработку персональных данных</span>
+                </label>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

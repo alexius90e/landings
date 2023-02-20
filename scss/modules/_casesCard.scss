@@ -1,0 +1,195 @@
+.cases-card {
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.0625rem;
+
+  @include tablet {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+  }
+
+  &-header {
+    display: flex;
+    gap: 1.875rem;
+    padding-bottom: 2.5rem;
+    margin-bottom: 1.25rem;
+    border-bottom: 0.0625rem solid $grey50;
+
+    @include laptop {
+      gap: 1.25rem;
+      padding-bottom: 1.5625rem;
+    }
+
+    @media (max-width: 40rem) {
+      flex-direction: column;
+      padding-bottom: 1.25rem;
+    }
+  }
+
+  &-image {
+    flex: 1 0 35%;
+    min-width: 35%;
+    height: 18.75rem;
+
+    @include laptop {
+      flex: 1 0 50%;
+      min-width: 50%;
+    }
+
+    @media (max-width: 40rem) {
+      flex: 1 0 100%;
+      min-width: 100%;
+    }
+
+    & img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 0.625rem;
+
+      @include laptop {
+        flex: 1 0 50%;
+        min-width: 50%;
+        max-height: 15.625rem;
+      }
+
+      @include mobile {
+        max-height: 11.25rem;
+      }
+    }
+  }
+
+  &-info {
+    &__title {
+      margin: 0 0 1.25rem;
+      padding-right: 2.5rem;
+      font-weight: 700;
+      font-size: 2.25rem;
+      line-height: 2.75rem;
+
+      @include laptop {
+        font-size: 1.75rem;
+      }
+
+      @include tablet {
+        font-size: 1.5rem;
+        line-height: 1.8125rem;
+      }
+
+      @include iphone {
+        margin: 0 0 0.625rem;
+        padding: 0;
+        font-size: 1.25rem;
+        line-height: 1.5625rem;
+      }
+
+      @include mobile {
+        font-size: 1.125rem;
+        line-height: 1.375rem;
+      }
+    }
+
+    & p {
+      margin-bottom: 0;
+    }
+  }
+
+  &-client,
+  &-title_secondary {
+    font-size: 1.25rem;
+    line-height: 1.5625rem;
+
+    @include laptop {
+      font-size: 1.125rem;
+      line-height: 1.375rem;
+    }
+
+    @include iphone {
+      font-size: 1rem;
+      line-height: 1.25rem;
+    }
+  }
+
+  &-client > b,
+  &-title_secondary {
+    font-weight: 700;
+  }
+
+  &-title_secondary {
+    margin: 0.8125rem 0;
+  }
+
+  &-description {
+    margin-bottom: 1.875rem;
+
+    &__text {
+      &.hidden {
+        @include laptop {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 5;
+          -webkit-box-orient: vertical;
+        }
+      }
+    }
+
+    &__toggler {
+      display: none;
+      align-items: center;
+      gap: 0.625rem;
+      padding: 0;
+      font-size: 0.75rem;
+      line-height: 0.9375rem;
+      text-decoration-line: underline;
+      background-color: $white;
+      border: none;
+      cursor: pointer;
+
+      &::after {
+        content: '';
+        width: 0.625rem;
+        height: 0.625rem;
+        display: block;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url(../../assets/icons/icon_toggler-black.svg);
+        transform: rotate(180deg);
+      }
+
+      &.hidden::after {
+        transform: rotate(0deg);
+      }
+
+      @include laptop {
+        display: flex;
+      }
+    }
+  }
+
+  & .consult-form {
+    padding: 1.5625rem 1.875rem;
+
+    & .main__heading {
+      margin-bottom: 1.875rem;
+      font-size: 1.875rem;
+      line-height: 2.3125rem;
+
+      @include laptop {
+        font-size: 1.625rem;
+        line-height: 2rem;
+      }
+
+      @include iphone {
+        font-size: 1.25rem;
+        line-height: 1.5625rem;
+      }
+
+      @include mobile {
+        font-size: 1.125rem;
+        line-height: 1.375rem;
+      }
+    }
+  }
+}

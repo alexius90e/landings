@@ -1,0 +1,110 @@
+.cases-page {
+  margin-top: 3.3125rem;
+
+  @include laptop {
+    margin-top: 1.4375rem;
+  }
+
+  @include iphone {
+    margin-top: 2.0625rem;
+  }
+
+  & .main__heading {
+    margin-bottom: 0.625rem;
+  }
+
+  &-slider {
+    & .swiper {
+      @media (min-width: 62.5063rem) {
+        position: static;
+        overflow: initial;
+      }
+
+      &-wrapper {
+        @media (min-width: 62.5063rem) {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 1.25rem;
+          transform: none !important;
+        }
+      }
+
+      &-slide {
+        @media (min-width: 62.5063rem) {
+          flex: 1 0 calc((100% - 1.25rem * 2) / 3) !important;
+          width: auto !important;
+          margin: 0 !important;
+        }
+
+        @include laptop {
+          height: 29rem;
+        }
+
+        @include tablet {
+          height: 25rem;
+        }
+      }
+
+      &-pagination {
+        display: none;
+
+        @include laptop {
+          position: static;
+          display: block;
+          margin: 1.875rem 0;
+        }
+
+        &-bullet {
+          width: 0.5625rem;
+          height: 0.5625rem;
+          border: 0.125rem solid $grey;
+          background-color: $white;
+
+          &-active {
+            border: 0.125rem solid $purple;
+            background-color: $purple;
+          }
+        }
+      }
+    }
+  }
+
+  &-slide {
+    position: relative;
+    height: 31.25rem;
+    box-sizing: border-box;
+    border: 0.1875rem solid rgba($color: $purple, $alpha: 0);
+    border-radius: 0.75rem;
+    transition: border linear 0.2s;
+    cursor: pointer;
+
+    &:hover {
+      border: 0.1875rem solid rgba($color: $purple, $alpha: 1);
+    }
+
+    &__img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 0.625rem;
+    }
+
+    &__title {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 1.5625rem;
+      font-weight: 700;
+      font-size: 1.25rem;
+      line-height: 1.5625rem;
+      color: $white;
+
+      @include iphone {
+        font-size: 1.125rem;
+        line-height: 1.375rem;
+      }
+    }
+  }
+}

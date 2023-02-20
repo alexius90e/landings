@@ -1,0 +1,100 @@
+.cases {
+  &__slider {
+    position: relative;
+    max-height: 34.375rem;
+
+    & .swiper-slide img {
+      border-radius: 0.625rem;
+    }
+  }
+
+  &__slide {
+    cursor: pointer;
+
+    &-title {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0.3125rem;
+      padding: 0 1.5625rem 1.5625rem;
+      color: $white;
+      font-weight: 700;
+      font-size: 1.25rem;
+      line-height: 1.5625rem;
+
+      @include iphone {
+        font-size: 1.125rem;
+        line-height: 1.375rem;
+      }
+    }
+  }
+
+  &__button-prev,
+  &__button-next {
+    position: absolute;
+    top: calc(50% - 1.5625rem);
+    width: 1.875rem;
+    height: 1.875rem;
+    background-image: url(../../assets/icons/icon_arrow.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
+    opacity: 0.5;
+    transform: translateY(-50%);
+    cursor: pointer;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__button-prev {
+    left: -4rem;
+
+    @include laptop {
+      left: -3rem;
+    }
+  }
+
+  &__button-next {
+    transform: rotate(180deg);
+    right: -4rem;
+
+    @include laptop {
+      right: -3rem;
+    }
+  }
+
+  & .main__heading {
+    margin: 0 0 0.625rem;
+  }
+
+  & .swiper {
+    &-slide {
+      & img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+
+    &-pagination {
+      position: static;
+      margin-top: 1.875rem;
+
+      &-bullet {
+        width: 0.625rem;
+        height: 0.625rem;
+        margin: 0 0.625rem !important;
+        border: 0.125rem solid #a5a5a5;
+        box-sizing: border-box;
+        background-color: $white;
+
+        &-active {
+          background-color: $purple;
+          border-color: $purple;
+        }
+      }
+    }
+  }
+}

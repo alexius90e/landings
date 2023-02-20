@@ -1,0 +1,143 @@
+.info {
+  margin: 0;
+  padding: 5rem 0;
+  background-color: $black;
+  color: $white;
+
+  & .main__container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+
+    @include tablet {
+      flex-direction: column;
+      flex-wrap: nowrap;
+    }
+  }
+
+  &__block {
+    flex: 1 0 calc((100% - 1.25rem) / 2);
+
+    @include tablet {
+      flex: 1 0 100%;
+    }
+  }
+
+  &__img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: radial-gradient(
+      rgba($color: $purple, $alpha: 0.9),
+      rgba($color: $purple, $alpha: 0) 75%
+    );
+
+    &_integration {
+      order: 0;
+
+      & img {
+        width: 100%;
+        height: 100%;
+        max-height: 37.5rem;
+        object-fit: contain;
+
+        @include tablet {
+          max-height: 25rem;
+        }
+      }
+
+      @include tablet {
+        order: 1;
+      }
+    }
+
+    &_control {
+      order: 3;
+
+      & img {
+        height: 100%;
+        width: 100%;
+        max-height: 46.25rem;
+        object-fit: contain;
+
+        @include laptop {
+          max-height: 29.875rem;
+        }
+
+        @include iphone {
+          max-height: 396px;
+        }
+      }
+    }
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    min-height: 100%;
+
+    @include tablet {
+      text-align: center;
+    }
+
+    &_integration {
+      order: 1;
+
+      @include tablet {
+        order: 0;
+      }
+    }
+
+    &_control {
+      order: 2;
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+
+    @include laptop {
+      font-size: 1.875rem;
+      line-height: 2.3125rem;
+    }
+
+    @include tablet {
+      width: 100%;
+      text-align: center;
+    }
+
+    @include iphone {
+      font-size: 1.625rem;
+      line-height: 2rem;
+    }
+
+    @include mobile {
+      font-size: 1.5rem;
+      line-height: 1.8125rem;
+    }
+  }
+
+  &__description {
+    font-size: 1rem;
+    line-height: 1.25rem;
+
+    @include laptop {
+      font-size: 0.9375rem;
+      line-height: 1.125rem;
+    }
+
+    @include iphone {
+      font-size: 0.875rem;
+      line-height: 1.0625rem;
+    }
+  }
+
+  &__button-wrapper {
+    margin-top: 1.875rem;
+    text-align: center;
+  }
+}

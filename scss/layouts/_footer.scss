@@ -1,0 +1,157 @@
+.footer {
+  padding: 3.125rem 0 2.5rem;
+  color: $white;
+  background-color: $black;
+
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 5.625rem;
+
+    &-block {
+      flex: 1 0 calc((100% - 4rem) / 5);
+      font-size: 1rem;
+      line-height: 1.25rem;
+
+      @include laptop {
+        font-size: 0.875rem;
+        line-height: 1.0625rem;
+      }
+
+      @include laptop {
+        font-size: 0.875rem;
+        line-height: 1.0625rem;
+      }
+
+      & > ul {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+        padding: 0;
+        margin: 0;
+
+        & > li {
+          display: flex;
+          align-items: center;
+          gap: 1.625rem;
+          list-style-type: none;
+          text-align: center;
+        }
+      }
+
+      & a {
+        color: $white;
+        text-decoration: none;
+      }
+    }
+  }
+
+  &__logo {
+    @media (max-width: 1200px) {
+      flex: 1 0 100%;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 2.125rem;
+    }
+  }
+
+  &__menu {
+    @include laptop {
+      flex: 1 0 100%;
+      margin-bottom: 2.75rem;
+    }
+
+    & > ul {
+      @include laptop {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        gap: 3.125rem;
+      }
+    }
+  }
+
+  &__contacts {
+    @media (max-width: 40rem) {
+      flex: 1 0 100%;
+      margin-bottom: 1.5rem;
+    }
+
+    & > ul {
+      @include laptop {
+        align-items: flex-start;
+      }
+
+      @include tablet {
+        align-items: center;
+      }
+    }
+  }
+
+  &__address {
+    @media (max-width: 40rem) {
+      flex: 1 0 100%;
+      margin-bottom: 1.5rem;
+    }
+
+    & > ul {
+      @include laptop {
+        align-items: center;
+      }
+    }
+  }
+
+  &__social {
+    @media (max-width: 40rem) {
+      flex: 1 0 100%;
+    }
+
+    & > ul {
+      @include laptop {
+        align-items: flex-end;
+      }
+
+      @include tablet {
+        align-items: center;
+      }
+    }
+
+    &-link {
+      display: block;
+      height: 1.5rem;
+      width: 1.5rem;
+      background-position: center;
+      background-repeat: no-repeat;
+
+      &_vk {
+        background-image: url(../../assets/icons/ion_logo-vk.svg);
+      }
+
+      &_youtube {
+        background-image: url(../../assets/icons/akar-icons_youtube-fill.svg);
+      }
+
+      &_telegram {
+        background-image: url(../../assets/icons/mingcute_telegram-fill.svg);
+      }
+    }
+  }
+
+  &__policy,
+  &__copyright {
+    margin: 0;
+    font-size: 0.8125rem;
+    line-height: 1rem;
+    text-align: center;
+
+    @include laptop {
+      font-size: 0.6875rem;
+      line-height: 0.8125rem;
+    }
+  }
+
+  &__policy {
+    margin-bottom: 0.625rem;
+  }
+}

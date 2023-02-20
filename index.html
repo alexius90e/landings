@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AX PRO</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./css/index.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"
+      defer
+    ></script>
+    <script src="./js/index.js" defer></script>
+  </head>
+  <body>
+    <section class="top-contacts">
+      <div class="container">
+        <a href="mailto: help@site.ru">help@site.ru</a>
+        <a href="tel: +78001234567">+7 (800) 123 45 67</a>
+      </div>
+    </section>
+
+    <header class="header">
+      <div class="container">
+        <a class="logo" href="./index.html"></a>
+
+        <nav class="header__nav">
+          <ul class="header-menu">
+            <li class="header-menu-item active">
+              <a href="./index.html">Главная</a>
+            </li>
+
+            <li class="header-menu-item">
+              <div class="header-menu-item__title">
+                <a href="./catalog.html">Каталог</a>
+              </div>
+            </li>
+
+            <li class="header-menu-item">
+              <a href="./cases.html">Кейсы</a>
+            </li>
+
+            <li class="header-menu-item">
+              <a href="./contacts.html">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="header__buttons">
+          <button class="icon-button icon-button_search"></button>
+          <button class="icon-button icon-button_basket">
+            <a href="./checkout.html"></a>
+          </button>
+          <button class="button request-offer-button">Получить КП</button>
+          <button
+            class="icon-button icon-button_menu"
+            id="burgerButton"
+          ></button>
+        </div>
+      </div>
+      <div class="search-bar">
+        <div class="search-bar__container">
+          <input
+            class="search-bar__input"
+            placeholder="Введите запрос"
+            type="search"
+          />
+          <button
+            class="icon-button icon-button_search-black search-bar__search-button"
+          ></button>
+          <button
+            class="icon-button icon-button_close search-bar__close"
+          ></button>
+        </div>
+      </div>
+    </header>
+
+    <section class="first-screen">
+      <div class="container">
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="first-screen__banner">
+                <img src="./assets/first-screen-banner.png" alt="banner" />
+              </div>
+              <h2 class="first-screen__title">AX PRO</h2>
+              <p class="first-screen__description">
+                Эффективная беспроводная система для охраны вашего дома и офиса
+              </p>
+              <div class="first-screen__button-wrapper">
+                <button class="button button_large request-offer-button">
+                  Защитить дом
+                </button>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="first-screen__banner">
+                <img src="./assets/first-screen-banner.png" alt="banner" />
+              </div>
+              <h2 class="first-screen__title">AX PRO</h2>
+              <p class="first-screen__description">
+                Эффективная беспроводная система для охраны вашего дома и офиса
+              </p>
+              <div class="first-screen__button-wrapper">
+                <button class="button button_large request-offer-button">
+                  Защитить дом
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+
+        <div class="swiper-pagination first-screen-pagination"></div>
+      </div>
+    </section>
+
+    <main class="main">
+      <section class="main__section benefits">
+        <div class="main__container">
+          <h2 class="main__heading">Преимущества</h2>
+          <ul class="benefits__list">
+            <li class="benefits__list-item benefit">
+              <div class="benefit__icon">
+                <img src="./assets/benefits/benefit1.svg" alt="IvaaS" />
+              </div>
+              <div class="benefit__info">
+                <h3 class="benefit__title">IvaaS</h3>
+                <p class="benefit__description">
+                  Видеоверификация событий с хранилищем видеозаписей
+                </p>
+              </div>
+            </li>
+            <li class="benefits__list-item benefit">
+              <div class="benefit__icon">
+                <img src="./assets/benefits/benefit2.svg" alt="Tri-X" />
+              </div>
+              <div class="benefit__info">
+                <h3 class="benefit__title">Tri-X</h3>
+                <p class="benefit__description">
+                  Быстрая, мощная и надежная технология беспроводной передачи
+                  данных
+                </p>
+              </div>
+            </li>
+            <li class="benefits__list-item benefit">
+              <div class="benefit__icon">
+                <img src="./assets/benefits/benefit3.svg" alt="Стабильность" />
+              </div>
+              <div class="benefit__info">
+                <h3 class="benefit__title">Стабильность</h3>
+                <p class="benefit__description">
+                  Больше никаких радиопомех и глушения сигнала
+                </p>
+              </div>
+            </li>
+            <li class="benefits__list-item benefit">
+              <div class="benefit__icon">
+                <img
+                  src="./assets/benefits/benefit4.svg"
+                  alt="Сертификация Grade 2"
+                />
+              </div>
+              <div class="benefit__info">
+                <h3 class="benefit__title">Сертификация Grade 2</h3>
+                <p class="benefit__description">
+                  Решение полностью соответствует стандарту EN Grade 2
+                </p>
+              </div>
+            </li>
+            <li class="benefits__list-item benefit">
+              <div class="benefit__icon">
+                <img src="./assets/benefits/benefit5.svg" alt="Дизайн" />
+              </div>
+              <div class="benefit__info">
+                <h3 class="benefit__title">Дизайн</h3>
+                <p class="benefit__description">
+                  Все устройства системы AX PRO выполнены в едином стиле
+                </p>
+              </div>
+            </li>
+            <li class="benefits__list-item benefit">
+              <div class="benefit__icon">
+                <img src="./assets/benefits/benefit6.svg" alt="IvaaS" />
+              </div>
+              <div class="benefit__info">
+                <h3 class="benefit__title">Простота установки</h3>
+                <p class="benefit__description">
+                  Установка не требует специальных устройств
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="main__section categories">
+        <div class="main__container">
+          <h2 class="main__heading">Категории</h2>
+          <ul class="categories__list">
+            <li class="categories__list-item">
+              <img src="./assets/categories/category-bg1.jpg" alt="" />
+              <a href="./catalog.html"> Комплекты </a>
+            </li>
+            <li class="categories__list-item">
+              <img src="./assets/categories/category-bg2.jpg" alt="" />
+              <a href="./catalog.html"> Датчики </a>
+            </li>
+            <li class="categories__list-item">
+              <img src="./assets/categories/category-bg3.jpg" alt="" />
+              <a href="./catalog.html"> Оповещение </a>
+            </li>
+            <li class="categories__list-item">
+              <img src="./assets/categories/category-bg4.jpg" alt="" />
+              <a href="./catalog.html"> Управление </a>
+            </li>
+            <li class="categories__list-item">
+              <img src="./assets/categories/category-bg5.jpg" alt="" />
+              <a href="./catalog.html"> Автоматизация </a>
+            </li>
+
+            <li class="categories__list-item categories__list-item_basic">
+              <a href="./catalog.html">Перейти в каталог</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="main__section info">
+        <div class="main__container">
+          <div class="info__block info__img info__img_integration">
+            <img src="./assets/info/info1.png" alt="" />
+          </div>
+
+          <div class="info__block info__text info__text_integration">
+            <h3 class="info__title">Интеграция с системами мониторинга</h3>
+            <p class="info__description">
+              Равным образом новая модель организационной деятельности
+              обеспечивает широкому кругу (специалистов) участие в формировании
+              системы обучения кадров, соответствует насущным потребностям.
+              Таким образом консультация с широким активом требуют от нас
+              анализа новых предложений. Не следует, однако забывать, что
+              постоянное информационно-пропагандистское обеспечение нашей
+              деятельности в значительной степени обуславливает создание
+              дальнейших направлений развития. Идейные соображения высшего
+              порядка, а также укрепление и развитие структуры играет важную
+              роль в формировании позиций, занимаемых участниками в отношении
+              поставленных задач.
+            </p>
+          </div>
+
+          <div class="info__block info__text info__text_control">
+            <h3 class="info__title">Контроль безопасности со смартфона</h3>
+            <p class="info__description">
+              Повседневная практика показывает, что начало повседневной работы
+              по формированию позиции играет важную роль в формировании систем
+              массового участия. Таким образом реализация намеченных плановых
+              заданий позволяет выполнять важные задания по разработке систем
+              массового участия. Товарищи! постоянное
+              информационно-пропагандистское обеспечение нашей деятельности
+              способствует подготовки и реализации системы обучения кадров,
+              соответствует насущным потребностям. Повседневная практика
+              показывает, что начало повседневной работы по формированию позиции
+              играет важную роль в формировании систем массового участия.
+              <br />
+              <br />
+              Таким образом реализация намеченных плановых заданий позволяет
+              выполнять важные задания по разработке систем массового участия.
+              Товарищи! постоянное информационно-пропагандистское обеспечение
+              нашей деятельности способствует подготовки и реализации системы
+              обучения кадров, соответствует насущным потребностям.
+            </p>
+          </div>
+
+          <div class="info__block info__img info__img_control">
+            <img src="./assets/info/info2.png" alt="" />
+          </div>
+        </div>
+        <div class="info__button-wrapper">
+          <button class="button button_large request-offer-button">
+            Оставить заявку
+          </button>
+        </div>
+      </section>
+
+      <section class="main__section cases">
+        <div class="main__container">
+          <h2 class="main__heading">Кейсы</h2>
+
+          <p class="main__description">
+            Как мир становится безопаснее с AX PRO
+          </p>
+
+          <div class="cases__slider">
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide cases__slide">
+                  <img src="./assets/cases/case1.jpg" alt="case" />
+                  <div class="cases__slide-title">
+                    Внедрение AX PRO в компании “Рога и копыта”
+                  </div>
+                </div>
+                <div class="swiper-slide cases__slide">
+                  <img src="./assets/cases/case2.jpg" alt="case" />
+                  <div class="cases__slide-title">
+                    Система сигнализации в компании “Лидер”
+                  </div>
+                </div>
+                <div class="swiper-slide cases__slide">
+                  <img src="./assets/cases/case3.jpg" alt="case" />
+                  <div class="cases__slide-title">
+                    Разработка охранной системы для «Вектор»
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-pagination"></div>
+
+            <div class="cases__button-prev"></div>
+            <div class="cases__button-next"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="main__section consult-form">
+        <div class="main__container">
+          <div class="consult-form__wrapper">
+            <h2 class="main__heading">Получить консультацию</h2>
+            <p class="main__description">
+              Оставьте заявку, чтобы наши менеджеры могли вас проконсультировать
+            </p>
+            <form>
+              <fieldset
+                class="consult-form__fieldset consult-form__fieldset_top"
+              >
+                <label class="consult-form__label_input">
+                  <span>Ваше имя</span><input type="text" placeholder="Имя" />
+                </label>
+                <label class="consult-form__label_input">
+                  <span>Номер телефона</span>
+                  <input type="tel" placeholder="+7 (900) 800-00-00" />
+                </label>
+                <button class="button button_large">Задать вопрос</button>
+              </fieldset>
+
+              <fieldset class="consult-form__fieldset">
+                <label class="consult-form__label_checkbox">
+                  <input type="checkbox" />
+                  <span>Согласие на обработку персональных данных</span>
+                </label>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="main__container">
+        <div class="footer__wrapper">
+          <div class="footer__logo footer__wrapper-block">
+            <div class="logo"></div>
+          </div>
+
+          <nav class="footer__menu footer__wrapper-block">
+            <ul>
+              <li><a href="./catalog.html">Каталог</a></li>
+              <li><a href="./cases.html">Кейсы</a></li>
+              <li><a href="./contacts.html">Контакты</a></li>
+            </ul>
+          </nav>
+
+          <div class="footer__contacts footer__wrapper-block">
+            <ul>
+              <li>
+                <div class="icon-button icon-button_phone"></div>
+                <a href="tel:+78001234567">+7 (800) 123 45 67</a>
+              </li>
+              <li>
+                <div class="icon-button icon-button_mail"></div>
+                <a href="mailto:help@site.ru">help@site.ru</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer__address footer__wrapper-block">
+            <ul>
+              <li>г. Москва, ул. Советская 1</li>
+              <li>Пн-Пт с 9:00 до 18:00</li>
+            </ul>
+          </div>
+
+          <div class="footer__social footer__wrapper-block">
+            <ul>
+              <li>Мы в социальных сетях</li>
+              <li>
+                <a
+                  class="footer__social-link footer__social-link_vk"
+                  href="https://vk.com/"
+                  target="_blank"
+                ></a>
+                <a
+                  class="footer__social-link footer__social-link_youtube"
+                  href="https://youtube.com/"
+                  target="_blank"
+                ></a>
+                <a
+                  class="footer__social-link footer__social-link_telegram"
+                  href="https://web.telegram.org/"
+                  target="_blank"
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="footer__policy">Политика конфиденциальности</p>
+
+        <p class="footer__copyright">Копирайт ⓒ 2023</p>
+      </div>
+    </footer>
+
+    <div class="modal" id="requestOfferModal">
+      <div class="modal-dialog">
+        <button
+          class="icon-button icon-button_close-black"
+          id="casesCloseBtn"
+        ></button>
+        <div class="modal-content">
+          <div class="consult-form__wrapper consult-form">
+            <h2 class="main__heading">Запросить предложение</h2>
+            <form>
+              <fieldset
+                class="consult-form__fieldset consult-form__fieldset_top"
+              >
+                <label class="consult-form__label_input">
+                  <span>Ваше имя</span><input type="text" placeholder="Имя" />
+                </label>
+                <label class="consult-form__label_input">
+                  <span>Номер телефона</span>
+                  <input type="tel" placeholder="+7 (900) 800-00-00" />
+                </label>
+                <button class="button button_large">Задать вопрос</button>
+              </fieldset>
+
+              <fieldset class="consult-form__fieldset">
+                <label class="consult-form__label_checkbox">
+                  <input type="checkbox" />
+                  <span>Согласие на обработку персональных данных</span>
+                </label>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="casesModal">
+      <div class="modal-dialog">
+        <button
+          class="icon-button icon-button_close-black"
+          id="casesCloseBtn"
+        ></button>
+        <div class="modal-content">
+          <article class="cases-card">
+            <div class="cases-card-header">
+              <div class="cases-card-image">
+                <img src="./assets/cases/case3.jpg" alt="case3" />
+              </div>
+              <div class="cases-card-info">
+                <h2 class="cases-card-info__title">
+                  Внедрение AX PRO в компании “Рога и копыта”
+                </h2>
+                <p class="cases-card-client"><b>Клиент:</b> “Рога и копыта”</p>
+                <h3 class="cases-card-title_secondary">Задача:</h3>
+                <p>
+                  С помощью центрального устройства к охранной системе объекта
+                  можно подключить до 142 периферийных устройств, включая
+                  IP-камеры. Единый интерфейс для управления каждым элементом,
+                  настройка устройств и сигналов, просмотр видеозаписей и работа
+                  с архивом.
+                </p>
+              </div>
+            </div>
+
+            <div class="cases-card-description">
+              <h3 class="cases-card-title_secondary">Задача:</h3>
+              <p class="cases-card-description__text hidden">
+                Задача организации, в особенности же дальнейшее развитие
+                различных форм деятельности позволяет оценить значение
+                направлений прогрессивного развития. Разнообразный и богатый
+                опыт сложившаяся структура организации представляет собой
+                интересный эксперимент проверки системы обучения кадров,
+                соответствует насущным потребностям. Значимость этих проблем
+                настолько очевидна, что сложившаяся структура организации
+                позволяет выполнять важные задания по разработке позиций,
+                занимаемых участниками в отношении поставленных задач. Таким
+                образом сложившаяся структура организации позволяет оценить
+                значение новых предложений. Значимость этих проблем настолько
+                очевидна, что постоянное информационно-пропагандистское
+                обеспечение нашей деятельности позволяет оценить значение форм
+                развития. Не следует, однако забывать, что рамки и место
+                обучения.
+              </p>
+
+              <button class="cases-card-description__toggler">
+                Читать полностью
+              </button>
+            </div>
+
+            <div class="consult-form__wrapper consult-form">
+              <h2 class="main__heading">Запросить предложение</h2>
+              <form>
+                <fieldset
+                  class="consult-form__fieldset consult-form__fieldset_top"
+                >
+                  <label class="consult-form__label_input">
+                    <span>Ваше имя</span><input type="text" placeholder="Имя" />
+                  </label>
+                  <label class="consult-form__label_input">
+                    <span>Номер телефона</span>
+                    <input type="tel" placeholder="+7 (900) 800-00-00" />
+                  </label>
+                  <button class="button button_large">Задать вопрос</button>
+                </fieldset>
+
+                <fieldset class="consult-form__fieldset">
+                  <label class="consult-form__label_checkbox">
+                    <input type="checkbox" />
+                    <span>Согласие на обработку персональных данных</span>
+                  </label>
+                </fieldset>
+              </form>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

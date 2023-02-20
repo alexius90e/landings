@@ -1,0 +1,200 @@
+.catalog-card {
+  &-header {
+    display: flex;
+    gap: 1.875rem;
+    padding-bottom: 2.5rem;
+    margin-bottom: 1.25rem;
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 1.0625rem;
+    border-bottom: 0.0625rem solid $grey50;
+
+    @include laptop {
+      gap: 1.25rem;
+    }
+
+    @include tablet {
+      font-size: 0.8125rem;
+      line-height: 1rem;
+    }
+
+    @media (max-width: 40rem) {
+      flex-direction: column;
+    }
+  }
+
+  &-slider {
+    flex: 1 0 40%;
+    min-width: 40%;
+
+    @include laptop {
+      flex: 1 0 50%;
+      min-width: 50%;
+    }
+
+    @media (max-width: 40rem) {
+      flex: 1 0 100%;
+      min-width: 100%;
+    }
+
+    & .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 0.625rem;
+    }
+
+    &-top {
+      height: 18.75rem;
+      margin-bottom: 0.625rem;
+
+      @include laptop {
+        height: calc(100% - 3.875rem);
+        max-height: 31.25rem;
+      }
+
+      @media (max-width: 40rem) {
+        height: 12.5rem;
+      }
+
+      @include mobile {
+        height: 9.375rem;
+      }
+
+      & .swiper-button-prev:after,
+      & .swiper-button-next:after {
+        font-size: 1.75rem;
+
+        @include laptop {
+          display: none;
+        }
+      }
+    }
+
+    &-thumbs {
+      height: 5.625rem;
+
+      @include laptop {
+        height: 3.25rem;
+      }
+
+      @include iphone {
+        height: 4.25rem;
+      }
+
+      @include mobile {
+        height: 3.875rem;
+      }
+
+      & .swiper-slide {
+        border: 0.1875rem solid rgba($color: $purple, $alpha: 0);
+        box-sizing: border-box;
+        border-radius: 0.75rem;
+
+        &-thumb-active {
+          border: 0.1875rem solid $purple;
+        }
+      }
+    }
+  }
+
+  &-info {
+    &__title {
+      margin: 0 0 1.25rem;
+      padding-right: 2.5rem;
+      font-weight: 700;
+      font-size: 2.25rem;
+      line-height: 2.75rem;
+
+      @include laptop {
+        font-size: 1.75rem;
+      }
+
+      @include tablet {
+        font-size: 1.5rem;
+        line-height: 1.8125rem;
+      }
+
+      @include iphone {
+        margin: 0 0 0.625rem;
+        padding: 0;
+        font-size: 1.25rem;
+        line-height: 1.5625rem;
+      }
+
+      @include mobile {
+        font-size: 1.125rem;
+        line-height: 1.375rem;
+      }
+    }
+
+    &__article {
+      margin: 0 0 1.875rem;
+
+      @include tablet {
+        margin: 0 0 1.25rem;
+      }
+    }
+
+    &__description {
+      margin: 0 0 1.875rem;
+      font-weight: 400;
+      font-size: 1rem;
+      line-height: 1.25rem;
+
+      @include laptop {
+        font-size: 0.875rem;
+        line-height: 1.0625rem;
+      }
+
+      @include tablet {
+        margin: 0 0 1.25rem;
+        font-size: 0.8125rem;
+        line-height: 1rem;
+      }
+    }
+
+    &__price {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1.25rem;
+      font-weight: 700;
+      font-size: 1.125rem;
+      line-height: 1.375rem;
+    }
+  }
+
+  &-props {
+    display: flex;
+    gap: 1.25rem;
+
+    @include tablet {
+      flex-direction: column;
+    }
+
+    &__title {
+      margin: 0 0 1.25rem;
+      font-size: 1rem;
+      line-height: 1.25rem;
+    }
+
+    &__list {
+      margin: 0;
+      padding: 0;
+      font-weight: 400;
+      font-size: 0.875rem;
+      line-height: 1.0625rem;
+
+      & > li {
+        margin-bottom: 0.625rem;
+        list-style-type: none;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}

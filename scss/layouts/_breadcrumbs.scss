@@ -1,0 +1,46 @@
+.breadcrumbs {
+  margin: 1.25rem 0;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.0625rem;
+  color: $black;
+
+  & a {
+    color: $black;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  & ul {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  & li {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    list-style-type: none;
+
+    &:last-child::after {
+      display: none;
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      height: 0.625rem;
+      width: 0.625rem;
+      background-image: url(../../assets/icons/icon_toggler-black.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+      transform: rotate(90deg);
+    }
+  }
+}
