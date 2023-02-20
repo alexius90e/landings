@@ -2611,18 +2611,42 @@ input[type=checkbox]:checked::before {
 
 .catalog {
   margin-top: 3.3125rem;
+  margin-bottom: 4.375rem;
+}
+@media (max-width: 1000px) {
+  .catalog {
+    margin-bottom: 3.75rem;
+  }
+}
+@media (max-width: 480px) {
+  .catalog {
+    margin-bottom: 2.5rem;
+  }
 }
 .catalog__text {
-  margin: 70px 0;
+  margin: 4.375rem 0;
 }
 @media (max-width: 1000px) {
   .catalog__text {
-    margin: 60px 0;
+    margin: 3.75rem 0;
   }
 }
 @media (max-width: 480px) {
   .catalog__text {
-    margin: 40px 0;
+    margin: 2.5rem 0;
+  }
+}
+.catalog__cases {
+  margin-top: 4.375rem;
+}
+@media (max-width: 1000px) {
+  .catalog__cases {
+    margin-top: 3.75rem;
+  }
+}
+@media (max-width: 480px) {
+  .catalog__cases {
+    margin-top: 2.5rem;
   }
 }
 .catalog__types {
