@@ -20,6 +20,10 @@
     background-color: $greyBg;
     border-radius: 10px;
     margin-bottom: 25px;
+
+    @include tablet {
+      padding: 25px 16px;
+    }
   }
 
   &__title {

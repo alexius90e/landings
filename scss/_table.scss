@@ -1,17 +1,31 @@
 .table {
   width: 100%;
   font-weight: 500;
-  font-size: 0.875rem;
-  line-height: 1.125rem;
+  font-size: 14px;
+  line-height: 18px;
   vertical-align: top;
 
   @include laptop {
+    font-size: 13px;
+    line-height: 16px;
+  }
+
+  @include tablet {
     font-size: 12px;
     line-height: 15px;
   }
 
+  @include phone {
+    font-size: 11px;
+    line-height: 13px;
+  }
+
   & > :not(caption) > * > * {
-    padding: 0.5rem 0.5rem;
+    padding: 0.5rem;
+
+    @include phone {
+      padding: 0.25rem;
+    }
   }
 
   & > tbody {
@@ -39,9 +53,7 @@
   }
 
   & th {
-    position: relative;
-    // display: flex;
-    // gap: 0.1875rem;
+    word-break: break-all;
   }
 
   &-buy {
@@ -54,33 +66,35 @@
     cursor: pointer;
   }
 
-  &__th-buttons {
-    position: absolute;
-    right: 3px;
-    top: 0;
-    bottom: 0;
+  &__th {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 4px;
-  }
+    gap: 3px;
 
-  &__th-button {
-    display: block;
-    width: 8px;
-    height: 5px;
-    padding: 0;
-    border: none;
-    outline: none;
-    background: none;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    background-image: url('../assets/arrow.svg');
+    &-buttons {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+    }
 
-    &_bottom {
-      transform: rotate(180deg);
+    &-button {
+      display: block;
+      width: 8px;
+      height: 5px;
+      padding: 0;
+      border: none;
+      outline: none;
+      background: none;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      background-image: url('../assets/arrow.svg');
+
+      &_bottom {
+        transform: rotate(180deg);
+      }
     }
   }
 
