@@ -1,0 +1,91 @@
+.table {
+  width: 100%;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  vertical-align: top;
+
+  @include laptop {
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  & > :not(caption) > * > * {
+    padding: 0.5rem 0.5rem;
+  }
+
+  & > tbody {
+    vertical-align: inherit;
+  }
+
+  & > thead {
+    color: $greyText;
+    vertical-align: bottom;
+    text-align: left;
+  }
+
+  & th:first-child,
+  & td:first-child {
+    padding-left: 0;
+  }
+
+  & th:last-child,
+  & td:last-child {
+    padding-right: 0;
+  }
+
+  & td.grey {
+    color: $greyText;
+  }
+
+  & th {
+    position: relative;
+    // display: flex;
+    // gap: 0.1875rem;
+  }
+
+  &-buy {
+    padding: 0;
+    border: none;
+    outline: none;
+    background: none;
+    color: $orange;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  &__th-buttons {
+    position: absolute;
+    right: 3px;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+  }
+
+  &__th-button {
+    display: block;
+    width: 8px;
+    height: 5px;
+    padding: 0;
+    border: none;
+    outline: none;
+    background: none;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-image: url('../assets/arrow.svg');
+
+    &_bottom {
+      transform: rotate(180deg);
+    }
+  }
+
+  & th.active.top &__th-button_top,
+  & th.active.bottom &__th-button_bottom {
+    background-image: url('../assets/arrow-active.svg');
+  }
+}
