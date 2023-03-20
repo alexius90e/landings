@@ -1,0 +1,46 @@
+.nft-pass {
+  display: flex;
+  gap: 1.5625rem;
+  margin: 2.1875rem 0 1.5625rem;
+
+  @include phone {
+    display: block;
+  }
+
+  &__figure {
+    @include phone {
+      text-align: center;
+    }
+  }
+
+  &__title {
+    margin: 0 0 0.1875rem;
+
+    @include phone {
+      text-align: center;
+    }
+  }
+
+  &__owner {
+    margin: 0.1875rem 0;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.3125rem;
+    color: #7a7f87;
+
+    @include phone {
+      text-align: center;
+    }
+  }
+
+  &__description {
+    margin: 0.9375rem 0;
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 150%;
+
+    @include phone {
+      text-align: center;
+    }
+  }
+}
