@@ -80,6 +80,7 @@ th {
 }
 @media (max-width: 30rem) {
   .nft-pass__title {
+    margin: 0.9375rem 0 0.1875rem;
     text-align: center;
   }
 }
@@ -135,6 +136,11 @@ th {
   border-radius: 10px;
   margin-bottom: 25px;
 }
+@media (max-width: 48rem) {
+  .offers__table {
+    padding: 25px 16px;
+  }
+}
 .offers__title {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -186,18 +192,35 @@ th {
 .table {
   width: 100%;
   font-weight: 500;
-  font-size: 0.875rem;
-  line-height: 1.125rem;
+  font-size: 14px;
+  line-height: 18px;
   vertical-align: top;
 }
 @media (max-width: 64rem) {
+  .table {
+    font-size: 13px;
+    line-height: 16px;
+  }
+}
+@media (max-width: 48rem) {
   .table {
     font-size: 12px;
     line-height: 15px;
   }
 }
+@media (max-width: 30rem) {
+  .table {
+    font-size: 11px;
+    line-height: 13px;
+  }
+}
 .table > :not(caption) > * > * {
-  padding: 0.5rem 0.5rem;
+  padding: 0.5rem;
+}
+@media (max-width: 30rem) {
+  .table > :not(caption) > * > * {
+    padding: 0.25rem;
+  }
 }
 .table > tbody {
   vertical-align: inherit;
@@ -217,7 +240,7 @@ th {
   color: #545961;
 }
 .table th {
-  position: relative;
+  word-break: break-all;
 }
 .table-buy {
   padding: 0;
@@ -228,11 +251,16 @@ th {
   text-decoration: underline;
   cursor: pointer;
 }
+.table__th {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 3px;
+}
 .table__th-buttons {
-  position: absolute;
-  right: 3px;
-  top: 0;
-  bottom: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
