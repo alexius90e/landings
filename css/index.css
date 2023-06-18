@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
 html {
   font-size: 1rem;
   font-family: "Open Sans", "Segoe UI", Tahoma, Verdana, sans-serif;
@@ -135,4 +136,31 @@ textarea {
   -webkit-transform: scale(0.95);
       -ms-transform: scale(0.95);
           transform: scale(0.95);
+}
+.main__accordion-heading {
+  margin: 3rem 0 2rem;
+  font-size: 2rem;
+  line-height: 2.25rem;
+  font-weight: 700;
+}
+.main .accordion {
+  margin-bottom: 2rem;
+}
+.main .accordion-item {
+  border: none;
+}
+.main .accordion-button {
+  padding: 1.5rem 1rem;
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+}
+.main .accordion-button:not(.collapsed) {
+  color: #00809d;
+  background-color: #ffffff;
+}
+.main .accordion-button:focus {
+  border-color: #00809d;
+  -webkit-box-shadow: 0 0 0 0.25rem rgba(0, 128, 157, 0.25);
+          box-shadow: 0 0 0 0.25rem rgba(0, 128, 157, 0.25);
 }

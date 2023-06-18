@@ -4,13 +4,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AX PRO</title>
+    <title>Search Or Ask</title>
+    <link rel="icon" type="image/x-icon" href="./favicon.ico" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./css/index.css" />
-    <script src="./js/index.js" defer></script>
+    <link href="./css/index.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
   </head>
   <body>
     <header class="header">
@@ -76,6 +77,121 @@
         browser. Install Chat GPT for Google Chrome to gain quick access to useful information and
         knowledge!
       </p>
+
+      <h2 class="main__accordion-heading">FAQ</h2>
+
+      <div class="accordion" id="faqAccordion">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button
+              type="button"
+              class="accordion-button collapsed"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseOne"
+            >
+              What is ChatGPT?
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="card-body">
+              <p>
+                ChatGPT is a language model developed by OpenAI, it's a type of AI that is able to
+                understand and generate human-like text. It's been trained on a vast amount of text
+                data from the internet, so it has a good understanding of various topics and it can
+                perform various natural language processing tasks such as language translation, text
+                summarization, and text completion. Essentially, it's a computer program that can
+                communicate with people in a way that feels natural and human-like.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button
+              type="button"
+              class="accordion-button collapsed"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseTwo"
+            >
+              What is ChatGPT for Google?
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="card-body">
+              <p>
+                ChatGPT for Google is a browser extension that enhance search engines with the power
+                of ChatGPT. It works by showing ChatGPT response alongside normal search engine
+                results.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree">
+            <button
+              type="button"
+              class="accordion-button collapsed"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseThree"
+            >
+              Is ChatGPT for Google free to use?
+            </button>
+          </h2>
+          <div
+            id="collapseThree"
+            class="accordion-collapse collapse"
+            data-bs-parent="#faqAccordion"
+          >
+            <div class="card-body">
+              <p>Yes, the extension is free to use.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingFour">
+            <button
+              type="button"
+              class="accordion-button collapsed"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseFour"
+            >
+              What search engines are supported?
+            </button>
+          </h2>
+          <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="card-body">
+              <p>
+                Currently, ChatGPT for Google supports Google, Baidu, Bing, DuckDuckGo, Brave,
+                Yahoo, Naver, Yandex, Kagi, Searx.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingFive">
+            <button
+              type="button"
+              class="accordion-button collapsed"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseFive"
+            >
+              Do I need a ChatGPT/OpenAI account?
+            </button>
+          </h2>
+          <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="card-body">
+              <p>
+                Yes, you need to have a ChatGPT account to use this extension. You can create an
+                account for free at chat.openai.com
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
   </body>
 </html>
