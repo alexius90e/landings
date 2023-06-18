@@ -1,0 +1,34 @@
+.header {
+  margin-bottom: 2rem;
+
+  & .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 90rem;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+
+  @include iphone {
+    margin-bottom: 0;
+  }
+
+  &__links {
+    display: flex;
+    gap: 1rem;
+
+    & a {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: #00809d;
+      text-decoration: none;
+
+      & > img {
+        max-width: 1.5rem;
+        height: auto;
+      }
+    }
+  }
+}
