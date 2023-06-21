@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search Or Ask</title>
+    <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+    <link href="./css/index.css" rel="stylesheet" />
+    <script src="./js/search.js" defer></script>
+  </head>
+  <body>
+    <main class="search">
+      <section class="search__wrapper">
+        <div class="search__logo">
+          <img src="./assets/search-or-ask-logo-fin.svg" alt="logo" />
+        </div>
+
+        <div class="search__input">
+          <input type="search" id="mainSearch" placeholder="Search or ask something" />
+
+          <div class="search__source">
+            <div class="search__source-toggler">
+              <img
+                class="search__source-toggler-icon"
+                src="./assets/search/yandex-icon.svg"
+                alt="search-icon"
+              />
+            </div>
+
+            <ul class="search__source-list">
+              <li class="search__source-list-item" data-source="yandex">Yandex</li>
+              <li class="search__source-list-item" data-source="google">Google</li>
+              <li class="search__source-list-item" data-source="bing">Bing</li>
+              <li class="search__source-list-item" data-source="yahoo">Yahoo!</li>
+              <li class="search__source-list-item" data-source="baidu">Baidu</li>
+              <li class="search__source-list-item" data-source="duckduckgo">DuckDuckGo</li>
+            </ul>
+          </div>
+
+          <div class="search__input-buttons">
+            <button class="search__input-button search__input-button_search">
+              <img src="./assets/search/search-icon.svg" alt="" />
+              <span>Search</span>
+            </button>
+            <button class="search__input-button search__input-button_ai">
+              <img src="./assets/search/ai-icon.svg" alt="" />
+              <span>Ask AI</span>
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
