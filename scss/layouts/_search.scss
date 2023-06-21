@@ -19,6 +19,10 @@ $inputPaddingY: 1rem;
     & img {
       height: 5rem;
       width: auto;
+
+      @include iphone {
+        height: 3.5rem;
+      }
     }
   }
 
@@ -26,6 +30,8 @@ $inputPaddingY: 1rem;
     position: relative;
     max-width: 40rem;
     width: 100%;
+    padding: 0 1rem;
+    box-sizing: border-box;
 
     & input[type='search'] {
       display: block;
@@ -41,6 +47,12 @@ $inputPaddingY: 1rem;
       box-shadow: 0 0 1rem 1px rgba(0, 128, 157, 0.15);
       outline-color: rgba(255, 255, 255, 0.2);
       transition: $baseTransition;
+
+      @include iphone {
+        padding-right: 6rem;
+        font-size: 0.8125rem;
+        line-height: 1rem;
+      }
 
       &:focus {
         box-shadow: 0 0 1.5rem 0.125rem rgba(0, 128, 157, 0.1);
@@ -68,6 +80,11 @@ $inputPaddingY: 1rem;
       display: flex;
       gap: 0.5rem;
       transform: translateY(-50%);
+
+      @include iphone {
+        right: 1.5rem;
+        gap: 0.25rem;
+      }
     }
 
     &-button {
@@ -87,6 +104,16 @@ $inputPaddingY: 1rem;
         transform: scale(0.95);
       }
 
+      @include iphone {
+        padding: 0.5rem;
+      }
+
+      & span {
+        @include iphone {
+          display: none;
+        }
+      }
+
       & > img {
         height: 1.125rem;
         width: auto;
@@ -94,7 +121,7 @@ $inputPaddingY: 1rem;
 
       &_search {
         &:hover {
-          border: 1px solid rgb(0, 128, 157);
+          border: 1px solid #00809d;
           color: #00809d;
         }
       }
@@ -111,7 +138,7 @@ $inputPaddingY: 1rem;
   &__source {
     position: absolute;
     top: 50%;
-    left: 0.75rem;
+    left: 1.75rem;
     transform: translateY(-50%);
 
     &-toggler {

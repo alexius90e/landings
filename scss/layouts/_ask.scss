@@ -1,0 +1,116 @@
+.ask {
+  &__header {
+    border-bottom: 0.125rem solid #eeeeee;
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+      max-width: 120rem;
+      margin: 0 auto;
+      box-sizing: border-box;
+    }
+
+    &-logo {
+      height: 3rem;
+
+      & img {
+        height: 100%;
+        width: auto;
+      }
+    }
+
+    &-back {
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+      padding: 0.5rem 1rem;
+      border: 1px solid #00809d;
+      border-radius: 5rem;
+      color: #00809d;
+      font-size: 0.875rem;
+      line-height: 1rem;
+      text-decoration: none;
+      background-color: $white;
+      cursor: pointer;
+      transition: $baseTransition;
+
+      &:active {
+        transform: scale(0.95);
+      }
+    }
+  }
+
+  &-main {
+    .container {
+      padding: 1rem;
+      max-width: 50rem;
+      margin: 0 auto;
+      box-sizing: border-box;
+    }
+
+    &__content {
+      max-height: calc(100vh - 11.5rem);
+      height: 100vh;
+      margin-bottom: 1rem;
+      overflow-y: auto;
+      box-sizing: border-box;
+
+      &::-webkit-scrollbar {
+        width: 0.5rem;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: #fcfcfc;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        border-radius: 2rem;
+        background: #eeeeee;
+
+        &:hover {
+          background: #cccccc;
+        }
+      }
+    }
+
+    &__input-wrapper {
+      position: relative;
+    }
+
+    &__input {
+      display: block;
+      width: 100%;
+      padding: 0.75rem 2rem 0.75rem 2rem;
+      box-sizing: border-box;
+      font-size: 1rem;
+      line-height: 1.25rem;
+      border: 1px solid #dddddd;
+      border-radius: 0.5rem;
+      background: #ffffff;
+      outline-color: rgba(0, 129, 158, 0.25);
+    }
+
+    &__button {
+      position: absolute;
+      top: 50%;
+      right: 0.1875rem;
+      display: block;
+      width: 2.625rem;
+      height: 2.625rem;
+      background: url('/assets/cursor.svg') no-repeat center;
+      background-size: 1.5rem;
+      border-radius: 0.5rem;
+      border: none;
+      outline-color: rgba(0, 129, 158, 0.25);
+      transform: translateY(-50%);
+      transition: $baseTransition;
+      cursor: pointer;
+
+      &:active {
+        transform:translateY(-50%) scale(0.95);
+      }
+    }
+  }
+}
