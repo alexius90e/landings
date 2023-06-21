@@ -1,0 +1,229 @@
+$inputPaddingX: 4.25rem;
+$inputPaddingY: 1rem;
+
+.search {
+  height: 100vh;
+  background-color: $white;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  &__logo {
+    margin-bottom: 2rem;
+
+    & img {
+      height: 5rem;
+      width: auto;
+    }
+  }
+
+  &__input {
+    position: relative;
+    max-width: 40rem;
+    width: 100%;
+
+    & input[type='search'] {
+      display: block;
+      width: 100%;
+      padding: $inputPaddingY $inputPaddingX;
+      padding-right: 15rem;
+      box-sizing: border-box;
+      border: none;
+      border-radius: 10rem;
+      font-size: 1rem;
+      line-height: 1.125rem;
+      background-color: $white;
+      box-shadow: 0 0 1rem 1px rgba(0, 128, 157, 0.15);
+      outline-color: rgba(255, 255, 255, 0.2);
+      transition: $baseTransition;
+
+      &:focus {
+        box-shadow: 0 0 1.5rem 0.125rem rgba(0, 128, 157, 0.1);
+      }
+
+      &::-ms-clear,
+      &::-ms-reveal {
+        display: none;
+        width: 0;
+        height: 0;
+      }
+
+      &::-webkit-search-decoration,
+      &::-webkit-search-cancel-button,
+      &::-webkit-search-results-button,
+      &::-webkit-search-results-decoration {
+        display: none;
+      }
+    }
+
+    &-buttons {
+      position: absolute;
+      top: 50%;
+      right: calc($inputPaddingY * 2);
+      display: flex;
+      gap: 0.5rem;
+      transform: translateY(-50%);
+    }
+
+    &-button {
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+      padding: 0.5rem 1rem 0.5rem 0.75rem;
+      border: 1px solid #cccccc;
+      border-radius: 5rem;
+      font-size: 0.8125rem;
+      line-height: 0.8125rem;
+      background-color: $white;
+      cursor: pointer;
+      transition: $baseTransition;
+
+      &:active {
+        transform: scale(0.95);
+      }
+
+      & > img {
+        height: 1.125rem;
+        width: auto;
+      }
+
+      &_search {
+        &:hover {
+          border: 1px solid rgb(0, 128, 157);
+          color: #00809d;
+        }
+      }
+
+      &_ai {
+        &:hover {
+          border: 1px solid #615aff;
+          color: #615aff;
+        }
+      }
+    }
+  }
+
+  &__source {
+    position: absolute;
+    top: 50%;
+    left: 0.75rem;
+    transform: translateY(-50%);
+
+    &-toggler {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 1.75rem;
+      height: 1.75rem;
+      border-radius: 5rem;
+      cursor: pointer;
+
+      &-icon {
+        width: 100%;
+        height: 100%;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: calc(100% + 0.25rem);
+        border: 0.3125rem solid transparent;
+        border-top: 0.4375rem solid #cccccc;
+        transform: translateY(-20%);
+      }
+    }
+
+    &-list {
+      position: absolute;
+      top: calc(100% + 0.7rem);
+      left: -0.75rem;
+      z-index: 6;
+      display: none;
+      margin: 0;
+      padding: 0;
+      background-color: $white;
+      box-shadow: 0 0 1rem 1px rgba(0, 128, 157, 0.15);
+      border-radius: 0.5rem;
+
+      &:before {
+        content: '';
+        position: absolute;
+        bottom: calc(100% - 0.125rem);
+        left: 1.125rem;
+        z-index: 5;
+        border: 0.5rem solid transparent;
+        border-bottom: 0.75rem solid $white;
+      }
+
+      &-item {
+        position: relative;
+        z-index: 7;
+        padding: 0.4375rem 0.875rem;
+        padding-left: 2.75rem;
+        list-style-type: none;
+        background-repeat: no-repeat;
+        background-size: 1.25rem;
+        background-position: 0.875rem center;
+        transition: $baseTransition;
+        cursor: pointer;
+
+        &:first-child {
+          border-radius: 0.5rem 0.5rem 0 0;
+        }
+
+        &:last-child {
+          border-radius: 0 0 0.5rem 0.5rem;
+        }
+
+        &:hover {
+          background-color: #f6f6ff;
+        }
+
+        &[data-source='yandex'] {
+          background-image: url('/assets/search/yandex-icon.svg');
+        }
+
+        &[data-source='google'] {
+          background-image: url('/assets/search/google-icon.svg');
+        }
+
+        &[data-source='bing'] {
+          background-image: url('/assets/search/bing-icon.svg');
+        }
+
+        &[data-source='yahoo'] {
+          background-image: url('/assets/search/yahoo-icon.svg');
+        }
+
+        &[data-source='duckduckgo'] {
+          background-image: url('/assets/search/duckduckgo-icon.svg');
+        }
+
+        &[data-source='baidu'] {
+          background-image: url('/assets/search/baidu-icon.svg');
+        }
+      }
+    }
+  }
+
+  &__source.active {
+    & .search__source-toggler {
+      &:after {
+        bottom: 50%;
+        top: auto;
+        transform: translateY(20%) rotate(180deg);
+      }
+    }
+
+    & .search__source-list {
+      display: block;
+    }
+  }
+}
