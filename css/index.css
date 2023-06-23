@@ -541,3 +541,299 @@ textarea {
       -ms-transform: translateY(-50%) scale(0.95);
           transform: translateY(-50%) scale(0.95);
 }
+
+.congrats {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 26px;
+  line-height: 40px;
+  font-weight: 400;
+}
+@media (max-width: 768px) {
+  .congrats {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    padding: 3rem 1rem;
+  }
+}
+@media (max-width: 480px) {
+  .congrats {
+    padding: 1rem 0;
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+.congrats .container {
+  max-width: 1300px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 3rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+@media (max-width: 768px) {
+  .congrats .container {
+    padding: 1rem;
+  }
+}
+.congrats__logo img {
+  height: 5rem;
+  width: auto;
+}
+@media (max-width: 480px) {
+  .congrats__logo img {
+    height: 3rem;
+  }
+}
+.congrats__congrats {
+  margin: 0.5rem 0 2rem;
+}
+.congrats__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2.5rem;
+}
+@media (max-width: 768px) {
+  .congrats__info {
+    display: block;
+  }
+}
+.congrats__info-block {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc((100% - 3rem) / 2);
+          flex: 0 0 calc((100% - 3rem) / 2);
+  padding: 2.5rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid #dddddd;
+  border-radius: 0.75rem;
+}
+@media (max-width: 768px) {
+  .congrats__info-block {
+    display: block;
+    padding: 1.5rem;
+  }
+}
+@media (max-width: 480px) {
+  .congrats__info-block {
+    padding: 1rem;
+  }
+}
+@media (max-width: 768px) {
+  .congrats__info-block:first-child {
+    margin-bottom: 1.5rem;
+  }
+}
+.congrats__info-make-active {
+  margin: 0;
+  font-weight: 700;
+}
+.congrats__info-keep-it {
+  margin: 1rem 0 2rem;
+}
+.congrats__info-keep-it span {
+  color: #bd0000;
+}
+.congrats__info-lets-start {
+  margin: 0;
+  color: #615aff;
+}
+.congrats__info-screenshot {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: url("../../assets/congrats/congrats-bg.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (max-width: 768px) {
+  .congrats__info-screenshot {
+    height: 20rem;
+  }
+}
+@media (max-width: 480px) {
+  .congrats__info-screenshot {
+    height: 15rem;
+    background-size: 150%;
+  }
+}
+.congrats__info-modal {
+  width: 90%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: #ffffff;
+  font-size: 13px;
+  line-height: 16px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+@media (max-width: 480px) {
+  .congrats__info-modal {
+    width: 100%;
+    font-size: 11px;
+    line-height: 15px;
+  }
+}
+.congrats__info-modal-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.125rem;
+}
+@media (max-width: 480px) {
+  .congrats__info-modal-title {
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
+.congrats__info-modal-title img {
+  height: 1.5rem;
+  width: auto;
+}
+.congrats__info-modal-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  gap: 1rem;
+}
+@media (max-width: 480px) {
+  .congrats__info-modal-buttons {
+    gap: 0.5rem;
+  }
+}
+@-webkit-keyframes buttonClick {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  60% {
+    -webkit-transform: scale(0.93);
+            transform: scale(0.93);
+    -webkit-box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
+  }
+  80% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes buttonClick {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  60% {
+    -webkit-transform: scale(0.93);
+            transform: scale(0.93);
+    -webkit-box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
+  }
+  80% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+.congrats__info-modal-button {
+  padding: 0.5rem 1rem;
+  border: 1px solid #dddddd;
+  border-radius: 0.25rem;
+  color: #1e74e9;
+}
+.congrats__info-modal-button_primary {
+  background-color: #1e74e9;
+  border-color: #1e74e9;
+  color: #ffffff;
+}
+.congrats__info-modal-button_secondary {
+  position: relative;
+  -webkit-animation-name: buttonClick;
+          animation-name: buttonClick;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+@-webkit-keyframes cursorMove {
+  0% {
+    -webkit-transform: scale(1) translateX(1rem) translateY(1rem);
+            transform: scale(1) translateX(1rem) translateY(1rem);
+  }
+  50% {
+    -webkit-transform: scale(1.2) translateX(0rem) translateY(0rem);
+            transform: scale(1.2) translateX(0rem) translateY(0rem);
+  }
+  100% {
+    -webkit-transform: scale(1) translateX(1rem) translateY(1rem);
+            transform: scale(1) translateX(1rem) translateY(1rem);
+  }
+}
+@keyframes cursorMove {
+  0% {
+    -webkit-transform: scale(1) translateX(1rem) translateY(1rem);
+            transform: scale(1) translateX(1rem) translateY(1rem);
+  }
+  50% {
+    -webkit-transform: scale(1.2) translateX(0rem) translateY(0rem);
+            transform: scale(1.2) translateX(0rem) translateY(0rem);
+  }
+  100% {
+    -webkit-transform: scale(1) translateX(1rem) translateY(1rem);
+            transform: scale(1) translateX(1rem) translateY(1rem);
+  }
+}
+.congrats__info-modal-cursor {
+  position: absolute;
+  top: 40%;
+  left: 60%;
+  height: 2.5rem;
+  width: 2.5rem;
+  background-image: url("../../assets/congrats/cursor.svg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-animation-name: cursorMove;
+          animation-name: cursorMove;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+@media (max-width: 480px) {
+  .congrats__info-modal-cursor {
+    height: 2rem;
+    width: 2rem;
+  }
+}
