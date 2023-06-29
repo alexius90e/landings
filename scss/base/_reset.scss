@@ -1,0 +1,20 @@
+html {
+  font-size: 1rem;
+  font-family: 'Century Gothic', 'Segoe UI', Tahoma, Verdana, sans-serif;
+  color: $black;
+}
+
+body {
+  margin: 0;
+  background-color: $green;
+  background-image: url('/assets/bg.jpg');
+  background-position: top center;
+  background-repeat: repeat-y;
+}
+
+a,
+button,
+input,
+textarea {
+  font-family: 'Century Gothic', 'Segoe UI', Tahoma, Verdana, sans-serif;
+}

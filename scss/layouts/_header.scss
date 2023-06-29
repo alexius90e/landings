@@ -1,0 +1,52 @@
+.header {
+  margin: 64px 0;
+
+  & .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__contacts {
+    display: flex;
+    gap: 2rem;
+  }
+
+  &__phone {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 33px;
+    color: $black;
+    text-decoration: none;
+
+    & img {
+      width: 24px;
+      height: auto;
+    }
+  }
+
+  &__social {
+    display: flex;
+    gap: 0.5625rem;
+
+    &-link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 32px;
+      height: 32px;
+      padding: 8px;
+      box-sizing: border-box;
+      border-radius: 8px;
+      background: $white;
+
+      & img {
+        width: 1rem;
+        height: auto;
+      }
+    }
+  }
+}
