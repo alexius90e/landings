@@ -1,8 +1,8 @@
 .header {
-  margin: 64px 0;
+  margin: 4rem 0;
 
   @include tablet {
-    margin: 16px 0;
+    margin: 1rem 0;
   }
 
   & .container {
@@ -13,72 +13,76 @@
 
   &__contacts {
     display: flex;
-    gap: 32px;
+    gap: 2rem;
 
     @include tablet {
       flex-direction: column;
-      gap: 6px;
+      gap: 0.375rem;
     }
   }
 
   &__phone {
     display: flex;
     align-items: center;
-    gap: 7px;
+    gap: 0.4375rem;
     font-weight: 400;
-    font-size: 24px;
-    line-height: 33px;
+    font-size: 1.5rem;
+    line-height: 2.0625rem;
     color: $black;
     text-decoration: none;
 
     @include tablet {
-      gap: 0.25rem;
-      font-size: 16px;
-      line-height: 20px;
+      gap: 4px;
+      font-size: 1rem;
+      line-height: 1.25rem;
     }
 
     & img {
-      width: 24px;
+      width: 1.5rem;
       height: auto;
 
       @include tablet {
-        width: 20px;
+        width: 1.25rem;
       }
     }
   }
 
   &__social {
     display: flex;
-    gap: 9px;
+    gap: 0.5625rem;
 
     @include tablet {
-      gap: 6px;
+      gap: 0.375rem;
     }
 
     &-link {
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 32px;
-      height: 32px;
-      padding: 8px;
+      width: 2rem;
+      height: 2rem;
+      padding: 0.5rem;
       box-sizing: border-box;
-      border-radius: 8px;
+      border-radius: 0.5rem;
       background: $white;
 
       @include tablet {
-        width: 26px;
-        height: 26px;
-        padding: 4px;
-        border-radius: 6px;
+        width: 1.625rem;
+        height: 1.625rem;
+        padding: 0.25rem;
+        border-radius: 0.375rem;
+      }
+
+      &:active {
+        transform: scale(0.95);
       }
 
       & img {
-        width: 16px;
+        width: 1rem;
         height: auto;
 
         @include tablet {
-          width: 13px;
+          width: 0.8125rem;
         }
       }
     }
