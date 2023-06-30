@@ -9,11 +9,14 @@
 @import './modules/container';
 @import './modules/logo';
 @import './modules/button';
+@import './modules/social_links';
+@import './modules/phone';
 
 // Layouts
 
 @import './layouts/header';
-@import './layouts/first-screen';
+@import './layouts/first_screen';
 @import './layouts/examples';
 @import './layouts/advantages';
 @import './layouts/callback';
+@import './layouts/footer';

@@ -1,0 +1,40 @@
+.footer {
+  margin: 0 0 4.5rem;
+
+  @include iphone {
+    margin: 0 0 3.375rem;
+  }
+
+  & .logo {
+    background-image: url('/assets/logo-white.svg');
+  }
+
+  & .phone {
+    color: $white;
+  }
+
+  & .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+
+    @include tablet {
+      flex-direction: column;
+    }
+  }
+
+  &__contacts {
+    display: flex;
+    align-items: center;
+    gap: 1.875rem;
+
+    @include tablet {
+      gap: 1.5rem;
+    }
+
+    @include mobile {
+      flex-direction: column;
+    }
+  }
+}

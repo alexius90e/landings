@@ -1,9 +1,9 @@
 .callback {
-  margin-bottom: 54px;
+  margin-bottom: 3.375rem;
 
   &__wrapper {
-    padding: 110px 87px 97px;
-    border-radius: 30px;
+    padding: 6.875rem 5.4375rem 6.0625rem;
+    border-radius: 1.875rem;
     background-color: $green;
     background-image: url('/assets/formBg.jpg');
     background-position: top center;
@@ -11,40 +11,40 @@
     background-size: cover;
 
     @include tablet {
-      padding: 32px;
+      padding: 2rem;
     }
 
     @include iphone {
-      padding: 16px;
+      padding: 1rem;
     }
   }
 
   &__title {
-    margin: 0 0 32px;
+    margin: 0 0 2rem;
     color: $white;
-    font-size: 48px;
+    font-size: 3rem;
     font-family: 'Intro Black', sans-serif;
     font-weight: 900;
-    line-height: 53px;
+    line-height: 3.3125rem;
 
     @include tablet {
-      font-size: 36px;
-      line-height: 44px;
+      font-size: 2.25rem;
+      line-height: 2.75rem;
     }
 
     @include iphone {
-      margin: 0 0 18px;
-      font-size: 26px;
-      line-height: 32px;
+      margin: 0 0 1.125rem;
+      font-size: 1.625rem;
+      line-height: 2rem;
     }
   }
 
   &__form {
-    max-width: 540px;
+    max-width: 33.75rem;
 
     :nth-child(3) {
       display: flex;
-      gap: 8px;
+      gap: 0.5rem;
       margin-bottom: 2rem;
     }
 
@@ -61,21 +61,21 @@
 
   &__input {
     width: 100%;
-    padding: 18px 16px;
-    font-size: 18px;
+    padding: 1.125rem 1rem;
+    font-size: 1.125rem;
     font-family: 'Gotham Pro', sans-serif;
     font-weight: 400;
-    line-height: 24px;
+    line-height: 1.5rem;
     box-sizing: border-box;
     border: none;
-    outline: 2px solid rgba($color: #26ae61, $alpha: 0);
-    border-radius: 12px;
+    outline: 0.125rem solid rgba($color: #26ae61, $alpha: 0);
+    border-radius: 0.75rem;
     background: $white;
 
     @include iphone {
-      padding: 14px;
-      font-size: 14px;
-      line-height: 18px;
+      padding: 0.875rem;
+      font-size: 0.875rem;
+      line-height: 1.125rem;
     }
   }
 

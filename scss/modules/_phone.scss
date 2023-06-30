@@ -1,0 +1,25 @@
+.phone {
+  display: flex;
+  align-items: center;
+  gap: 0.4375rem;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 2.0625rem;
+  color: $black;
+  text-decoration: none;
+
+  @include tablet {
+    gap: 0.25rem;
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+
+  & img {
+    width: 1.5rem;
+    height: auto;
+
+    @include tablet {
+      width: 1.25rem;
+    }
+  }
+}
