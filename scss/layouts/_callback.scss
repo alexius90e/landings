@@ -1,0 +1,101 @@
+.callback {
+  margin-bottom: 54px;
+
+  &__wrapper {
+    padding: 110px 87px 97px;
+    border-radius: 30px;
+    background-color: $green;
+    background-image: url('/assets/formBg.jpg');
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include tablet {
+      padding: 32px;
+    }
+
+    @include iphone {
+      padding: 16px;
+    }
+  }
+
+  &__title {
+    margin: 0 0 32px;
+    color: $white;
+    font-size: 48px;
+    font-family: 'Intro Black', sans-serif;
+    font-weight: 900;
+    line-height: 53px;
+
+    @include tablet {
+      font-size: 36px;
+      line-height: 44px;
+    }
+
+    @include iphone {
+      margin: 0 0 18px;
+      font-size: 26px;
+      line-height: 32px;
+    }
+  }
+
+  &__form {
+    max-width: 540px;
+
+    :nth-child(3) {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 2rem;
+    }
+
+    :last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__fieldset {
+    margin-bottom: 1rem;
+    padding: 0;
+    border: none;
+  }
+
+  &__input {
+    width: 100%;
+    padding: 18px 16px;
+    font-size: 18px;
+    font-family: 'Gotham Pro', sans-serif;
+    font-weight: 400;
+    line-height: 24px;
+    box-sizing: border-box;
+    border: none;
+    outline: 2px solid rgba($color: #26ae61, $alpha: 0);
+    border-radius: 12px;
+    background: $white;
+
+    @include iphone {
+      padding: 14px;
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+
+  &__submit {
+    background: #26ae61;
+    color: $white;
+    transition: $baseTransition;
+    cursor: pointer;
+
+    &:hover {
+      box-shadow: 0 0 0.625rem rgba($color: $black, $alpha: 0.45);
+    }
+
+    &:active {
+      transform: scale(0.95);
+    }
+  }
+
+  &__code {
+    flex: 0 0 100%;
+    max-width: fit-content;
+  }
+}
