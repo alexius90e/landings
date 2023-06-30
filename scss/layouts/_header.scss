@@ -1,6 +1,10 @@
 .header {
   margin: 64px 0;
 
+  @include tablet {
+    margin: 16px 0;
+  }
+
   & .container {
     display: flex;
     align-items: center;
@@ -9,7 +13,12 @@
 
   &__contacts {
     display: flex;
-    gap: 2rem;
+    gap: 32px;
+
+    @include tablet {
+      flex-direction: column;
+      gap: 6px;
+    }
   }
 
   &__phone {
@@ -22,15 +31,29 @@
     color: $black;
     text-decoration: none;
 
+    @include tablet {
+      gap: 0.25rem;
+      font-size: 16px;
+      line-height: 20px;
+    }
+
     & img {
       width: 24px;
       height: auto;
+
+      @include tablet {
+        width: 20px;
+      }
     }
   }
 
   &__social {
     display: flex;
-    gap: 0.5625rem;
+    gap: 9px;
+
+    @include tablet {
+      gap: 6px;
+    }
 
     &-link {
       display: flex;
@@ -43,9 +66,20 @@
       border-radius: 8px;
       background: $white;
 
+      @include tablet {
+        width: 26px;
+        height: 26px;
+        padding: 4px;
+        border-radius: 6px;
+      }
+
       & img {
-        width: 1rem;
+        width: 16px;
         height: auto;
+
+        @include tablet {
+          width: 13px;
+        }
       }
     }
   }

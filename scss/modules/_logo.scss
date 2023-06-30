@@ -3,6 +3,12 @@
   width: 11.75rem;
   height: 4.25rem;
   background-image: url('/assets/logo.svg');
-  background-position: center center;
+  background-position: center;
   background-repeat: no-repeat;
+  background-size: contain;
+
+  @include tablet {
+    width: 124px;
+    height: 45px;
+  }
 }
