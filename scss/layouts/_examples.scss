@@ -1,0 +1,80 @@
+.examples {
+  margin: 106px 0 96px;
+
+  @include tablet {
+    margin: 80px 0;
+  }
+
+  @include iphone {
+    margin: 72px 0;
+  }
+
+  @include mobile {
+    margin: 64px 0;
+  }
+
+  &__title {
+    margin: 0 0 44px;
+    color: $white;
+
+    @include iphone {
+      margin: 0 0 32px;
+    }
+  
+    @include mobile {
+      margin: 0 0 24px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3.5rem;
+    margin: 0;
+    padding: 0;
+
+    @include laptop {
+      gap: 1.5rem;
+    }
+
+    @include laptop {
+      gap: 1rem;
+    }
+
+
+    &-item {
+      flex: 0 0 30%;
+      height: 360px;
+      list-style-type: none;
+
+      @include laptop {
+        flex: 0 0 calc((100% - 1.5rem) / 2);
+      }
+
+      @include tablet {
+        height: 240px;
+      }
+
+      @include iphone {
+        flex: 0 0 100%;
+      }
+
+      & img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 30px;
+        box-shadow: 7px 7px 9px 0px rgba(0, 0, 0, 0.5);
+
+        @include laptop {
+          border-radius: 20px;
+        }
+
+        @include iphone {
+          border-radius: 12px;
+        }
+      }
+    }
+  }
+}
