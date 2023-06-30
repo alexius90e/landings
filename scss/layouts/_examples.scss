@@ -44,7 +44,7 @@
 
 
     &-item {
-      flex: 0 0 30%;
+      flex: 0 0 calc((100% - 3.5rem * 2) / 3);
       height: 360px;
       list-style-type: none;
 
