@@ -17,7 +17,7 @@ html {
 body {
   margin: 0;
   background-color: #3fa7aa;
-  background-image: url("../assets/bg-min.jpg");
+  background-image: url("../assets/bg-min.webp");
   background-position: top center;
   background-repeat: repeat-y;
 }
@@ -562,7 +562,7 @@ textarea {
   padding: 6.875rem 5.4375rem 6.0625rem;
   border-radius: 1.875rem;
   background-color: #3fa7aa;
-  background-image: url("../assets/formBg-min.jpg");
+  background-image: url("../assets/formbg.webp");
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
