@@ -21,15 +21,15 @@
     text-transform: uppercase;
 
     @include laptop {
-      font-size: 72px;
+      font-size: 4.5rem;
     }
 
     @include tablet {
-      font-size: 48px;
+      font-size: 3rem;
     }
 
     @include iphone {
-      font-size: 32px;
+      font-size: 2rem;
     }
   }
 

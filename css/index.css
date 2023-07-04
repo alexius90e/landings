@@ -303,17 +303,17 @@ textarea {
 }
 @media (max-width: 75rem) {
   .first-screen__title {
-    font-size: 72px;
+    font-size: 4.5rem;
   }
 }
 @media (max-width: 48rem) {
   .first-screen__title {
-    font-size: 48px;
+    font-size: 3rem;
   }
 }
 @media (max-width: 30rem) {
   .first-screen__title {
-    font-size: 32px;
+    font-size: 2rem;
   }
 }
 .first-screen__description {
@@ -500,6 +500,7 @@ textarea {
   }
 }
 .advantages .container {
+  position: relative;
   padding: 3.25rem 4rem;
   border-radius: 1.875rem;
   opacity: 0.6;
@@ -517,10 +518,15 @@ textarea {
   }
 }
 .advantages__title {
-  margin: 0;
+  margin: 0 0 3rem;
 }
 .advantages__title_secondary {
-  margin: 1.25rem 0;
+  margin: 0 0 1.25rem;
+}
+@media (max-width: 30rem) {
+  .advantages__title_secondary {
+    margin: 0 0 0.5rem;
+  }
 }
 .advantages__list {
   display: -webkit-box;
@@ -587,8 +593,24 @@ textarea {
 }
 .advantages__description {
   max-width: 70.375rem;
-  margin: 0;
+  margin: 0 auto;
   text-align: center;
+}
+.advantages .swiper-button-prev, .advantages .swiper-button-next {
+  top: auto;
+  bottom: calc(50% - 4rem);
+  color: #000000;
+}
+@media (max-width: 48rem) {
+  .advantages .swiper-button-prev, .advantages .swiper-button-next {
+    display: none;
+  }
+}
+.advantages .swiper-button-prev {
+  left: 1rem;
+}
+.advantages .swiper-button-next {
+  right: 1rem;
 }
 
 .callback {
@@ -610,7 +632,8 @@ textarea {
 }
 @media (max-width: 30rem) {
   .callback__wrapper {
-    padding: 1rem;
+    padding: 1.5rem 1rem;
+    border-radius: 1.25rem;
   }
 }
 .callback__title {
@@ -697,6 +720,29 @@ textarea {
   max-width: -webkit-fit-content;
   max-width: -moz-fit-content;
   max-width: fit-content;
+}
+.callback p {
+  color: #ffffff;
+  font-size: 24px;
+  line-height: 32px;
+}
+@media (max-width: 48rem) {
+  .callback p {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+@media (max-width: 30rem) {
+  .callback p {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+.callback p:first-child {
+  margin-top: 0;
+}
+.callback p:last-child {
+  margin-bottom: 0;
 }
 
 .footer {

@@ -36,6 +36,7 @@
   }
 
   & .container {
+    position: relative;
     padding: 3.25rem 4rem;
     border-radius: 1.875rem;
     opacity: 0.6;
@@ -52,10 +53,14 @@
   }
 
   &__title {
-    margin: 0;
+    margin: 0 0 3rem;
 
     &_secondary {
-      margin: 1.25rem 0;
+      margin: 0 0 1.25rem;
+
+      @include iphone {
+        margin: 0 0 0.5rem;
+      }
     }
   }
 
@@ -112,7 +117,30 @@
 
   &__description {
     max-width: 70.375rem;
-    margin: 0;
+    margin: 0 auto;
     text-align: center;
+  }
+
+  & .swiper {
+    &-button {
+      &-prev,
+      &-next {
+        top: auto;
+        bottom: calc(50% - 4rem);
+        color: $black;
+
+        @include tablet {
+          display: none;
+        }
+      }
+
+      &-prev {
+        left: 1rem;
+      }
+
+      &-next {
+        right: 1rem;
+      }
+    }
   }
 }

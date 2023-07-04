@@ -15,7 +15,8 @@
     }
 
     @include iphone {
-      padding: 1rem;
+      padding: 1.5rem 1rem;
+      border-radius: 1.25rem;
     }
   }
 
@@ -97,5 +98,29 @@
   &__code {
     flex: 0 0 100%;
     max-width: fit-content;
+  }
+
+  & p {
+    color: $white;
+    font-size: 24px;
+    line-height: 32px;
+
+    @include tablet {
+      font-size: 18px;
+      line-height: 22px;
+    }
+
+    @include iphone {
+      font-size: 14px;
+      line-height: 18px;
+    }
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }
