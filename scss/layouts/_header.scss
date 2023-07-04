@@ -20,4 +20,19 @@
       gap: 0.375rem;
     }
   }
+
+  & .social-links {
+    @include iphone {
+      gap: 0.25rem;
+    }
+
+    &__link {
+      @include iphone {
+        width: 22px;
+        height: 22px;
+        padding: 3px;
+        border-radius: 4px;
+      }
+    }
+  }
 }

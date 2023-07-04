@@ -14,12 +14,13 @@ html {
   line-height: 1.25rem;
   font-weight: 400;
   color: $black;
+  scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
   background-color: $green;
-  background-image: url('/assets/bg.jpg');
+  background-image: url('/assets/bg-min.webp');
   background-position: top center;
   background-repeat: repeat-y;
 }
