@@ -20,7 +20,7 @@
     @include iphone {
       margin: 0 0 2rem;
     }
-  
+
     @include mobile {
       margin: 0 0 1.5rem;
     }
@@ -42,14 +42,15 @@
       gap: 1rem;
     }
 
-
     &-item {
       flex: 0 0 calc((100% - 3.5rem * 2) / 3);
+      max-width: calc((100% - 3.5rem * 2) / 3);
       height: 22.5rem;
       list-style-type: none;
 
       @include laptop {
         flex: 0 0 calc((100% - 1.5rem) / 2);
+        max-width: calc((100% - 1.5rem) / 2);
       }
 
       @include tablet {
@@ -58,6 +59,7 @@
 
       @include iphone {
         flex: 0 0 100%;
+        max-width: 100%;
       }
 
       & img {
@@ -73,6 +75,36 @@
 
         @include iphone {
           border-radius: 0.75rem;
+        }
+      }
+
+      & .swiper {
+        height: 100%;
+        border-radius: 1.875rem;
+
+        &:hover {
+          & .swiper-button-prev:after,
+          & .swiper-button-next:after {
+            opacity: 1;
+
+            @include iphone {
+              opacity: 0;
+            }
+          }
+        }
+
+        &-pagination-bullet {
+          width: 9px;
+          height: 9px;
+          background: aliceblue;
+        }
+
+        &-button-prev:after,
+        &-button-next:after {
+          opacity: 0;
+          color: aliceblue;
+          font-size: 1rem;
+          transition: $baseTransition;
         }
       }
     }

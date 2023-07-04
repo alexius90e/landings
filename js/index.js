@@ -22,3 +22,26 @@ const advantagesSwiper = new Swiper('.advantages .swiper', {
     prevEl: '.advantages .swiper-button-prev',
   },
 });
+
+const examplesBlock = document.querySelector('.examples');
+
+const exampleIds = [...examplesBlock.querySelectorAll('.examples__list-item')].map(
+  (item) => item.id
+);
+
+exampleIds.map(
+  (id) =>
+    new Swiper(`#${id} .swiper`, {
+      loop: true,
+      slidesPerView: 1,
+      spaceBetween: 10,
+      navigation: {
+        nextEl: `#${id} .swiper-button-next`,
+        prevEl: `#${id} .swiper-button-prev`,
+      },
+      pagination: {
+        el: `#${id} .swiper-pagination`,
+        type: 'bullets',
+      },
+    })
+);
