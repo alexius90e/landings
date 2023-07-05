@@ -78,7 +78,7 @@ textarea {
   display: block;
   width: 11.75rem;
   height: 4.25rem;
-  background-image: url("/assets/logo.svg");
+  background-image: url("../assets/logo.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -785,7 +785,7 @@ textarea {
   }
 }
 .footer .logo {
-  background-image: url("/assets/logo-white.svg");
+  background-image: url("../assets/logo-white.svg");
 }
 .footer .phone {
   color: #ffffff;
