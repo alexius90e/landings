@@ -78,7 +78,7 @@ textarea {
   display: block;
   width: 11.75rem;
   height: 4.25rem;
-  background-image: url("../assets/logo.svg");
+  background-image: url("/assets/logo.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -297,8 +297,8 @@ textarea {
 .first-screen__title {
   margin: 0 0 0.625rem;
   text-align: center;
-  font-size: 6.5rem;
-  line-height: 1.15;
+  font-size: 6rem;
+  line-height: 1.1;
   text-transform: uppercase;
 }
 @media (max-width: 75rem) {
@@ -634,6 +634,9 @@ textarea {
     display: none;
   }
 }
+.advantages .swiper-button-prev:after, .advantages .swiper-button-next:after {
+  font-size: 2.25rem;
+}
 .advantages .swiper-button-prev {
   left: 1rem;
 }
@@ -782,7 +785,7 @@ textarea {
   }
 }
 .footer .logo {
-  background-image: url("../assets/logo-white.svg");
+  background-image: url("/assets/logo-white.svg");
 }
 .footer .phone {
   color: #ffffff;
