@@ -1,22 +1,22 @@
 // Base
 
-@import './base/vars';
-@import './base/mixins';
-@import './base/reset';
+@import './b_vars';
+@import './b_mixins';
+@import './b_reset';
 
 // Modules
 
-@import './modules/container';
-@import './modules/logo';
-@import './modules/button';
-@import './modules/social_links';
-@import './modules/phone';
+@import './m_container';
+@import './m_logo';
+@import './m_button';
+@import './m_social_links';
+@import './m_phone';
 
 // Layouts
 
-@import './layouts/header';
-@import './layouts/first_screen';
-@import './layouts/examples';
-@import './layouts/advantages';
-@import './layouts/callback';
-@import './layouts/footer';
+@import './l_header';
+@import './l_first_screen';
+@import './l_examples';
+@import './l_advantages';
+@import './l_callback';
+@import './l_footer';

@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'Gotham Pro';
-  src: url('/fonts/gothampro.ttf');
+  src: url('../fonts/gothampro.ttf');
 }
 
 @font-face {
   font-family: 'Intro Black';
-  src: url('/fonts/intro_black.ttf');
+  src: url('../fonts/intro_black.ttf');
 }
 
 html {
@@ -20,7 +20,7 @@ html {
 body {
   margin: 0;
   background-color: $green;
-  background-image: url('/assets/bg-min.webp');
+  background-image: url('../assets/bg-min.webp');
   background-position: top center;
   background-repeat: repeat-y;
 }

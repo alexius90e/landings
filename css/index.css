@@ -1,10 +1,10 @@
 @font-face {
   font-family: "Gotham Pro";
-  src: url("/fonts/gothampro.ttf");
+  src: url("../fonts/gothampro.ttf");
 }
 @font-face {
   font-family: "Intro Black";
-  src: url("/fonts/intro_black.ttf");
+  src: url("../fonts/intro_black.ttf");
 }
 html {
   font-size: 1rem;
@@ -18,7 +18,7 @@ html {
 body {
   margin: 0;
   background-color: #3fa7aa;
-  background-image: url("/assets/bg-min.webp");
+  background-image: url("../assets/bg-min.webp");
   background-position: top center;
   background-repeat: repeat-y;
 }
@@ -297,8 +297,8 @@ textarea {
 .first-screen__title {
   margin: 0 0 0.625rem;
   text-align: center;
-  font-size: 6.5rem;
-  line-height: 1.15;
+  font-size: 6rem;
+  line-height: 1.1;
   text-transform: uppercase;
 }
 @media (max-width: 75rem) {
@@ -634,6 +634,9 @@ textarea {
     display: none;
   }
 }
+.advantages .swiper-button-prev:after, .advantages .swiper-button-next:after {
+  font-size: 2.25rem;
+}
 .advantages .swiper-button-prev {
   left: 1rem;
 }
@@ -648,7 +651,7 @@ textarea {
   padding: 6.875rem 5.4375rem 6.0625rem;
   border-radius: 1.875rem;
   background-color: #3fa7aa;
-  background-image: url("/assets/formbg.webp");
+  background-image: url("../assets/formbg.webp");
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;

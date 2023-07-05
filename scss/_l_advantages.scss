@@ -132,6 +132,10 @@
         @include tablet {
           display: none;
         }
+
+        &:after {
+          font-size: 2.25rem;
+        }
       }
 
       &-prev {
