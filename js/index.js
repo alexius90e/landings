@@ -74,7 +74,7 @@ exampleItems.forEach((item, index) => {
   swiperButtonNext.classList.add('swiper-button-next');
 
   for (let i = 0; i < item.countOfImages; i++) {
-    const slide = createSwiperSlide(index, i)
+    const slide = createSwiperSlide(index, i);
     swiperWrapper.append(slide);
   }
 
@@ -99,3 +99,37 @@ exampleIds.map(
       },
     })
 );
+
+const successModal = document.getElementById('successModal');
+
+successModal.addEventListener('click', (event) => {
+  const { target } = event;
+
+  const canCloseModal =
+    target.classList.contains('modal') || target.classList.contains('modal__close-button');
+
+  if (canCloseModal) event.currentTarget.classList.remove('active');
+});
+
+const callbackForm = document.querySelector('.callback__form');
+
+callbackForm.addEventListener('submit', (event) => {
+  event.preventDefault();
+
+  const formData = new FormData(callbackForm);
+  const userName = formData.get('userName');
+  const userEmail = formData.get('userEmail');
+  const userPhone = formData.get('userPhone');
+
+  const message = { userName, userEmail, userPhone };
+
+  fetch('../contact-form-handler.php', {
+    method: 'POST',
+    data: message,
+  })
+    .then(() => {
+      successModal.classList.add('active');
+      setTimeout(() => successModal.classList.remove('active'), 3000);
+    })
+    .catch((error) => console.log(error));
+});
