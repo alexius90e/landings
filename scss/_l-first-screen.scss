@@ -1,15 +1,82 @@
 .first-screen {
   max-height: 857px;
   max-width: 1920px;
-  height: 100vh;
   margin: 0 auto;
   box-sizing: border-box;
   border-radius: 0 0 70px 70px;
   background-image: url('../assets/bg.webp');
   background-position: top center;
   background-repeat: no-repeat;
+  color: $white;
+  overflow: hidden;
 
   @include tablet {
     border-radius: 0 0 32px 32px;
+  }
+
+  &__wrapper {
+    display: flex;
+    gap: 54px;
+  }
+
+  &__image {
+    flex: 0 0 584px;
+    display: flex;
+    align-items: flex-end;
+    margin: 0;
+
+    @include laptop {
+      flex: 0 0 480px;
+    }
+
+    & img {
+      max-width: 100%;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__info {
+    position: relative;
+  }
+
+  &__title {
+    max-width: 656px;
+    margin: 19px 0 16px;
+    font-size: 60px;
+    font-weight: 900;
+    line-height: 68px;
+  }
+
+  &__description {
+    font-size: 23px;
+    font-weight: 400;
+    line-height: 32px;
+
+    &_secondary {
+      max-width: 450px;
+      margin: 0;
+      font-size: 20px;
+      line-height: 28px;
+    }
+
+    & span {
+      padding: 4px 8px;
+      background-color: $green;
+      border-radius: 32px;
+      white-space: nowrap;
+    }
+  }
+
+  &__buttons {
+
+  }
+
+  &__button {
+    
+  }
+  
+  &__price {
+    
   }
 }
