@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Replace</title>
+    <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <script type="module" src="./js/index.js"></script>
+  </head>
+
+  <body>
+    <main>
+      <section class="first-screen">
+        <div class="container">
+          <header class="header">
+            <a class="logo" href="/"></a>
+            <div class="header__title">Элитная недвижимость Кипра</div>
+          </header>
+
+          <article class="first-screen__wrapper">
+            <figure class="first-screen__image">
+              <img src="./assets/mentor.png" alt="mentor" />
+            </figure>
+
+            <div class="first-screen__info">
+              <p class="first-screen__description_secondary">
+                Онлайн вебинар с ведущим специалистом по недвижимости Кипра
+              </p>
+
+              <h1 class="first-screen__title">Жизнь на Кипре. Плюсы и подводные камни</h1>
+
+              <p class="first-screen__description">
+                Получите доступ к консультации с одним из лучших экспертов по Кипру стоимостью 70
+                000 рублей - <span>совершенно бесплатно!</span>
+              </p>
+
+              <p class="first-screen__description">
+                Узнайте все о перспективах релокации, покупки недвижимости, открытии бизнеса и
+                получении гражданства ЕС для себя и своей семьи
+              </p>
+
+              <div class="first-screen__buttons">
+                <div class="first-screen__tag">
+                  <span class="first-screen__tag-price">70 000</span>
+                  <span>Бесплатно</span>
+                  <img src="./assets/fire-icon.svg" alt="fire" />
+                </div>
+
+                <a class="first-screen__button" href="#callback">Записаться на вебинар</a>
+              </div>
+
+              <div class="first-screen__video-tag">
+                <button class="first-screen__video-tag-button">
+                  <img src="./assets/mentor-icon.png" alt="mentor-icon" />
+                </button>
+                <span>Узнайте о вебинаре за 1 минуту</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="recalls">
+        <div class="container">
+          <h2 class="recalls-title">Отзывы о консультациях</h2>
+
+          <div class="recalls-cards">
+            <article class="recalls-card">
+              <figure class="recalls-avatar">
+                <img src="./assets/avatars/avatar1.png" alt="avatar" />
+              </figure>
+
+              <h3 class="recalls-name">Иван</h3>
+
+              <p class="recalls-text">
+                Все быстро, четко, понятно и по делу. Никаких лишних тем, разбирали только наиболее
+                важные вопросы. Оказалось, что информация по гражданству, которую я находил раньше -
+                не совсем актуальная. Даже не представляю, сколько я сэкономил времени и нервов.
+              </p>
+
+              <div class="recalls-rating">
+                <img src="./assets/rating.svg" alt="" />
+              </div>
+            </article>
+
+            <article class="recalls-card">
+              <figure class="recalls-avatar">
+                <img src="./assets/avatars/avatar2.png" alt="avatar" />
+              </figure>
+
+              <h3 class="recalls-name">Ольга</h3>
+
+              <p class="recalls-text">
+                Долго искала информацию по Кипру самостоятельно, перебрала множество статей и часы
+                видео на ютубе, но наконец нашла в одном месте все, что нужно! Я очень благодарна за
+                консультацию, буквально за час мы разобрали все вопросы, ответы на которые я уже
+                замучилась гуглить
+              </p>
+
+              <div class="recalls-rating">
+                <img src="./assets/rating.svg" alt="" />
+              </div>
+            </article>
+
+            <article class="recalls-card">
+              <figure class="recalls-avatar">
+                <img src="./assets/avatars/avatar3.png" alt="avatar" />
+              </figure>
+
+              <h3 class="recalls-name">Максим</h3>
+
+              <p class="recalls-text">
+                Индивидуальный подход и внимательность ко всем вопросам, сразу чувствуется
+                профессионал в своей области. Спасибо за качественную информацию и рекомендации
+              </p>
+
+              <div class="recalls-rating">
+                <img src="./assets/rating.svg" alt="" />
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="callback" id="callback">
+        <div class="container">
+          <div class="callback__wrapper">
+            <h2 class="callback__title">Запишись сейчас и получи доступ к вебинару бесплатно!</h2>
+
+            <div class="callback__timer timer">
+              <p class="callback__timer-title">
+                Бесплатно <span>70 000₽</span> <img src="./assets/fire-icon.svg" alt="fire" />
+              </p>
+              <div class="timer__items">
+                <div class="timer__item timer__days">00</div>
+                <div class="timer__item timer__hours">00</div>
+                <div class="timer__item timer__minutes">00</div>
+                <div class="timer__item timer__seconds">00</div>
+              </div>
+            </div>
+
+            <form class="callback__form">
+              <input type="text" placeholder="Имя" required />
+              <input type="text" placeholder="Email" required />
+              <input type="text" placeholder="Ваш телефон" required />
+              <input type="submit" value="Записаться" />
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <a class="logo" href="#"></a>
+      </div>
+    </footer>
+
+    <div class="modal">
+      <div class="modal__body"></div>
+    </div>
+  </body>
+</html>
