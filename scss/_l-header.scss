@@ -9,14 +9,14 @@
   font-weight: 400;
   line-height: 1.5rem;
 
-  @include laptop {
+  @include desktop {
     gap: 2rem;
     padding: 2rem 0;
   }
 
   @include tablet {
     gap: 1.5rem;
-    padding: 1.5rem 0;
+    padding: 1rem 0;
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
