@@ -1,0 +1,141 @@
+.callback {
+  margin: 92px 0 54px;
+
+  &__wrapper {
+    position: relative;
+    padding: 66px 88px;
+    background-color: #222222;
+    background-image: url('../assets/form-bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 30px;
+
+    @include desktop {
+      padding: 32px;
+    }
+
+    @include iphone {
+      padding: 32px 16px;
+      border-radius: 16px;
+    }
+  }
+
+  &__title {
+    max-width: 554px;
+    margin: 0 0 21px;
+    color: $white;
+    font-size: 37px;
+    font-weight: 900;
+    line-height: 46px;
+    text-align: left;
+
+    @include iphone {
+      font-size: 32px;
+      line-height: 36px;
+    }
+
+    @include mobile {
+      font-size: 24px;
+      line-height: 28px;
+    }
+  }
+
+  &__form {
+    max-width: 554px;
+
+    & input {
+      display: block;
+      width: 100%;
+      margin: 0 0 16px;
+      padding: 18px 16px;
+      box-sizing: border-box;
+      border: none;
+      border-radius: 12px;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 24px;
+      outline-color: rgba($color: $green, $alpha: 0.5);
+      background-color: $white;
+    }
+
+    & input[type='submit'] {
+      margin: 32px 0 0;
+      padding: 19px;
+      color: $white;
+      font-size: 25px;
+      font-weight: 400;
+      line-height: 26px;
+      background-color: $green;
+      transition: $baseTransition;
+      cursor: pointer;
+
+      &:hover {
+        transform: scale(1.02);
+      }
+
+      &:active {
+        transform: scale(0.98);
+      }
+    }
+  }
+
+  &__timer {
+    position: absolute;
+    top: 66px;
+    right: 88px;
+    width: max-content;
+    padding: 12px 17px;
+    border-radius: 20px;
+    color: $white;
+    background-color: $green;
+
+    @include desktop {
+      top: 32px;
+      right: 32px;
+    }
+
+    @include laptop {
+      position: static;
+      max-width: 554px;
+      width: 100%;
+      margin-bottom: 1rem;
+      box-sizing: border-box;
+    }
+
+    &-title {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin: 0 0 8px;
+      font-size: 35px;
+      font-weight: 700;
+      line-height: 36px;
+
+      @include iphone {
+        font-size: 24px;
+        line-height: 26px;
+      }
+
+      & span {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 17px;
+        text-decoration: line-through;
+      }
+
+      & img {
+        position: absolute;
+        bottom: 50%;
+        left: 174px;
+        transform: rotate(33.262deg);
+
+        @include iphone {
+          bottom: 50%;
+          left: 115px;
+        }
+      }
+    }
+  }
+}
