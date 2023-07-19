@@ -1,0 +1,14 @@
+.logo {
+  display: block;
+  width: 11.75rem;
+  height: 4.25rem;
+  background-image: url('../assets/logo-white.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  @include tablet {
+    width: 7.75rem;
+    height: 2.8125rem;
+  }
+}

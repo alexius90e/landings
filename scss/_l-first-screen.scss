@@ -1,0 +1,15 @@
+.first-screen {
+  max-height: 857px;
+  max-width: 1920px;
+  height: 100vh;
+  margin: 0 auto;
+  box-sizing: border-box;
+  border-radius: 0 0 70px 70px;
+  background-image: url('../assets/bg.webp');
+  background-position: top center;
+  background-repeat: no-repeat;
+
+  @include tablet {
+    border-radius: 0 0 32px 32px;
+  }
+}
