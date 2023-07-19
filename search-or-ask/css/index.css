@@ -101,7 +101,7 @@ textarea {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
 }
 .main__button {
   display: -webkit-box;
@@ -164,7 +164,16 @@ textarea {
   -webkit-box-shadow: 0 0 0 0.25rem rgba(0, 128, 157, 0.25);
   box-shadow: 0 0 0 0.25rem rgba(0, 128, 157, 0.25);
 }
-
+.main__video {
+  width: 100%;
+  margin: 3rem 0;
+  aspect-ratio: 16 / 9;
+}
+.main__video iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.75rem;
+}
 .search {
   height: 100vh;
   background-color: #ffffff;
