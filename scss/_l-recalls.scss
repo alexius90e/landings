@@ -1,0 +1,44 @@
+.recalls {
+  margin: 92px 0;
+
+  @include iphone {
+    margin: 48px 0;
+  }
+
+  &-title {
+    margin: 0 0 48px;
+  }
+
+  &-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+
+  &-card {
+    flex: 0 1 366px;
+  }
+
+  &-card {
+    color: $black;
+    font-size: 22px;
+    line-height: 31px;
+    text-align: center;
+
+    @include iphone {
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
+
+  &-name {
+    margin: 24px 0 16px;
+    font-weight: 700;
+  }
+
+  &-text {
+    margin: 16px 0;
+    font-weight: 400;
+  }
+}

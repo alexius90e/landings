@@ -33,9 +33,9 @@ h6 {
 }
 
 h2 {
-  font-size: 4rem;
+  font-size: 3.125rem;
   font-weight: 900;
-  line-height: 4.625rem;
+  line-height: 3.625rem;
   text-align: center;
 
   @include tablet {
@@ -59,4 +59,8 @@ button,
 input,
 textarea {
   font-family: 'Gotham Pro', 'Segoe UI', Tahoma, Verdana, sans-serif;
+}
+
+figure {
+  margin: 0;
 }

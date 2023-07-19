@@ -31,9 +31,9 @@ h6 {
 }
 
 h2 {
-  font-size: 4rem;
+  font-size: 3.125rem;
   font-weight: 900;
-  line-height: 4.625rem;
+  line-height: 3.625rem;
   text-align: center;
 }
 @media (max-width: 48rem) {
@@ -60,6 +60,10 @@ button,
 input,
 textarea {
   font-family: "Gotham Pro", "Segoe UI", Tahoma, Verdana, sans-serif;
+}
+
+figure {
+  margin: 0;
 }
 
 .container {
@@ -645,4 +649,52 @@ textarea {
   -webkit-transform: scale(0.98);
       -ms-transform: scale(0.98);
           transform: scale(0.98);
+}
+
+.recalls {
+  margin: 92px 0;
+}
+@media (max-width: 30rem) {
+  .recalls {
+    margin: 48px 0;
+  }
+}
+.recalls-title {
+  margin: 0 0 48px;
+}
+.recalls-cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 40px;
+}
+.recalls-card {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 366px;
+          flex: 0 1 366px;
+}
+.recalls-card {
+  color: #000000;
+  font-size: 22px;
+  line-height: 31px;
+  text-align: center;
+}
+@media (max-width: 30rem) {
+  .recalls-card {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+.recalls-name {
+  margin: 24px 0 16px;
+  font-weight: 700;
+}
+.recalls-text {
+  margin: 16px 0;
+  font-weight: 400;
 }
