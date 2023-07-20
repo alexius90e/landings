@@ -52,13 +52,16 @@ callbackForm.addEventListener('submit', (event) => {
 
   const message = { userName, userEmail, userPhone };
 
+  console.log(message)
+
   fetch('../contact-form-handler.php', {
     method: 'POST',
     data: message,
   })
     .then(() => {
-      successModal.classList.add('active');
-      setTimeout(() => successModal.classList.remove('active'), 3000);
+      console.log('success')
+      // successModal.classList.add('active');
+      // setTimeout(() => successModal.classList.remove('active'), 3000);
     })
     .catch((error) => console.log(error));
 });

@@ -42,7 +42,7 @@
 
               <div class="first-screen__buttons">
                 <div class="first-screen__tag">
-                  <span class="first-screen__tag-price">70 000</span>
+                  <span class="first-screen__tag-price">70 000₽</span>
                   <span>Бесплатно</span>
                   <img src="./assets/fire-icon.svg" alt="fire" />
                 </div>
@@ -141,9 +141,15 @@
             </div>
 
             <form class="callback__form">
-              <input type="text" placeholder="Имя" required />
-              <input type="text" placeholder="Email" required />
-              <input type="text" placeholder="Ваш телефон" required />
+              <input name="userName" type="text" placeholder="Имя" required />
+              <input name="userEmail" type="email" placeholder="Email" required />
+              <input
+                name="userPhone"
+                type="text"
+                placeholder="Ваш телефон"
+                pattern="^(\+|00)[1-9][0-9 \-\(\)\.]{10,32}$"
+                required
+              />
               <input type="submit" value="Записаться" />
             </form>
           </div>
