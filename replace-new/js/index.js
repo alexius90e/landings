@@ -38,6 +38,41 @@ countdownTimer();
 
 timerId = setInterval(countdownTimer, 1000);
 
+// modals
+
+const modals = document.querySelectorAll('.modal');
+
+const successModal = document.getElementById('successModal');
+
+const errorModal = document.getElementById('errorModal');
+
+const videoModal = document.getElementById('videoModal');
+
+modals.forEach((item) =>
+  item.addEventListener('click', (event) => {
+    const target = event.target;
+
+    const isTargetOverlay = target.classList.contains('modal');
+
+    const isTargetCloseBtn = target.classList.contains('modal__close-button');
+
+    const iframe = item.querySelector('iframe');
+
+    if (iframe) {
+      const  iframeSrc = iframe.src;
+      iframe.src = iframeSrc;
+    }
+
+    if (isTargetOverlay || isTargetCloseBtn) item.classList.remove('active');
+  })
+);
+
+const videoButton = document.getElementById('videoButton');
+
+videoButton.addEventListener('click', () => {
+  videoModal.classList.add('active');
+});
+
 // form
 
 const callbackForm = document.querySelector('.callback__form');
@@ -52,13 +87,12 @@ callbackForm.addEventListener('submit', (event) => {
 
   const message = { userName, userEmail, userPhone };
 
+  console.log(message);
+
   fetch('../contact-form-handler.php', {
     method: 'POST',
     data: message,
   })
-    .then(() => {
-      successModal.classList.add('active');
-      setTimeout(() => successModal.classList.remove('active'), 3000);
-    })
-    .catch((error) => console.log(error));
+    .then(() => successModal.classList.add('active'))
+    .catch(() => errorModal.classList.add('active'));
 });

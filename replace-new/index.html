@@ -42,7 +42,7 @@
 
               <div class="first-screen__buttons">
                 <div class="first-screen__tag">
-                  <span class="first-screen__tag-price">70 000</span>
+                  <span class="first-screen__tag-price">70 000₽</span>
                   <span>Бесплатно</span>
                   <img src="./assets/fire-icon.svg" alt="fire" />
                 </div>
@@ -51,7 +51,7 @@
               </div>
 
               <div class="first-screen__video-tag">
-                <button class="first-screen__video-tag-button">
+                <button class="first-screen__video-tag-button" id="videoButton">
                   <img src="./assets/mentor-icon.png" alt="mentor-icon" />
                 </button>
                 <span>Узнайте о вебинаре за 1 минуту</span>
@@ -141,9 +141,15 @@
             </div>
 
             <form class="callback__form">
-              <input type="text" placeholder="Имя" required />
-              <input type="text" placeholder="Email" required />
-              <input type="text" placeholder="Ваш телефон" required />
+              <input name="userName" type="text" placeholder="Имя" required />
+              <input name="userEmail" type="email" placeholder="Email" required />
+              <input
+                name="userPhone"
+                type="text"
+                placeholder="Ваш телефон"
+                pattern="^(\+|00)[1-9][0-9 \-\(\)\.]{10,32}$"
+                required
+              />
               <input type="submit" value="Записаться" />
             </form>
           </div>
@@ -157,8 +163,49 @@
       </div>
     </footer>
 
-    <div class="modal">
-      <div class="modal__body"></div>
+    <div class="modal" id="successModal">
+      <div class="modal__body">
+        <h3 class="modal__title">
+          <img src="./assets/ok-icon.svg" alt="ok" />Ваша заявка на доступ к онлайн вебинару
+          принята!
+        </h3>
+        <p class="modal__description">
+          Скоро вам придет письмо на указанный электронный адрес с подробной информацией о времени и
+          способе проведения.
+        </p>
+        <p class="modal__description_secondary">
+          Если по каким-то причинам письмо не приходит - свяжитесь с нами по адресу
+          info@replace.com.cy
+        </p>
+        <button class="modal__close-button"></button>
+      </div>
+    </div>
+
+    <div class="modal" id="errorModal">
+      <div class="modal__body">
+        <h3 class="modal__title"><img src="./assets/error-icon.svg" alt="error" />Ошибка!</h3>
+        <p class="modal__description">
+          Попробуйте отправить форму еще раз. Возможно вы указали неверные данные
+        </p>
+        <button class="modal__close-button"></button>
+      </div>
+    </div>
+
+    <div class="modal" id="videoModal">
+      <div class="modal__body modal__body_video">
+        <div class="video">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/KukcGE49_NQ"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <button class="modal__close-button"></button>
+      </div>
     </div>
   </body>
 </html>
