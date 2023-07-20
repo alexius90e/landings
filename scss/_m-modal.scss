@@ -19,8 +19,8 @@
   &__body {
     position: relative;
     max-width: 80%;
-    width: 760px;
-    padding: 70px 50px 40px;
+    width: 800px;
+    padding: 65px 38px 52px;
     box-sizing: border-box;
     border-radius: 30px;
     background: $white;
@@ -29,13 +29,24 @@
 
     @include iphone {
       max-width: 90%;
-      padding: 36px 16px;
+      padding: 40px 16px 16px;
       border-radius: 16px;
+    }
+
+    &_video {
+      padding: 0;
+      max-width: 90%;
+      width: 1200px;
+      background: none;
+
+      & .modal__close-button {
+        display: none;
+      }
     }
   }
 
   &__title {
-    margin: 0;
+    margin: 0 0 18px;
     text-align: center;
     font-size: 37px;
     line-height: 42px;
@@ -44,49 +55,27 @@
       font-size: 28px;
       line-height: 32px;
     }
+
+    & img {
+      margin-right: 16px;
+    }
   }
 
   &__description {
-    margin: 22px 0 34px;
-    font-size: 21px;
-    line-height: 29px;
+    margin: 0;
+    font-size: 22px;
+    line-height: 31px;
 
     @include iphone {
       font-size: 16px;
       line-height: 19px;
     }
-  }
 
-  & .social-links {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 16px;
-
-    @include iphone {
-      gap: 8px;
-    }
-
-    &__link {
-      height: auto;
-      width: auto;
-      padding: 12px;
-      border-radius: 8px;
-      background: #e8e8e8;
-
-      @include iphone {
-        padding: 8px;
-      }
-
-      & > img {
-        height: auto;
-        width: 30px;
-
-        @include iphone {
-          width: 18px;
-        }
-      }
+    &_secondary {
+      margin: 25px 0 0;
+      color: #909090;
+      font-size: 16px;
+      line-height: 19px;
     }
   }
 
@@ -97,7 +86,7 @@
     width: 18px;
     height: 18px;
     border: none;
-    background-image: url('../assets/icons/close.svg');
+    background-image: url('../assets/close.svg');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
