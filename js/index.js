@@ -1,6 +1,29 @@
 // timer
 
-const deadline = new Date('2023-08-30');
+const today = new Date();
+
+const deltaMinutes = Math.round((0.5 + Math.random() * 0.5) * 60);
+
+const currentYear = today.getFullYear();
+
+const currentMonth = today.getMonth();
+
+const currentDay = today.getDate();
+
+const currentHours = today.getHours() + 1;
+
+const currentMinutes = today.getMinutes() + deltaMinutes;
+
+const currentSeconds = today.getSeconds();
+
+const deadline = new Date(
+  currentYear,
+  currentMonth,
+  currentDay,
+  currentHours,
+  currentMinutes,
+  currentSeconds
+);
 
 let timerId = null;
 
@@ -59,7 +82,7 @@ modals.forEach((item) =>
     const iframe = item.querySelector('iframe');
 
     if (iframe) {
-      const  iframeSrc = iframe.src;
+      const iframeSrc = iframe.src;
       iframe.src = iframeSrc;
     }
 
