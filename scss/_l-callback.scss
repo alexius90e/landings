@@ -104,7 +104,6 @@
     }
 
     &-title {
-      position: relative;
       display: flex;
       align-items: center;
       gap: 16px;
@@ -118,23 +117,26 @@
         line-height: 26px;
       }
 
-      & span {
+      &-free {
+        position: relative;
+
+        & img {
+          position: absolute;
+          bottom: 50%;
+          left: calc(100% - 18px);
+          transform: rotate(33.262deg);
+
+          @include iphone {
+            left: calc(100% - 12px);
+          }
+        }
+      }
+
+      &-price {
         font-size: 16px;
         font-weight: 400;
         line-height: 17px;
         text-decoration: line-through;
-      }
-
-      & img {
-        position: absolute;
-        bottom: 50%;
-        left: 174px;
-        transform: rotate(33.262deg);
-
-        @include iphone {
-          bottom: 50%;
-          left: 115px;
-        }
       }
     }
   }
