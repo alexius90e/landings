@@ -581,7 +581,7 @@ figure {
 }
 .first-screen__tag img {
   position: absolute;
-  right: 26px;
+  right: 16px;
   top: 2px;
   -webkit-transform: rotate(33.262deg);
       -ms-transform: rotate(33.262deg);
