@@ -289,6 +289,11 @@ figure {
   width: -moz-min-content;
   width: min-content;
 }
+@media (max-width: 64rem) {
+  .header__title {
+    display: none;
+  }
+}
 
 .footer {
   margin: 3.375rem 0;
@@ -326,6 +331,11 @@ figure {
     border-radius: 0 0 32px 32px;
   }
 }
+@media (max-width: 64rem) {
+  .first-screen {
+    overflow: auto;
+  }
+}
 @media (max-width: 48rem) {
   .first-screen {
     border-radius: 0 0 16px 16px;
@@ -342,6 +352,22 @@ figure {
     gap: 24px;
   }
 }
+@media (max-width: 64rem) {
+  .first-screen__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
 .first-screen__image {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 584px;
@@ -352,6 +378,9 @@ figure {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+  -webkit-box-ordinal-group: 1;
+      -ms-flex-order: 0;
+          order: 0;
   margin: 0;
 }
 @media (max-width: 90rem) {
@@ -363,7 +392,13 @@ figure {
 }
 @media (max-width: 64rem) {
   .first-screen__image {
-    display: none;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    text-align: center;
   }
 }
 .first-screen__image img {
@@ -371,9 +406,26 @@ figure {
   width: 100%;
   height: auto;
 }
+@media (max-width: 64rem) {
+  .first-screen__image img {
+    max-width: 480px;
+    min-width: 70%;
+  }
+}
 .first-screen__info {
   position: relative;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
   padding-bottom: 32px;
+}
+@media (max-width: 64rem) {
+  .first-screen__info {
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+    padding-bottom: 0;
+  }
 }
 .first-screen__title {
   max-width: calc(100% - 148px);
@@ -391,8 +443,8 @@ figure {
 @media (max-width: 48rem) {
   .first-screen__title {
     margin: 12px 0;
-    font-size: 36px;
-    line-height: 40px;
+    font-size: 30px;
+    line-height: 36px;
   }
 }
 @media (max-width: 30rem) {
@@ -415,20 +467,20 @@ figure {
 @media (max-width: 48rem) {
   .first-screen__description {
     font-size: 16px;
-    line-height: 22px;
+    line-height: 28px;
   }
 }
 @media (max-width: 30rem) {
   .first-screen__description {
     font-size: 14px;
-    line-height: 18px;
+    line-height: 24px;
     text-align: center;
   }
 }
 @media (max-width: 22.5rem) {
   .first-screen__description {
     font-size: 13px;
-    line-height: 17px;
+    line-height: 22px;
   }
 }
 .first-screen__description_secondary {
@@ -639,7 +691,6 @@ figure {
 }
 @media (max-width: 48rem) {
   .first-screen__video-tag {
-    max-width: 100px;
     padding: 8px 2px;
     font-size: 13px;
     line-height: 16px;
@@ -647,7 +698,17 @@ figure {
 }
 @media (max-width: 30rem) {
   .first-screen__video-tag {
-    display: none;
+    top: auto;
+    bottom: calc(100% + 12px);
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 4px;
+    max-width: none;
+    padding: 6px;
+    font-size: 11px;
+    line-height: 14px;
   }
 }
 .first-screen__video-tag-button {
@@ -680,6 +741,13 @@ figure {
   border-left: 20px solid rgba(255, 255, 255, 0.75);
   border-bottom: 12px solid transparent;
 }
+@media (max-width: 30rem) {
+  .first-screen__video-tag-button::before {
+    border-top: 8px solid transparent;
+    border-left: 14px solid rgba(255, 255, 255, 0.75);
+    border-bottom: 8px solid transparent;
+  }
+}
 .first-screen__video-tag-button:hover {
   -webkit-transform: scale(1.05);
       -ms-transform: scale(1.05);
@@ -689,6 +757,20 @@ figure {
   -webkit-transform: scale(0.98);
       -ms-transform: scale(0.98);
           transform: scale(0.98);
+}
+@media (max-width: 30rem) {
+  .first-screen__video-tag-button img {
+    width: 42px;
+    height: auto;
+  }
+}
+.first-screen__video-tag span {
+  max-width: 85px;
+}
+@media (max-width: 30rem) {
+  .first-screen__video-tag span {
+    text-align: left;
+  }
 }
 
 .recalls {

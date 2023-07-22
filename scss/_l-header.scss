@@ -23,5 +23,9 @@
 
   &__title {
     width: min-content;
+
+    @include laptop {
+      display: none;
+    }
   }
 }
