@@ -102,14 +102,20 @@ exampleIds.map(
 
 const successModal = document.getElementById('successModal');
 
-successModal.addEventListener('click', (event) => {
-  const { target } = event;
+const errorModal = document.getElementById('errorModal');
 
-  const canCloseModal =
-    target.classList.contains('modal') || target.classList.contains('modal__close-button');
+const modals = [successModal, errorModal];
 
-  if (canCloseModal) event.currentTarget.classList.remove('active');
-});
+modals.forEach((modal) =>
+  modal.addEventListener('click', (event) => {
+    const { target } = event;
+
+    const canCloseModal =
+      target.classList.contains('modal') || target.classList.contains('modal__close-button');
+
+    if (canCloseModal) event.currentTarget.classList.remove('active');
+  })
+);
 
 const callbackForm = document.querySelector('.callback__form');
 
@@ -127,9 +133,6 @@ callbackForm.addEventListener('submit', (event) => {
     method: 'POST',
     data: message,
   })
-    .then(() => {
-      successModal.classList.add('active');
-      setTimeout(() => successModal.classList.remove('active'), 3000);
-    })
-    .catch((error) => console.log(error));
+    .then(() => successModal.classList.add('active'))
+    .catch(() => errorModal.classList.add('active'));
 });

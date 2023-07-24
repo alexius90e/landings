@@ -30,11 +30,12 @@
             <span>+357 25054738</span>
           </a>
 
-          <nav class="social-links">
-            <a class="social-links__link" href="https://wa.me/35725054738" target="_blank">
-              <img src="./assets/icons/whatsapp.svg" alt="whatsapp" />
-            </a>
+          <a class="phone" href="tel:+74951313159">
+            <img src="./assets/icons/phone.svg" alt="" />
+            <span>+7(495)131-31-59</span>
+          </a>
 
+          <nav class="social-links">
             <a
               class="social-links__link"
               href="https://www.linkedin.com/company/replacecy/"
@@ -224,7 +225,6 @@
                   name="userName"
                   placeholder="Имя"
                   minlength="3"
-                  value="wertyuiop"
                   required
                 />
               </fieldset>
@@ -235,23 +235,17 @@
                   type="email"
                   name="userEmail"
                   placeholder="Email"
-                  value="qwertyui@qwert.ru"
                   required
                 />
               </fieldset>
 
               <fieldset class="callback__fieldset">
-                <div class="callback__input callback__code">
-                  <img src="./assets/icons/rus.svg" alt="" />
-                  <span>+7</span>
-                </div>
                 <input
                   class="callback__input"
                   type="text"
                   name="userPhone"
                   placeholder="Ваш телефон"
-                  pattern="[0-9]{2,3}[0-9]{3}[0-9]{4,6}"
-                  value="23456789011"
+                  pattern="^(\+|00)[1-9][0-9 \-\(\)\.]{10,32}$"
                   required
                 />
               </fieldset>
@@ -281,6 +275,11 @@
           <a class="phone" href="tel:+35725054738">
             <img src="./assets/icons/phone-white.svg" alt="" />
             <span>+357 25054738</span>
+          </a>
+
+          <a class="phone" href="tel:+74951313159">
+            <img src="./assets/icons/phone-white.svg" alt="" />
+            <span>+7(495)131-31-59</span>
           </a>
 
           <nav class="social-links">
@@ -330,10 +329,6 @@
           А пока вы ждете - подпишитесь на наши социальные сети, где мы пишем о жизни на Кипре
         </p>
         <nav class="social-links">
-          <a class="social-links__link" href="https://wa.me/35725054738" target="_blank">
-            <img src="./assets/icons/whatsapp.svg" alt="whatsapp" />
-          </a>
-
           <a
             class="social-links__link"
             href="https://www.linkedin.com/company/replacecy/"
@@ -363,6 +358,16 @@
           </a>
         </nav>
 
+        <button class="modal__close-button"></button>
+      </div>
+    </div>
+
+    <div class="modal" id="errorModal">
+      <div class="modal__body">
+        <h3 class="modal__title"><img src="./assets/error-icon.svg" alt="error" />Ошибка!</h3>
+        <p class="modal__description">
+          Попробуйте отправить форму еще раз. Возможно вы указали неверные данные
+        </p>
         <button class="modal__close-button"></button>
       </div>
     </div>

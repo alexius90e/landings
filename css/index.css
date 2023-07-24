@@ -282,6 +282,9 @@ textarea {
     line-height: 32px;
   }
 }
+.modal__title img {
+  margin-right: 10px;
+}
 .modal__description {
   margin: 22px 0 34px;
   font-size: 21px;
