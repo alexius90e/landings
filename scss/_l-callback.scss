@@ -30,6 +30,18 @@
     line-height: 46px;
     text-align: left;
 
+    @include laptop {
+      max-width: 320px;
+      font-size: 32px;
+      font-weight: 900;
+      line-height: 38px;
+    }
+
+    @include tablet {
+      max-width: none;
+      text-align: center;
+    }
+
     @include iphone {
       font-size: 32px;
       line-height: 36px;
@@ -80,15 +92,41 @@
     }
   }
 
-  &__timer {
+  & .iframe-form {
     position: absolute;
     top: 66px;
     right: 88px;
-    width: max-content;
+
+    @include desktop {
+      top: 32px;
+      right: 32px;
+    }
+
+    @include tablet {
+      position: absolute;
+      top: auto;
+      left: 50%;
+      bottom: 32px;
+      margin: 0 auto;
+      transform: translateX(-50%);
+    }
+
+    @include iphone {
+
+    }
+  }
+
+  &__timer {
+    position: static;
+    top: 66px;
+    right: 88px;
+    max-width: 320px;
+    width: 100%;
     padding: 12px 17px;
     border-radius: 20px;
     color: $white;
     background-color: $green;
+    box-sizing: border-box;
 
     @include desktop {
       top: 32px;
@@ -96,26 +134,21 @@
     }
 
     @include laptop {
-      position: static;
-      max-width: 554px;
-      width: 100%;
       margin-bottom: 1rem;
       box-sizing: border-box;
     }
 
+    @include tablet {
+      margin: 0 auto 256px;
+    }
+
     &-title {
-      display: flex;
-      align-items: center;
       gap: 16px;
       margin: 0 0 8px;
-      font-size: 35px;
-      font-weight: 700;
-      line-height: 36px;
-
-      @include iphone {
-        font-size: 24px;
-        line-height: 26px;
-      }
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 18px;
 
       &-free {
         position: relative;
