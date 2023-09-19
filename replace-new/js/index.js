@@ -4,26 +4,7 @@ const today = new Date();
 
 const deltaMinutes = Math.round((0.5 + Math.random() * 0.5) * 60);
 
-const currentYear = today.getFullYear();
-
-const currentMonth = today.getMonth();
-
-const currentDay = today.getDate();
-
-const currentHours = today.getHours() + 1;
-
-const currentMinutes = today.getMinutes() + deltaMinutes;
-
-const currentSeconds = today.getSeconds();
-
-const deadline = new Date(
-  currentYear,
-  currentMonth,
-  currentDay,
-  currentHours,
-  currentMinutes,
-  currentSeconds
-);
+const deadline = new Date('2023-10-03 20:00');
 
 let timerId = null;
 
@@ -35,9 +16,6 @@ function declensionNum(num, words) {
 
 function countdownTimer() {
   const diff = deadline - new Date();
-  if (diff <= 0) {
-    clearInterval(timerId);
-  }
   const days = diff > 0 ? Math.floor(diff / 1000 / 60 / 60 / 24) : 0;
   const hours = diff > 0 ? Math.floor(diff / 1000 / 60 / 60) % 24 : 0;
   const minutes = diff > 0 ? Math.floor(diff / 1000 / 60) % 60 : 0;
@@ -98,24 +76,24 @@ videoButton.addEventListener('click', () => {
 
 // form
 
-const callbackForm = document.querySelector('.callback__form');
+// const callbackForm = document.querySelector('.callback__form');
 
-callbackForm.addEventListener('submit', (event) => {
-  event.preventDefault();
+// callbackForm.addEventListener('submit', (event) => {
+//   event.preventDefault();
 
-  const formData = new FormData(callbackForm);
-  const userName = formData.get('userName');
-  const userEmail = formData.get('userEmail');
-  const userPhone = formData.get('userPhone');
+//   const formData = new FormData(callbackForm);
+//   const userName = formData.get('userName');
+//   const userEmail = formData.get('userEmail');
+//   const userPhone = formData.get('userPhone');
 
-  const message = { userName, userEmail, userPhone };
+//   const message = { userName, userEmail, userPhone };
 
-  console.log(message);
+//   console.log(message);
 
-  fetch('../contact-form-handler.php', {
-    method: 'POST',
-    data: message,
-  })
-    .then(() => successModal.classList.add('active'))
-    .catch(() => errorModal.classList.add('active'));
-});
+//   fetch('../contact-form-handler.php', {
+//     method: 'POST',
+//     data: message,
+//   })
+//     .then(() => successModal.classList.add('active'))
+//     .catch(() => errorModal.classList.add('active'));
+// });
